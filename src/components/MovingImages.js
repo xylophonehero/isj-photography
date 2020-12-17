@@ -17,8 +17,14 @@ const MovingImages = ({ data }) =>
 
     const createStyle = (index) =>
     {
-        const width = window.innerWidth
-        const height = window.innerHeight
+        var width = 0
+        var height = 0
+        if (typeof window !== 'undefinded')
+        {
+            width = window.innerWidth
+            height = window.innerHeight
+        }
+
 
         const animate = {
             width: '300px',
