@@ -19,7 +19,7 @@ const MovingImages = ({ data }) =>
     {
         var width = 0
         var height = 0
-        if (typeof window !== 'undefinded')
+        if (typeof window !== 'undefined')
         {
             width = window.innerWidth
             height = window.innerHeight
