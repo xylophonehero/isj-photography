@@ -3,13 +3,14 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import MovingImages from '../components/MovingImages'
 
 export const BlankPageTemplate = ({ title, content, contentComponent }) =>
 {
     const PageContent = contentComponent || Content
 
     return (
-        <section className="section section--gradient">
+        <section className="section section--gradient" style={{ height: '100vh' }}>
             <div className="container">
                 <div className="columns">
                     <div className="column is-10 is-offset 1">
@@ -32,7 +33,8 @@ const BlankPage = ({ data }) =>
 
     return (
         <Layout>
-            <AboutPageTemplate
+            <MovingImages />
+            <BlankPageTemplate
                 contentComponent={HTMLContent}
                 title={post.frontmatter.title}
                 content={post.html}
@@ -41,8 +43,8 @@ const BlankPage = ({ data }) =>
     )
 }
 
-BlankPage.PropTypes = {
-    data: PropTypes.object.isRequired
+BlankPage.propTypes = {
+    data: PropTypes.object.isRequired,
 }
 
 export default BlankPage
