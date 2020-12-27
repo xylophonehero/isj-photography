@@ -59,6 +59,20 @@ module.exports = {
         ],
       },
     },
+    // {
+    //   resolve: 'gatsby-plugin-react-svg',
+    //   options: {
+    //     rule: {
+    //       include: /img/social
+    //     }
+    //   }
+    // },
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `1706299453`,
+      },
+    },
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {

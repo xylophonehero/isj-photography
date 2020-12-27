@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+// import github from '../img/github-icon.svg'
+import logo from '../img/isjlogo.svg'
+import Facebook from '../img/social/facebook.svg'
+import Instagram from '../img/social/instagram.svg'
 // import { set } from 'lodash'
+
 
 const Navbar = () =>
 {
@@ -10,18 +13,16 @@ const Navbar = () =>
 
   const [active, setActive] = useState(false);
 
-
-
   return (
     <nav
-      className="navbar is-transparent"
+      className="navbar is-transparent has-background-light"
       role="navigation"
       aria-label="main-navigation"
     >
       <div className="container">
         <div className="navbar-brand">
           <Link to="/" className="navbar-item" title="Logo">
-            <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+            <img src={logo} alt="isj-photography" />
           </Link>
           {/* Hamburger menu */}
           <div
@@ -30,7 +31,8 @@ const Navbar = () =>
             onClick={() => setActive(!active)}
             role="button"
             tabIndex='0'
-            onKeyDown={() => setActive(!active)}
+            onKeyDown={e => { e.keyCode === 13 && setActive(!active) }}
+            style={{ height: '100px', width: '100px' }}
           >
             <span />
             <span />
@@ -41,10 +43,32 @@ const Navbar = () =>
           id="navMenu"
           className={`navbar-menu ${active && 'is-active'}`}
         >
-          <div className="navbar-start has-text-centered">
+          <div className="navbar-start has-text-centered is-uppercase">
             <Link className="navbar-item" to="/about">
               About
               </Link>
+            <div className="navbar-item is-hoverable has-dropdown">
+              <div className="navbar-link">
+                Sessions
+                </div>
+              <div className="navbar-dropdown">
+                <Link className="navbar-item" to="/sessions/engagement">
+                  Engagement
+                </Link>
+                <Link className="navbar-item" to="/sessions/wedding">
+                  Wedding
+                </Link>
+                <Link className="navbar-item" to="/sessions/maternity">
+                  Maternity
+                </Link>
+                <Link className="navbar-item" to="/sessions/newborn">
+                  Newborn
+                </Link>
+                <Link className="navbar-item" to="/sessions/family-portraits">
+                  Family Portraits
+                </Link>
+              </div>
+            </div>
             <Link className="navbar-item" to="/products">
               Products
               </Link>
@@ -54,22 +78,32 @@ const Navbar = () =>
             <Link className="navbar-item" to="/contact">
               Contact
               </Link>
-            <Link className="navbar-item" to="/blank">
+            {/* <Link className="navbar-item" to="/blank">
               Blank
               </Link>
             <Link className="navbar-item" to="/contact/examples">
               Form Examples
-              </Link>
+              </Link> */}
           </div>
           <div className="navbar-end has-text-centered">
             <a
               className="navbar-item"
-              href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
+              href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               <span className="icon">
-                <img src={github} alt="Github" />
+                <img src={Facebook} alt="Facebook" />
+              </span>
+            </a>
+            <a
+              className="navbar-item"
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="icon">
+                <img src={Instagram} alt="Instagram" />
               </span>
             </a>
           </div>

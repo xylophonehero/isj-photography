@@ -32,6 +32,21 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
 
+  - name: session
+    label: session
+    folder: "src/pages/sessions"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: TemplateKey,
+          name: templateKey,
+          widget: hidden,
+          default: session-page,
+        }
+      - { label: Title, name: title, widget: string }
+      - { label: Body, name: body, widget: markdown }
+
   - name: "pages"
     label: "Pages"
     files:
@@ -49,6 +64,7 @@ collections:
           - { label: Image, name: image, widget: image }
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
+          - { label: Letter, name: letter, widget: markdown }
           - {
               label: Mainpitch,
               name: mainpitch,
@@ -60,26 +76,37 @@ collections:
                 ],
             }
           - { label: Description, name: description, widget: string }
+          # - {
+          #     label: Intro,
+          #     name: intro,
+          #     widget: object,
+          #     fields:
+          #       [
+          #         { label: Heading, name: heading, widget: string },
+          #         { label: Description, name: description, widget: text },
+          #         {
+          #           label: Blurbs,
+          #           name: blurbs,
+          #           widget: list,
+          #           fields:
+          #             [
+          #               { label: Image, name: image, widget: image },
+          #               { label: Text, name: text, widget: text },
+          #             ],
+          #         },
+          #       ],
+          #   }
           - {
-              label: Intro,
-              name: intro,
-              widget: object,
+              label: Timeline Images,
+              name: timelineImages,
+              widget: list,
               fields:
                 [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                  {
-                    label: Blurbs,
-                    name: blurbs,
-                    widget: list,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Text, name: text, widget: text },
-                      ],
-                  },
+                  { label: Image, name: image, widget: image },
+                  { label: Text, name: text, widget: text },
                 ],
             }
+          - { label: Ieashia Photo, name: ieashiaPhoto, widget: image }
           - {
               label: Main,
               name: main,
@@ -146,26 +173,26 @@ collections:
           - { label: Image, name: image, widget: image }
           - { label: Heading, name: heading, widget: string }
           - { label: Description, name: description, widget: string }
-          - {
-              label: Intro,
-              name: intro,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                  {
-                    label: Blurbs,
-                    name: blurbs,
-                    widget: list,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Text, name: text, widget: text },
-                      ],
-                  },
-                ],
-            }
+          # - {
+          #     label: Intro,
+          #     name: intro,
+          #     widget: object,
+          #     fields:
+          #       [
+          #         { label: Heading, name: heading, widget: string },
+          #         { label: Description, name: description, widget: text },
+          #         {
+          #           label: Blurbs,
+          #           name: blurbs,
+          #           widget: list,
+          #           fields:
+          #             [
+          #               { label: Image, name: image, widget: image },
+          #               { label: Text, name: text, widget: text },
+          #             ],
+          #         },
+          #       ],
+          #   }
           - {
               label: Main,
               name: main,

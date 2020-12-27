@@ -2,23 +2,28 @@ import React from 'react'
 import { navigate } from 'gatsby-link'
 import Layout from '../../components/Layout'
 
-function encode(data) {
+function encode(data)
+{
   return Object.keys(data)
     .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
 }
 
-export default class Index extends React.Component {
-  constructor(props) {
+export default class Index extends React.Component
+{
+  constructor(props)
+  {
     super(props)
     this.state = { isValidated: false }
   }
 
-  handleChange = (e) => {
+  handleChange = (e) =>
+  {
     this.setState({ [e.target.name]: e.target.value })
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = (e) =>
+  {
     e.preventDefault()
     const form = e.target
     fetch('/', {
@@ -33,7 +38,8 @@ export default class Index extends React.Component {
       .catch((error) => alert(error))
   }
 
-  render() {
+  render()
+  {
     return (
       <Layout>
         <section className="section">
@@ -41,7 +47,7 @@ export default class Index extends React.Component {
             <div className="content">
               <h1>Contact</h1>
               <form
-                name="contact"
+                name="contact v1"
                 method="post"
                 action="/contact/thanks/"
                 data-netlify="true"
@@ -49,7 +55,7 @@ export default class Index extends React.Component {
                 onSubmit={this.handleSubmit}
               >
                 {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="form-name" value="contact v1" />
                 <div hidden>
                   <label>
                     Don’t fill this out:{' '}
@@ -82,6 +88,21 @@ export default class Index extends React.Component {
                       name={'email'}
                       onChange={this.handleChange}
                       id={'email'}
+                      required={true}
+                    />
+                  </div>
+                </div>
+                <div className="field">
+                  <label className="label" htmlFor={'phone'}>
+                    Phone Number
+                  </label>
+                  <div className="control">
+                    <input
+                      className="input"
+                      type={'phone'}
+                      name={'phone'}
+                      onChange={this.handleChange}
+                      id={'phone'}
                       required={true}
                     />
                   </div>
