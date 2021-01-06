@@ -35,7 +35,7 @@ After my grandad inspired me to love amateur photography throughout childhood, a
 
 I then worked as a photographer for magazines, night clubs, fashion and even TV events. 
 
-I wanted to travel, so combined that with my photography skills and passion, and worked as a cruise ship photographer for the next ?? years. Cruise ships was where 
+I wanted to travel, so combined that with my photography skills and passion, and worked as a cruise ship photographer from 2014 to 2015. Cruise ships was where 
 I really found my feet, my flow and the type of photography I wanted to pursue. 
 
 On ships, I also found a real love for makeup. I have always enjoyed makeup, and my favourite part of any night out was always getting ready, putting my make up on with friends while dancing about to my favourite songs. 
@@ -48,13 +48,13 @@ I then trained to become a makeup artist so I could bring both aspects together 
 
 Cruise ships were also where I found my amazing husband Zoran. 
 
-He was a handsome hairdresser on the ship, from Macedonia, and we fell in love right away. We sailed the seven seas together for ?? years and then decided to take our adventures back to land so we could eventually start our own family. 
+He was a handsome hairdresser on the ship, from Macedonia, and we fell in love right away. We sailed the seven seas together for 2 years and then decided to take our adventures back to land so we could eventually start our own family. 
 
-We moved to Essex in ??  and I’ve been running ISJ Photography ever since. Zoran and I also run our own makeup and hair company, Krstev Kreates, together. We offer packages for hair and makeup, specialising in weddings. We are available for all types of packages with this if you like too, such as engagement, maternity and family portraits (again, just not the babies). 
+We moved to Essex in 2015 and I’ve been running ISJ Photography ever since. Zoran and I also run our own makeup and hair company, Krstev Kreates, together. We offer packages for hair and makeup, specialising in weddings. We are available for all types of packages with this if you like too, such as engagement, maternity and family portraits (again, just not the babies). 
 
 ![Ieashia and Zoran](../../../static/img/about2.jpg)
 
-We got married in Macedonia in ??, and at the end of 2019, we had our adorable baby boy Reggie. 
+We got married in Macedonia in September 2017, and on Valentine's Day 2020 our adorable baby boy Reggie arrived. 
 
 ![Baby Reggie](../../../static/img/ieashia.jpg)
 

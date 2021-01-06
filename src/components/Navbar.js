@@ -72,9 +72,9 @@ const Navbar = () =>
             <Link className="navbar-item" to="/testimonials">
               Testimonials
               </Link>
-            <Link className="navbar-item" to="/shop">
+            {/* <Link className="navbar-item" to="/shop">
               Shop
-              </Link>
+              </Link> */}
             <Link className="navbar-item" to="/blog">
               Blog
               </Link>

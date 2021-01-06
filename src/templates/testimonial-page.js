@@ -22,29 +22,31 @@ export const TestimonialPageTemplate = ({ description, testimonials }) =>
               <div className="content">
                 <p>{description}</p>
               </div>
-              <div className="columns is-multiline">
-                {testimonials.map(testimonial => (
-                  <div key={testimonial.author} className="column is-half-tablet">
-                    <div className="card has-background-light" key={testimonial.author}>
-                      <div className="card-content">
-                        <div className="columns is-desktop">
 
-                          <div className="column">
-                            <PreviewCompatibleImage imageInfo={testimonial.image} />
-                            <p className="title is-4 is-hidden-widescreen mt-2">{testimonial.author}</p>
-                          </div>
+              {testimonials.map(testimonial => (
 
-                          <div className="column content">
-                            <p className="title is-4 is-hidden-touch is-hidden-desktop-only">{testimonial.author}</p>
-                            <p className="is-italic">"{testimonial.quote}"</p>
-                          </div>
-                        </div>
+                <div key={testimonial.author} className="card has-background-light mb-6">
+                  <div className="card-content">
+                    <div className="columns is-desktop">
 
+                      <div className="column">
+                        <PreviewCompatibleImage imageInfo={testimonial.image} />
+                        <p className="title is-4 is-hidden-widescreen mt-2">{testimonial.author}</p>
+                        <p className="is-hidden-widescreen">{testimonial.location}</p>
+                      </div>
+
+                      <div className="column content">
+                        <p className="title is-4 is-hidden-touch is-hidden-desktop-only">{testimonial.author}</p>
+                        <p className="is-hidden-touch is-hidden-desktop-only">{testimonial.location}</p>
+                        <p className="is-italic">"{testimonial.quote}"</p>
                       </div>
                     </div>
+
                   </div>
-                ))}
-              </div>
+                </div>
+
+              ))}
+
             </div>
           </div>
         </div>
@@ -85,6 +87,7 @@ export const testimonialPageQuery = graphql`
         description
         testimonials{
           author
+          location
           quote
           image {
             childImageSharp {
