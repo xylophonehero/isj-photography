@@ -2,9 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
+import { FaAngleDoubleUp, FaRegEnvelope } from 'react-icons/fa'
+import scrollTo from 'gatsby-plugin-smoothscroll';
 import logo from '../img/isjlogo.svg'
 import Facebook from '../img/social/facebook.svg'
 import Instagram from '../img/social/instagram.svg'
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 // import PreviewCompatibleImage from './PreviewCompatibleImage'
 // import PreviewCompatibleImage from './PreviewCompatibleImage'
 
@@ -17,10 +21,29 @@ import Instagram from '../img/social/instagram.svg'
 // const Footer = class extends React.Component
 const Footer = ({ data }) =>
 {
+  const [footerRef, footerInView] = useInView({
+    triggerOnce: true
+  })
   const { edges: images } = data.allInstaNode
 
+  const variants = {
+    hiddden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.4
+      }
+    }
+  }
+
+  const imageVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 }
+  }
+
   return (
-    <footer className="footer has-background-light has-text-black-ter">
+    <footer className="footer has-background-light has-text-black-ter is-relative" ref={footerRef}>
       {/* <div className="content has-text-centered">
           <img
             src={logo}
@@ -28,13 +51,16 @@ const Footer = ({ data }) =>
             style={{ width: '14em', height: '10em' }}
           />
         </div> */}
-      <div className="content has-text-centered has-background-light has-text-black-ter">
-        <div className="container has-background-light has-text-black">
+      <button className="back-to-top has-background-light box has-text-dark" onClick={() => scrollTo('#top')}>
+        <FaAngleDoubleUp />
+      </button>
+      <div className="content has-text-centered has-text-black-ter">
+        <div className="container  has-text-black">
           <div style={{ maxWidth: '100vw' }} className="columns">
             <div className="column is-3">
-              <img src={logo} alt="isj-photography" style={{ maxWidth: '250px' }} />
-              <a href="mailto:ieshia@photography.com">
-                ieshia@photography.com
+              <img src={logo} alt="isj-photography" style={{ width: '100%', maxWidth: '250px' }} />
+              <a href="mailto:isjphoto@hotmail.co.uk" style={{ display: 'block' }}>
+                <FaRegEnvelope size="1rem" /> isjphoto@hotmail.co.uk
               </a>
               <div className="is-flex is-justify-content-center">
                 <a
@@ -94,14 +120,19 @@ const Footer = ({ data }) =>
               </section> */}
             </div>
             <div className="column is-9">
-              <div className="columns">
-                {images.map(item => (
-                  <a
+              <motion.div className="columns is-multiline is-mobile"
+                animate={footerInView ? 'visible' : ''}
+                initial="hidden"
+                variants={variants}
+              >
+                {images.map((item, index) => (
+                  <motion.a
                     key={item.node.id}
-                    className="column"
+                    className={`column is-one-third-tablet is-half-mobile is-one-fifth-desktop ${index === 5 && "is-hidden-desktop"}`}
                     href={`https://www.instagram.com/p/${item.node.id}/`}
                     rel="noopener noreferrer"
                     target="_blank"
+                    variants={imageVariants}
                   >
                     {/* {item.node.localFile.childImageSharp.fixed} */}
                     {/* <PreviewCompatibleImage imageInfo={item.node.localFile} /> */}
@@ -110,9 +141,9 @@ const Footer = ({ data }) =>
                       alt={item.node.id}
 
                     />
-                  </a>
+                  </motion.a>
                 ))}
-              </div>
+              </motion.div>
             </div>
             {/* <div className="column is-4">
                 <section>
@@ -182,7 +213,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query Footer {
-        allInstaNode(limit: 5, sort: {order: DESC, fields: timestamp}) {
+        allInstaNode(limit: 6, sort: {order: DESC, fields: timestamp}) {
           edges {
             node {
               id

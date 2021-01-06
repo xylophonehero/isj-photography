@@ -4,6 +4,12 @@ import { Link, graphql } from 'gatsby'
 import { kebabCase } from 'lodash'
 import { motion } from 'framer-motion'
 import Content, { HTMLContent } from '../components/Content'
+import BackgroundImage from 'gatsby-background-image'
+
+// import SessionParallax from '../components/SessionParallax'
+// import VerticalTimeline from '../components/VerticalTimeline'
+// import useWindowSize from '../components/windowSize'
+// import scrollTo from 'gatsby-plugin-smoothscroll'
 
 import Layout from '../components/Layout'
 // import Features from '../components/Features'
@@ -11,6 +17,8 @@ import BlogRoll from '../components/BlogRoll'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import Img from 'gatsby-image'
 import foralEnd from '../img/floral-end.svg'
+import logo from '../img/isjlogo.svg'
+
 // import FitText from '@kennethormandy/react-fittext'
 
 
@@ -35,7 +43,8 @@ export const IndexPageTemplate = ({
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3
+        delayChildren: 0.5,
+        staggerChildren: 0.5
       }
     }
   }
@@ -45,125 +54,133 @@ export const IndexPageTemplate = ({
     visible: { opacity: 1 }
   }
 
+  // const timelinePoints = {
+  //   height: '2rem',
+  //   width: '2rem',
+  //   left: '.5rem',
+  //   position: 'absolute',
+  //   backgroundColor: 'black',
+  //   border: 'solid black .25rem',
+  //   borderRadius: '1rem',
+  //   transform: 'translateY(-30px)'
+
+  // }
+
+  // const [sessionInView, setSessionInView] = useState('')
+  // const handleNewSessionInView = (target) =>
+  // {
+  //   setSessionInView(kebabCase(target))
+  // }
+  // const windowSize = useWindowSize()
+  // const { scrollY } = useViewportScroll()
+  // const ballPosition = useTransform(scrollY, [200, windowSize.height * 4], [windowSize.height * 0.05, windowSize.height * 0.65])
 
   return (
     <div>
-
-      {/* {<div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
-          })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
-        <h1
-          className="has-text-centered has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            boxShadow:
-              'rgb(128, 128, 128) 0.5rem 0px 0px, rgb(128, 128, 128) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(128, 128, 128)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {title}
-        </h1>
-        <h3
-          className="has-text-centered has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow:
-              'rgb(128, 128, 128) 0.5rem 0px 0px, rgb(128, 128, 128) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(128, 128, 128)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {subheading}
-        </h3>
-      </div>
-    </div>} */}
-      <section className="section section--gradient">
-
-        <div className="container">
-          <div className="columns">
-            <div className="column is-8 is-offset-2 has-background-light">
-              <div className="primary-border" style={{ position: 'relative' }}>
-
-                <h2 className="is-size-1 has-text-weight-semibold has-text-centered has-text-primary my-4 is-family-secondary">
-                  Creating Visual Heirlooms
-                              </h2>
+      <div className="is-hidden-desktop">
+        {timelineImages.map((item, index) => (
+          <Link key={item.text} to={`/sessions/${kebabCase(item.text)}`}>
+            <BackgroundImage
+              key={item.text}
+              className="hero mt-1"
+              style={{ minHeight: '20vh' }}
+              fluid={item.image.childImageSharp.fluid}
+              // eslint-disable-next-line
+              style={{ backgroundPosition: index === 1 ? '0% 20%' : 'center' }}
+            >
+              <div style={{ backgroundColor: 'rgba(0,0,0,0.4)' }}>
+                <div className="hero-body">
+                  <h2 className="is-family-secondary is-size-2 has-text-light p-3">{item.text}</h2>
+                </div>
               </div>
+            </BackgroundImage>
+          </Link>
+        ))}
+      </div>
+
+      {/* <section className="is-hidden-desktop  section section--gradient">
+        <div className="columns is-mobile mt-5" >
+
+          <div className="column is-2 p-0">
+            <VerticalTimeline sessionInView={sessionInView} foralEnd={foralEnd} />
+          </div>
+          <div className="column is-10">
+            <div className="container">
+
+              <SessionParallax title="Engagement" handleSessionInView={handleNewSessionInView} />
+              <SessionParallax title="Weddings" handleSessionInView={handleNewSessionInView} />
+              <SessionParallax title="Maternity" handleSessionInView={handleNewSessionInView} />
+              <SessionParallax title="Newborns" handleSessionInView={handleNewSessionInView} />
+              <SessionParallax title="Family Photos" handleSessionInView={handleNewSessionInView} />
             </div>
           </div>
         </div>
+      </section> */}
+      <div className="is-hidden-touch">
+        <div className="hero linear-gradiant-light">
+          <div className="hero-body">
+            <div className="is-flex is-justify-content-center"><img src={logo} alt="ISJ Photography" /></div>
+            <h2 className="is-size-1 has-text-weight-semibold has-text-centered has-text-primary my-4 is-family-secondary">
+              Creating Visual Heirlooms
+              </h2>
 
-        <motion.div style={{
-          position: 'relative',
-          display: 'flex'
-        }}
-          initial="hidden"
-          animate="visible"
-          variants={variants}
-        >
-          {/* horizontal line */}
-          <img src={foralEnd} style={{ position: 'absolute', top: '.57rem', right: '91%', height: '3rem', transform: 'rotate(-90deg)' }} alt='floral' />
-          <div
-            className='timeline'
-            style={{ height: 0, width: '84%', borderTop: '.125rem solid', position: 'absolute', top: '2rem', left: '8%' }}
+            <motion.div style={{
+              position: 'relative',
+              display: 'flex'
+            }}
+              initial="hidden"
+              animate="visible"
+              variants={variants}
+            >
+              {/* horizontal line */}
+              <img src={foralEnd} style={{ position: 'absolute', top: '.57rem', right: '91%', height: '3rem', transform: 'rotate(-90deg)' }} alt='floral' />
+              <div
+                className='timeline'
+                style={{ height: 0, width: '84%', borderTop: '.125rem solid', position: 'absolute', top: '2rem', left: '8%' }}
 
-          />
-          <img src={foralEnd} style={{ position: 'absolute', top: '.57rem', left: '91%', height: '3rem', transform: 'rotate(90deg)' }} alt='floral' />
-          {timelineImages.map(item => (
-            <motion.div
-              variants={itemVariants}
-              key={item.text}
-              style={{
-                width: '17%',
-                margin: '2rem'
-              }}>
-              {/* vertical lines */}
-              <div className='timeline' style={{ height: '2rem', width: 0, borderLeft: '.125rem solid', margin: '0 auto' }} />
-              <Link to={`/sessions/${kebabCase(item.text)}`}>
+              />
+              <img src={foralEnd} style={{ position: 'absolute', top: '.57rem', left: '91%', height: '3rem', transform: 'rotate(90deg)' }} alt='floral' />
+              {timelineImages.map(item => (
                 <motion.div
-                  className="card"
-                  whileHover={{ scale: 1.2 }}
-                  style={{ originY: 0 }}
-                >
-                  <div className="card-image">
-                    <Img fluid={{ ...item.image.childImageSharp.fluid, aspectRatio: 16 / 9 }} />
-                    {/* <PreviewCompatibleImage imageInfo={{ image: item.image }} borderRadius={0} /> */}
-                  </div>
-                  <div className="card-header">
-
-                    <h3
-                      className='card-header-title is-centered subtitle is-3 is-family-secondary has-text-weight-semibold'
-                      style={{ fontSize: '1.8vw' }}
+                  variants={itemVariants}
+                  key={item.text}
+                  style={{
+                    width: '17%',
+                    margin: '1rem',
+                    marginTop: '2rem'
+                  }}>
+                  {/* vertical lines */}
+                  <div className='timeline' style={{ height: '2rem', width: 0, borderLeft: '.125rem solid', margin: '0 auto' }} />
+                  <Link to={`/sessions/${kebabCase(item.text)}`}>
+                    <motion.div
+                      className="card"
+                      whileHover={{ scale: 1.2 }}
+                      style={{ originY: 0 }}
                     >
-                      {item.text}
-                    </h3>
+                      <div className="card-image">
+                        <Img fluid={{ ...item.image.childImageSharp.fluid, aspectRatio: 16 / 9 }} />
+                        {/* <PreviewCompatibleImage imageInfo={{ image: item.image }} borderRadius={0} /> */}
+                      </div>
+                      <div className="card-header">
 
-                  </div>
+                        <h3
+                          className='card-header-title is-centered subtitle is-3 is-family-secondary has-text-weight-semibold p-2'
+                          style={{ fontSize: '1.8vw' }}
+                        >
+                          {item.text}
+                        </h3>
+
+                      </div>
+                    </motion.div>
+                  </Link>
+
                 </motion.div>
-              </Link>
-
+              ))}
             </motion.div>
-          ))}
-        </motion.div>
-
+          </div>
+        </div>
+      </div>
+      <section className="section pt-0">
         <div className="container">
           <div className="section">
             <div className="columns">
@@ -171,7 +188,7 @@ export const IndexPageTemplate = ({
                 <div className="content">
                   <div className="columns">
                     <div className="column is-4">
-                      <PreviewCompatibleImage imageInfo={ieashiaPhoto} />
+                      <PreviewCompatibleImage imageInfo={ieashiaPhoto} style={{ height: '100%' }} />
                     </div>
                     <div className="column is-8">
                       <PageContent className="content" content={content} />
@@ -205,10 +222,10 @@ export const IndexPageTemplate = ({
                     </Link>
                     </div>
                   </div>
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      Latest stories
-                  </h3> */}
+                  <div className="column is-12">*/}
+                  <h3 className="has-text-weight-semibold is-size-2 has-text-centered is-family-secondary">
+                    Latest stories
+                  </h3>
                   <BlogRoll />
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/blog">
@@ -319,7 +336,7 @@ export const pageQuery = graphql`
           }
         }
         ieashiaPhoto {
-        childImageSharp {
+          childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
             }

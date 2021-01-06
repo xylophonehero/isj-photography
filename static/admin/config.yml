@@ -270,6 +270,28 @@ collections:
                   },
                 ],
             }
+      - file: "src/pages/testimonials/index.md"
+        label: Testimonials
+        name: testimonials
+        fields:
+          - {
+              label: Template Key,
+              name: templateKey,
+              widget: hidden,
+              default: testmonial-page,
+            }
+          - { label: Description, name: description, widget: string }
+          - {
+              label: Testimonials,
+              name: testimonials,
+              widget: list,
+              fields:
+                [
+                  { label: Author, name: author, widget: string },
+                  { label: Quote, name: quote, widget: string },
+                  { label: Image, name: image, widget: image },
+                ],
+            }
       - file: "src/pages/blank.md"
         label: "Blank"
         name: "blank"

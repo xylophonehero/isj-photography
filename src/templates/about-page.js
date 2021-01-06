@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({ title, content, contentComponent }) =>
+{
   const PageContent = contentComponent || Content
 
   return (
@@ -13,10 +14,18 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+              <h2 className="title is-size-1 has-text-weight-bold is-family-secondary has-text-centered">
                 {title}
               </h2>
+              <hr />
               <PageContent className="content" content={content} />
+              <p className="is-family-secondary is-size-2">Ieashia</p>
+            </div>
+            <div className="hero has-background-light">
+              <div className="hero-body has-text-centered">
+                <p className="is-size-4 pb-3">Contact me to chat about your photoshoot.</p>
+                <Link to="/contact"><button className="button is-primary">Contact me</button></Link>
+              </div>
             </div>
           </div>
         </div>
@@ -31,7 +40,8 @@ AboutPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
 }
 
-const AboutPage = ({ data }) => {
+const AboutPage = ({ data }) =>
+{
   const { markdownRemark: post } = data
 
   return (

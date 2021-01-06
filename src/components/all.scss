@@ -24,15 +24,52 @@ $navbar-dropdown-background-color: $soul;
 $navbar-dropdown-item-hover-color: $gold;
 $navbar-dropdown-arrow: $storm !important;
 
+$footer-padding: 3.5rem 1.5rem 6rem;
 
 $family-secondary:'Allura', cursive; 
+
+.linear-gradiant-light{
+  background-image: linear-gradient($light, transparent);
+}
+
+// .footer-gradiant{
+//   background-image: linear-gradient(white, $light);
+// }
 
 .navbar-link:not(.is-arrowless):hover::after{
   border-color: $gold !important;
 }
 
-.timeline{
-  border-color: $storm;
+.navbar-dropdown{
+  font-size: 1em;
+}
+
+.back-to-top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  padding: 0.5rem !important;
+  font-size: x-large;
+  border: none;
+
+}
+
+.gallery-arrow{
+  border: none;
+  // background-color: rgba(43, 37, 35, 0.2);
+  cursor: pointer;
+  pointer-events: auto;
+  outline: none;
+  background: none;
+  color: white;
+  font-size: xxx-large;
+}
+
+
+.timeline-node{
+  background-color: $gold;
 }
 
 .gold-line{
@@ -51,6 +88,20 @@ $family-secondary:'Allura', cursive;
   position: sticky;
   top: 3rem
 }
+
+.timeline{
+  border-color: $storm !important;
+  background-color: $storm;
+}
+
+.timeline:active{
+  outline: none;
+}
+
+.timeline:focus{
+  outline: none;
+}
+
 
 .navbar .navbar-menu{
   box-shadow: none !important;
@@ -217,28 +268,40 @@ $family-secondary:'Allura', cursive;
   .navbar-brand{
     z-index: 2;
     position: relative;
-    // background-color: white;
   }
 
 
   .navbar-menu{
     display: block;
-    opacity: 0;
     z-index: 1;
-    background-color: white;
+    background-color: $light;
+    padding: 0 10vw;
 
     position: absolute;
     left: 0;
     right: 0;
 
-    transform: translateY(-50%);
-    transition: all .4s ease-in-out;
+    transform: translateY(-100vh);
+    transition: transform .4s ease-in-out .4s;
     pointer-events: none;
+    > *{
+      opacity: 0;
+      transition: opacity .4s ease-in-out;
+    }
   }
 
+
   .navbar-menu.is-active{
-    opacity: 1;
     transform: none;
+    transition: transform .4s ease-in-out;
     pointer-events: auto;
+    > *{
+      opacity: 1;
+      transition: opacity .4s ease-in-out .4s;
+    }
+  }
+
+  .navbar-link:not(.is-arrowless)::after{
+    border-color: transparent !important;
   }
 }

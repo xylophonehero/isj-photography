@@ -82,10 +82,10 @@ main:
 ---
 Welcome to ISJ Photography. Thanks for stopping by. 
 
-I’m Ieashia, the photographer behind ISJ Photography, based in Dagenham in Essex. My passion to capturing your precious moments when your families come together and grow. 
+I’m Ieashia, the photographer behind ISJ Photography, based in Dagenham in Essex. My passion is capturing your precious moments when your families come together and grow. 
 
 I’m here for all your momentous moments. 
 
-I’m a qualified and experienced photographer with a BA (Hons) in Digital Photography from the London Southbank University and ten years as professional photographer under my belt. 
+I’m a qualified and experienced photographer with my own private studio in my garden. I have a BA (Hons) in Digital Photography from the London Southbank University and 10 years as a professional photographer under my belt. 
 
-Let me tell your story and create a visual heirloom for you.
+Let me tell your story and create visual heirlooms for you.

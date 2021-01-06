@@ -20,7 +20,7 @@ const Navbar = () =>
       aria-label="main-navigation"
     >
       <div className="container">
-        <div className="navbar-brand">
+        <div className="navbar-brand has-background-light">
           <Link to="/" className="navbar-item" title="Logo">
             <img src={logo} alt="isj-photography" />
           </Link>
@@ -43,7 +43,7 @@ const Navbar = () =>
           id="navMenu"
           className={`navbar-menu ${active && 'is-active'}`}
         >
-          <div className="navbar-start has-text-centered is-uppercase">
+          <div className={`navbar-start  is-uppercase`}>
             <Link className="navbar-item" to="/about">
               About
               </Link>
@@ -69,8 +69,11 @@ const Navbar = () =>
                 </Link>
               </div>
             </div>
-            <Link className="navbar-item" to="/products">
-              Products
+            <Link className="navbar-item" to="/testimonials">
+              Testimonials
+              </Link>
+            <Link className="navbar-item" to="/shop">
+              Shop
               </Link>
             <Link className="navbar-item" to="/blog">
               Blog
@@ -93,7 +96,7 @@ const Navbar = () =>
               rel="noopener noreferrer"
             >
               <span className="icon">
-                <img src={Facebook} alt="Facebook" />
+                <img src={Facebook} alt="Facebook" style={{ maxWidth: '2rem' }} />
               </span>
             </a>
             <a
@@ -103,7 +106,7 @@ const Navbar = () =>
               rel="noopener noreferrer"
             >
               <span className="icon">
-                <img src={Instagram} alt="Instagram" />
+                <img src={Instagram} alt="Instagram" style={{ maxWidth: '2rem' }} />
               </span>
             </a>
           </div>
