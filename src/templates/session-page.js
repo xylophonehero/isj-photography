@@ -170,43 +170,45 @@ export const SessionPageTemplate = ({
   }
 
 
-  // const pricing = {
-  //   description: "I offer packages to suit your needs and budget. Choose from the options below and please get in touch if you’d like anything a little different.",
-  //   tables: [
-  //     {
-  //       title: "Advanced",
-  //       image: "GatsbySharpHolder",
-  //       price: "£499",
-  //       features: [
-  //         "ahsjahksdjkasd",
-  //         "ajsdklajskldaj ajdhakjshdjasd",
-  //         "ahsjdkhasjkda ahdja jah ah jahk",
-  //         "ahsjdkhasjkda ahdja jah ah jahk",
-  //         "ahsjdkhasjkda ahdja jah ah jahk",
-  //       ]
-  //     },
-  //     {
-  //       title: "Intermediate",
-  //       image: "GatsbySharpHolder",
-  //       price: "£399",
-  //       features: [
-  //         "ahsjahksdjkasd",
-  //         "ajsdklajskldaj ajdhakjshdjasd",
-  //         "ahsjdkhasjkda ahdja jah ah jahk"
-  //       ]
-  //     },
-  //     {
-  //       title: "Basic",
-  //       image: "GatsbySharpHolder",
-  //       price: "£299",
-  //       features: [
-  //         "ahsjahksdjkasd",
-  //         "ajsdklajskldaj ajdhakjshdjasd",
-  //         "ahsjdkhasjkda ahdja jah ah jahk"
-  //       ]
-  //     },
-  //   ]
-  // }
+  const mockpricing = {
+    description: "I offer packages to suit your needs and budget. Choose from the options below and please get in touch if you’d like anything a little different.",
+    tables: [
+      {
+        title: "Pinnacle",
+        image: "GatsbySharpHolder",
+        price: "499",
+        features: [
+          "ahsjahksdjkasd",
+          "ajsdklajskldaj ajdhakjshdjasd",
+          "ahsjdkhasjkda ahdja jah ah jahk",
+          "ahsjdkhasjkda ahdja jah ah jahk",
+          "ahsjdkhasjkda ahdja jah ah jahk",
+        ]
+      },
+      {
+        title: "Vista",
+        image: "GatsbySharpHolder",
+        price: "399",
+        features: [
+          "ahsjahksdjkasd",
+          "ajsdklajskldaj ajdhakjshdjasd",
+          "ahsjdkhasjkda ahdja jah ah jahk"
+        ]
+      },
+      {
+        title: "Signature",
+        image: "GatsbySharpHolder",
+        price: "299",
+        features: [
+          "ahsjahksdjkasd",
+          "ajsdklajskldaj ajdhakjshdjasd",
+          "ahsjdkhasjkda ahdja jah ah jahk"
+        ]
+      },
+    ]
+  }
+
+  if (!pricing) { pricing = mockpricing }
 
   return (
     <>
@@ -270,7 +272,7 @@ export const SessionPageTemplate = ({
 
                   </header>
                   <div className="card-image">
-                    <PreviewCompatibleImage imageInfo={gallery[index].photo} borderRadius={0} />
+                    <PreviewCompatibleImage imageInfo={gallery[0].photo} borderRadius={0} />
                   </div>
 
                   <div className="card-content">
