@@ -21,6 +21,7 @@ import { useInView } from 'react-intersection-observer'
 // const Footer = class extends React.Component
 const Footer = ({ data }) =>
 {
+
   const [footerRef, footerInView] = useInView({
     triggerOnce: true
   })
@@ -119,7 +120,7 @@ const Footer = ({ data }) =>
                 </ul>
               </section> */}
             </div>
-            <div className="column is-9">
+            {!!data.allInstaNode && <div className="column is-9">
               <motion.div className="columns is-multiline is-mobile"
                 animate={footerInView ? 'visible' : ''}
                 initial="hidden"
@@ -144,7 +145,7 @@ const Footer = ({ data }) =>
                   </motion.a>
                 ))}
               </motion.div>
-            </div>
+            </div>}
             {/* <div className="column is-4">
                 <section>
                   <ul className="menu-list">
