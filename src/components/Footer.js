@@ -25,7 +25,7 @@ const Footer = ({ data }) =>
   const [footerRef, footerInView] = useInView({
     triggerOnce: true
   })
-  const { edges: images } = data.allInstaNode
+  const images = data?.allInstaNode.edges
 
   const variants = {
     hiddden: { opacity: 0 },
@@ -120,7 +120,7 @@ const Footer = ({ data }) =>
                 </ul>
               </section> */}
             </div>
-            {!!data.allInstaNode && <div className="column is-9">
+            {!!data && <div className="column is-9">
               <motion.div className="columns is-multiline is-mobile"
                 animate={footerInView ? 'visible' : ''}
                 initial="hidden"
@@ -210,26 +210,28 @@ Footer.propTypes = {
   })
 }
 
-export default () => (
-  <StaticQuery
-    query={graphql`
-      query Footer {
-        allInstaNode(limit: 6, sort: {order: DESC, fields: timestamp}) {
-          edges {
-            node {
-              id
-              localFile {
-                childImageSharp {
-                  fluid(maxWidth: 250, quality: 100) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={data => <Footer data={data} />}
-  />
-)
+export default Footer
+
+// export default () => (
+//   <StaticQuery
+//     query={graphql`
+//       query Footer {
+//         allInstaNode(limit: 6, sort: {order: DESC, fields: timestamp}) {
+//           edges {
+//             node {
+//               id
+//               localFile {
+//                 childImageSharp {
+//                   fluid(maxWidth: 250, quality: 100) {
+//                     ...GatsbyImageSharpFluid
+//                   }
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     `}
+//     render={data => <Footer data={data} />}
+//   />
+// )
