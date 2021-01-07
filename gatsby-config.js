@@ -75,7 +75,7 @@ module.exports = {
     {
       resolve: "gatsby-source-google-photos",
       options: {
-        albumsTitles: ["Wedding", "Engagement", "Maternity", "Newborn", "Family"],
+        albumsTitles: ["Wedding", "Engagement", "Maternity", "Newborn", "Family", "Landing"],
         photosMaxWidth: 2048,
       },
     },

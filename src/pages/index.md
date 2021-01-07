@@ -1,7 +1,6 @@
 ---
 templateKey: index-page
 title: A new title
-image: /img/home-jumbotron.jpg
 heading: A new heading
 subheading: Creating a heirloom to cherish forever
 mainpitch:
@@ -63,26 +62,10 @@ timelineImages:
   - image: /img/family.jpg
     text: Family
 ieashiaPhoto: /img/ieashia.jpg
-main:
-  heading: Great coffee with no compromises
-  description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
-  image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    image: /img/products-grid3.jpg
-  image2:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
-  image3:
-    alt: Coffee beans
-    image: /img/products-grid1.jpg
 ---
 Welcome to ISJ Photography. Thanks for stopping by. 
 
-I’m Ieashia, the photographer behind ISJ Photography, based in Dagenham in Essex. My passion is capturing your precious moments when your families come together and grow. 
+I’m Ieashia, the photographer behind the lens of ISJ Photography, based in Dagenham in Essex. My passion is capturing your precious moments when your families come together and grow. 
 
 I’m here for all your momentous moments. 
 

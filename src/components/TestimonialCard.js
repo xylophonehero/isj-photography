@@ -31,7 +31,7 @@ const TestimonialCard = ({ testimonial, alt }) =>
         :
         <div className="card has-background-light mb-6">
           <div className="card-content">
-            <div className="columns is-desktop">
+            <div className={`${testimonial.quote.length > 500 && "columns"} is-desktop`}>
 
               <div className="column">
                 <PreviewCompatibleImage imageInfo={testimonial.image} />

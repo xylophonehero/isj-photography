@@ -22,6 +22,12 @@ testimonials:
     quote: 
       Ieashia did both the makeup and photography for my wedding day and I couldn’t have picked a better person. She made me feel amazing and captured our day perfectly, giving us photos we will cherish forever.
     image: /img/image2.jpg
+  - author: Louise
+    location: Rainham
+    tag: Wedding
+    quote: 
+      When I used Ieashia to capture our firstborn photos, once again we were blown by the photos she took. I am so glad I chose Ieashia to capture the biggest moments of my life, as she tells a story with her photos and really makes the effort with everything she does. Thank you so much for everything you have done.
+    image: /img/testimonial-louise-frempong-wedding.jpg
   - author: Hayley
     location: Essex
     tag: Wedding
@@ -39,17 +45,11 @@ testimonials:
     location: Upminster
     tag: Wedding
     quote: 
-      I honestly couldn’t recommend Ieashia enough. Not only did she capture my husband and my wedding day, she also captured our firstborn child photos. As always, they came out absolutely stunning! If you’re looking for someone to do your wedding photos, I wouldn’t look any further. Ieashia is amazing! She captures the small things that you don’t see as you are busy and can’t be in more than one place at once! She also knows how you are feeling and what you are going through, so really looks after you. Her husband Zoran is amazing too, making sure my bridesmaids and husband were okay too. Everyone at the wedding couldn’t praise them enough – they are a lovely couple. When I used Ieashia to capture our firstborn photos, once again we were blown by the photos she took. I am so glad I chose Ieashia to capture the biggest moments of my life, as she tells a story with her photos and really makes the effort with everything she does. Thank you so much for everything you have done.
-    image: /img/image3.jpg
+      I honestly couldn’t recommend Ieashia enough. Not only did she capture my husband and my wedding day, she also captured our firstborn child photos. As always, they came out absolutely stunning! If you’re looking for someone to do your wedding photos, I wouldn’t look any further. Ieashia is amazing! She captures the small things that you don’t see as you are busy and can’t be in more than one place at once! She also knows how you are feeling and what you are going through, so really looks after you. Her husband Zoran is amazing too, making sure my bridesmaids and husband were okay too. Everyone at the wedding couldn’t praise them enough – they are a lovely couple. I am so glad I chose Ieashia to capture the biggest moments of my life, as she tells a story with her photos and really makes the effort with everything she does. Thank you so much for everything you have done.
+    image: /img/testimonial-april-wedding.jpg
   - author: April and Alex
     location: Upminster
     tag: Newborn
-    quote: 
-      I honestly couldn’t recommend Ieashia enough. If you’re looking for someone to do your wedding photos, I wouldn’t look any further. Ieashia is amazing! She captures the small things that you don’t see as you are busy and can’t be in more than one place at once! She also knows how you are feeling and what you are going through, so really looks after you. Her husband Zoran is amazing too, making sure my bridesmaids and husband were okay too. Everyone at the wedding couldn’t praise them enough – they are a lovely couple. I am so glad I chose Ieashia to capture the biggest moments of my life, as she tells a story with her photos and really makes the effort with everything she does. Thank you so much for everything you have done.
-    image: /img/image3.jpg
-  - author: Louise
-    location: Rainham
-    tag: Wedding
     quote: 
       When I used Ieashia to capture our firstborn photos, once again we were blown by the photos she took. I am so glad I chose Ieashia to capture the biggest moments of my life, as she tells a story with her photos and really makes the effort with everything she does. Thank you so much for everything you have done.
     image: /img/image3.jpg
@@ -84,7 +84,7 @@ testimonials:
     tag: Wedding
     quote: 
       Ieashia took photos for the wedding of my son Danny to his fiance Chelsea. The shots are beautiful! Ieashia also did a shoot with my grandchildren. That was perfect as well. She spent a long time with us all on the special day. This lady is worth her weight in gold!
-    image: /img/image3.jpg
+    image: /img/testimonial-angie-chalmers-wedding.jpg
   - author: Angie
     location: Romford
     tag: Family

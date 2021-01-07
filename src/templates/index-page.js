@@ -162,7 +162,7 @@ export const IndexPageTemplate = ({
                     <Link to={`/sessions/${kebabCase(item.text)}`}>
                       <motion.div
                         className="card"
-                        whileHover={{ scale: 1.2 }}
+                        whileHover={{ scale: 1.1 }}
                         style={{ originY: 0 }}
                       >
                         <div className="card-image">
@@ -205,32 +205,6 @@ export const IndexPageTemplate = ({
                   </div>
 
                   <div style={{ height: '100vh' }} />
-
-
-                  {/* <div className="tile">
-                      <h1 className="title">{mainpitch.title}</h1>
-                    </div>
-                    <div className="tile">
-                      <h3 className="subtitle">{mainpitch.description}</h3>
-                    </div>
-                  </div>
-                  <div className="columns">
-                    <div className="column is-12">
-                      <h3 className="has-text-weight-semibold is-size-2">
-                        {heading}
-                      </h3>
-                      <p>{description}</p>
-                    </div>
-                  </div>
-                  <Features gridItems={intro.blurbs} />
-                  <div className="columns">
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/products">
-                        See all products
-                    </Link>
-                    </div>
-                  </div>
-                  <div className="column is-12">*/}
                   <h3 className="has-text-weight-semibold is-size-2 has-text-centered is-family-secondary">
                     Latest stories
                   </h3>
@@ -284,6 +258,7 @@ const IndexPage = ({ data }) =>
         ieashiaPhoto={frontmatter.ieashiaPhoto}
         contentComponent={HTMLContent}
         content={html}
+        photos={data.googlePhotosAlbum.photos}
       />
     </Layout>
   )
@@ -305,13 +280,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         heading
         subheading
         mainpitch {
@@ -346,6 +314,18 @@ export const pageQuery = graphql`
         ieashiaPhoto {
           childImageSharp {
             fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+    googlePhotosAlbum(title: {eq: "Landing"}) {
+      photos {
+        photo {
+          id
+          childImageSharp {
+            fluid(maxWidth: 1024, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

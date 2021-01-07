@@ -7,6 +7,7 @@ import { v4 } from 'uuid'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import { Subtitle } from '../components/Styled'
+import Accordian from '../components/Accordian'
 import TestimonialCard from '../components/TestimonialCard'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
@@ -14,6 +15,8 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import { FaAngleLeft, FaAngleRight, FaCheck } from 'react-icons/fa'
 // import ScrollLock from 'react-scrolllock'
 import BackgroundImage from 'gatsby-background-image'
+
+import Transform from '../components/Transform'
 
 // const AnimatedPicture = ({ delay, image }) =>
 // {
@@ -123,7 +126,8 @@ export const SessionPageTemplate = ({
   gallery,
   pricing,
   secondPricing,
-  testimonials
+  testimonials,
+  faqs
   // helmet,
 }) =>
 {
@@ -299,12 +303,19 @@ export const SessionPageTemplate = ({
                 </div>
               </div>
             ))}
+
           </div>
+          {!!pricing.afterDescription &&
+            <div className="columns">
+              <div className="column is-8 is-offset-2">
+                <p dangerouslySetInnerHTML={{ __html: Transform(pricing.afterDescription) }}></p>
+              </div>
+            </div>}
           {!!secondPricing &&
             <>
               <div className="columns">
                 <div className="column is-8 is-offset-2">
-                  {secondPricing.description.split("\n").map(item => <p key={item}>{item}</p>)}
+                  <div dangerouslySetInnerHTML={{ __html: Transform(secondPricing.description) }} />
                 </div>
               </div>
               <div className="columns">
@@ -346,20 +357,26 @@ export const SessionPageTemplate = ({
           <div className="columns">
             <div className="column is-8 is-offset-2">
               <Subtitle>FAQs</Subtitle>
-
+              <Accordian data={faqs} />
+              {/* {faqs.map(faq =>
+              (
+                <div key={faq.question}>
+                  <p>{faq.question}</p>
+                  <p dangerouslySetInnerHTML={{ __html: Transform(faq.answer) }} />
+                </div>
+              ))} */}
             </div>
           </div>
           <Subtitle>Testimonials</Subtitle>
-          {/* <div className="columns is-multiline"> */}
+          <div className="columns is-multiline">
 
-          {testimonials.filter(x => x.featured !== true).map(testimonial => (
-            // <div  className="column is-half-tablet">
-            <TestimonialCard key={v4()} testimonial={testimonial} alt={true} />
-            // </div>
-          ))}
+            {testimonials.filter(x => x.featured !== true).map(testimonial => (
+              <div className="column is-half-tablet">
+                <TestimonialCard key={v4()} testimonial={testimonial} alt={true} />
+              </div>
+            ))}
 
-          {/* </div> */}
-          <div style={{ height: '100vh' }} />
+          </div>
           {/* Gallery */}
           <motion.div
             ref={galleryRef}
@@ -449,6 +466,7 @@ const SessionPage = ({ data }) =>
         pricing={post.frontmatter.pricing}
         secondPricing={post.frontmatter.secondPricing}
         testimonials={testimonials}
+        faqs={post.frontmatter.faqs}
       />
     </Layout>
   )
@@ -476,6 +494,7 @@ export const pageQuery = graphql`
             price
             features
           }
+          afterDescription
         }
         secondPricing {
           description
@@ -485,6 +504,10 @@ export const pageQuery = graphql`
             features
           }
           afterDescription
+        }
+        faqs{
+          question
+          answer
         }
       }
     }
