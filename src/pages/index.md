@@ -61,7 +61,7 @@ timelineImages:
   - image: /img/newborn.jpg
     text: Newborn
   - image: /img/family.jpg
-    text: Family Portraits
+    text: Family
 ieashiaPhoto: /img/ieashia.jpg
 main:
   heading: Great coffee with no compromises

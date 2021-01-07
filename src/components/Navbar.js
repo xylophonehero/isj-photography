@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import logo from '../img/isjlogo.svg'
 import Facebook from '../img/social/facebook.svg'
 import Instagram from '../img/social/instagram.svg'
+// import { ReactComponent as AltFacebook } from '../img/social/instagram.svg'
 // import { set } from 'lodash'
 
 
@@ -64,8 +65,8 @@ const Navbar = () =>
                 <Link className="navbar-item" to="/sessions/newborn">
                   Newborn
                 </Link>
-                <Link className="navbar-item" to="/sessions/family-portraits">
-                  Family Portraits
+                <Link className="navbar-item" to="/sessions/family">
+                  Family
                 </Link>
               </div>
             </div>
@@ -108,6 +109,7 @@ const Navbar = () =>
               <span className="icon">
                 <img src={Instagram} alt="Instagram" style={{ maxWidth: '2rem' }} />
               </span>
+              {/* <AltFacebook /> */}
             </a>
           </div>
         </div>

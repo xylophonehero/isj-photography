@@ -65,14 +65,6 @@ module.exports = {
         ],
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-react-svg',
-    //   options: {
-    //     rule: {
-    //       include: /img/social
-    //     }
-    //   }
-    // },
     `gatsby-plugin-smoothscroll`,
     {
       resolve: `gatsby-source-instagram`,
@@ -83,7 +75,8 @@ module.exports = {
     {
       resolve: "gatsby-source-google-photos",
       options: {
-        albumsTitles: ["Wedding", "Engagement", "Maternity", "Newborn", "Family Portraits"],
+        albumsTitles: ["Wedding", "Engagement", "Maternity", "Newborn", "Family"],
+        photosMaxWidth: 2048,
       },
     },
     {

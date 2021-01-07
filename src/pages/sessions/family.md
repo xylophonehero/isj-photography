@@ -1,6 +1,6 @@
 ---
 templateKey: session-page
-title: Family Portraits
+title: Family
 ---
 Family is important.
 

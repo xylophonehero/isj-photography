@@ -3,14 +3,16 @@ import PropTypes from 'prop-types'
 // import { kebabCase } from 'lodash'
 // import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
+import { v4 } from 'uuid'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import { Subtitle } from '../components/Styled'
+import TestimonialCard from '../components/TestimonialCard'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import { FaAngleLeft, FaAngleRight, FaCheck } from 'react-icons/fa'
-import ScrollLock from 'react-scrolllock'
+// import ScrollLock from 'react-scrolllock'
 import BackgroundImage from 'gatsby-background-image'
 
 // const AnimatedPicture = ({ delay, image }) =>
@@ -74,7 +76,7 @@ const GalleryModal = ({ setModalActive, activeItem, handleDirectionClick }) =>
   )
 }
 
-const TestimonialBlock = ({ image, text }) =>
+const TestimonialBlock = ({ image, text, author }) =>
 {
   const [offset, setOffset] = useState(0)
   useEffect(() =>
@@ -100,8 +102,9 @@ const TestimonialBlock = ({ image, text }) =>
       >
         <div className="hero-body">
           <div className="columns">
-            <div className="column is-6 is-offset-3 has-text-white is-italic is-size-5" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
-              "{text}"
+            <div className="column is-6 is-offset-3 has-text-white is-size-5" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
+              <p className="is-italic ">"{text}"</p>
+              <p className="has-text-centered">{author}</p>
             </div>
           </div>
         </div>
@@ -118,10 +121,13 @@ export const SessionPageTemplate = ({
   // tags,
   title,
   gallery,
-  pricing
+  pricing,
+  secondPricing,
+  testimonials
   // helmet,
 }) =>
 {
+
   const PostContent = contentComponent || Content
 
   const [modalActive, setModalActive] = useState(false)
@@ -168,7 +174,7 @@ export const SessionPageTemplate = ({
     visible: { opacity: 1 }
 
   }
-
+  const featuredTestimonial = testimonials.find(x => x.featured)
 
   const mockpricing = {
     description: "I offer packages to suit your needs and budget. Choose from the options below and please get in touch if you’d like anything a little different.",
@@ -181,8 +187,8 @@ export const SessionPageTemplate = ({
           "ahsjahksdjkasd",
           "ajsdklajskldaj ajdhakjshdjasd",
           "ahsjdkhasjkda ahdja jah ah jahk",
-          "ahsjdkhasjkda ahdja jah ah jahk",
-          "ahsjdkhasjkda ahdja jah ah jahk",
+          "ahsjdkhasjkda ahdja ah jahk",
+          "ahsjdkhasjkda ahdja asdasdjah ah jahk",
         ]
       },
       {
@@ -207,8 +213,8 @@ export const SessionPageTemplate = ({
       },
     ]
   }
-
-  if (!pricing) { pricing = mockpricing }
+  pricing = pricing || mockpricing
+  // if (!pricing) { pricing = mockpricing }
 
   return (
     <>
@@ -248,8 +254,10 @@ export const SessionPageTemplate = ({
         </div>
       </section>
       {/* Testimonial */}
-      <TestimonialBlock text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum ipsum sed iure voluptatibus, quas explicabo dicta expedita, dolorem commodi eos incidunt quidem rem sunt ab autem dolores quasi et error!"
-        image={gallery[0].photo.childImageSharp.fluid}
+      <TestimonialBlock
+        text={featuredTestimonial.quote}
+        author={featuredTestimonial.author + " - " + featuredTestimonial.location}
+        image={featuredTestimonial.image.childImageSharp.fluid}
       />
       <section className="section">
         <div className="container content">
@@ -257,7 +265,7 @@ export const SessionPageTemplate = ({
           <div className="columns">
             <div className="column is-8 is-offset-2">
               <Subtitle>Pricing</Subtitle>
-              <p>{pricing.description}</p>
+              {pricing.description.split("\n").map(item => <p key={item}>{item}</p>)}
             </div>
           </div>
           <div className="columns">
@@ -292,6 +300,65 @@ export const SessionPageTemplate = ({
               </div>
             ))}
           </div>
+          {!!secondPricing &&
+            <>
+              <div className="columns">
+                <div className="column is-8 is-offset-2">
+                  {secondPricing.description.split("\n").map(item => <p key={item}>{item}</p>)}
+                </div>
+              </div>
+              <div className="columns">
+                {secondPricing.tables.map((item, index) => (
+                  <div className="column" key={item.title}>
+                    <div className={`card has-background-white ${index > 0 && "mt-3"}`}>
+                      <header className="card-header">
+
+                        <p className="card-header-title has-text-weight-semibold is-size-3">
+                          {item.title}
+                        </p>
+
+                      </header>
+                      <div className="card-image">
+                        <PreviewCompatibleImage imageInfo={gallery[0].photo} borderRadius={0} />
+                      </div>
+
+                      <div className="card-content">
+                        <p className={`is-size-3 has-text-centered ${index === 0 ? "has-text-primary has-text-weight-bold" : "has-text-weight-semibold"}`}>
+                          {Intl.NumberFormat('en-US', { style: 'currency', currency: 'GBP', minimumFractionDigits: 0, }).format(item.price)}
+                        </p>
+                        <hr />
+                        {item.features.map(feature => (
+                          <p key={feature}><FaCheck /> {feature}</p>
+                        ))}
+                        <hr />
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="columns">
+                <div className="column is-8 is-offset-2">
+                  <p dangerouslySetInnerHTML={{ __html: secondPricing.afterDescription }} />
+                </div>
+              </div>
+            </>}
+          {/* FAQs */}
+          <div className="columns">
+            <div className="column is-8 is-offset-2">
+              <Subtitle>FAQs</Subtitle>
+
+            </div>
+          </div>
+          <Subtitle>Testimonials</Subtitle>
+          {/* <div className="columns is-multiline"> */}
+
+          {testimonials.filter(x => x.featured !== true).map(testimonial => (
+            // <div  className="column is-half-tablet">
+            <TestimonialCard key={v4()} testimonial={testimonial} alt={true} />
+            // </div>
+          ))}
+
+          {/* </div> */}
           <div style={{ height: '100vh' }} />
           {/* Gallery */}
           <motion.div
@@ -309,7 +376,7 @@ export const SessionPageTemplate = ({
                   <motion.div
                     variants={galleryItemVariants}
                     // className='has-background-primary'
-                    style={{ width: '100%' }}
+                    style={{ width: '100%', cursor: 'pointer' }}
                     whileHover={{ scale: 1.1 }}
                     onClick={() => handleGalleryClick(index)}
 
@@ -343,7 +410,7 @@ export const SessionPageTemplate = ({
           }
 
         </AnimatePresence>
-        <ScrollLock isActive={modalActive} />
+        {/* <ScrollLock isActive={modalActive} /> */}
       </section >
     </>
   )
@@ -360,7 +427,7 @@ SessionPageTemplate.propTypes = {
 const SessionPage = ({ data }) =>
 {
   const { markdownRemark: post } = data
-
+  const testimonials = data.allMarkdownRemark.nodes[0].frontmatter.testimonials.filter(x => x.tag === post.frontmatter.title)
   return (
     <Layout>
       <SessionPageTemplate
@@ -380,6 +447,8 @@ const SessionPage = ({ data }) =>
         title={post.frontmatter.title}
         gallery={data.googlePhotosAlbum.photos}
         pricing={post.frontmatter.pricing}
+        secondPricing={post.frontmatter.secondPricing}
+        testimonials={testimonials}
       />
     </Layout>
   )
@@ -407,7 +476,15 @@ export const pageQuery = graphql`
             price
             features
           }
-
+        }
+        secondPricing {
+          description
+          tables{
+            title
+            price
+            features
+          }
+          afterDescription
         }
       }
     }
@@ -416,9 +493,29 @@ export const pageQuery = graphql`
         photo {
           id
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
+            fluid(maxWidth: 1024, quality: 100) {
               ...GatsbyImageSharpFluid
             }
+          }
+        }
+      }
+    }
+    allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "testimonial-page"}}}) {
+      nodes {
+        frontmatter {
+          testimonials {
+            author
+            tag
+            featured
+            image {
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            location
+            quote
           }
         }
       }

@@ -54,9 +54,9 @@ export default class Index extends React.Component
                     <p>
                       If you have any questions then please contact me by email or fill out the form and I will get back to you as quickly as possible.
                 </p>
-                    <p className="is-flex is-align-content-baseline">
+                    <p className="is-flex is-align-content-baseline is-size-3">
 
-                      <a href="mailto:isjphoto@hotmail.co.uk"><FaRegEnvelope size="1rem" /> isjphoto@hotmail.co.uk</a>
+                      <a href="mailto:isjphoto@hotmail.co.uk"><FaRegEnvelope size="1.5rem" /> isjphoto@hotmail.co.uk</a>
                     </p>
                   </div>
                   <div className="column is-6">

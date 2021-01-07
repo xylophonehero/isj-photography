@@ -1,5 +1,7 @@
 @import "~bulma/sass/utilities/initial-variables";
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
 // Config vars
 // Kaldi logo brand color: #FD461E
 $kaldi-red: #808080;
@@ -26,6 +28,7 @@ $navbar-dropdown-arrow: $storm !important;
 
 $footer-padding: 3.5rem 1.5rem 6rem;
 
+$family-primary: 'Raleway', sans-serif;
 $family-secondary:'Allura', cursive; 
 
 .linear-gradiant-light{

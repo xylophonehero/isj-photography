@@ -13,6 +13,8 @@ My passion for photography started back in childhood.
 
 My grandad was a keen photographer. He sat me on his knee and showed me his 35mm camera. He patiently taught me how it worked: how to put the film in, and how to wait for the exact right moment to capture the shot just right. I was mesmerized at this seeming magic. He used to say “There are only 27 shots, so we don’t want to waste any!” 
 
+![My love for cameras at an early age](../../../static/img/about3.jpg)
+
 From that point on, I was hooked! 
 
 Luckily nowadays we have digital cameras, and so lots more chances to catch the perfect shot. But these beginnings using film cameras has served me well. It made me have patience to wait for these moments and use my skill to frame and find the perfect moment to freeze, rather than just taking a hundred shots and hoping that quantity would bring the quality in a few of them. 
@@ -33,12 +35,18 @@ Being a photographer is what I’ve always done.
 
 After my grandad inspired me to love amateur photography throughout childhood, at 18 I decided to make it my profession. So, I studied Digital Photography at London Southbank University and am proud to say that I graduated with a BA (Hons) degree. 
 
+![My Grandad and I at my graduation ceremony](../../../static/img/about6.jpg)
+
 I then worked as a photographer for magazines, night clubs, fashion and even TV events. 
 
 I wanted to travel, so combined that with my photography skills and passion, and worked as a cruise ship photographer from 2014 to 2015. Cruise ships was where 
 I really found my feet, my flow and the type of photography I wanted to pursue. 
 
-On ships, I also found a real love for makeup. I have always enjoyed makeup, and my favourite part of any night out was always getting ready, putting my make up on with friends while dancing about to my favourite songs. 
+![Me working as a cruise ship photographer](../../../static/img/about4.jpg)
+
+On ships, I also found a real love for makeup. I have always enjoyed makeup, and my favourite part of any night out was always getting ready, putting my makeup on with friends while dancing about to my favourite songs. 
+
+![Wedding makeup artist](../../../static/img/about5.jpg)
 
 I brought this love and skill into my photography work on ships, by doing the cruise guest’s makeup for them before their photo shoots. Seeing how it transformed their presence, postures and confidence in front of the camera was amazing, and so rewarding. 
 
