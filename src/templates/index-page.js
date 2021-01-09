@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import Content, { HTMLContent } from '../components/Content'
 import BackgroundImage from 'gatsby-background-image'
 import { GiArrowDunk } from 'react-icons/gi'
+import Slider from 'react-slick'
 
 // import SessionParallax from '../components/SessionParallax'
 // import VerticalTimeline from '../components/VerticalTimeline'
@@ -17,7 +18,7 @@ import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import Img from 'gatsby-image'
-import foralEnd from '../img/floral-end.svg'
+// import foralEnd from '../img/floral-end.svg'
 import logo from '../img/isjlogo.svg'
 
 // import FitText from '@kennethormandy/react-fittext'
@@ -55,6 +56,16 @@ export const IndexPageTemplate = ({
     visible: { opacity: 1 }
   }
 
+  const settings = {
+    infinte: true,
+    speed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    // autoplay: true,
+    autoplaySpeed: 5000,
+    cssEase: "ease-in-out"
+  }
+
   // const timelinePoints = {
   //   height: '2rem',
   //   width: '2rem',
@@ -78,6 +89,32 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
+      <div className="is-hidden-touch">
+        <Slider {...settings}>
+          {timelineImages.map(item => (
+            <BackgroundImage
+              key={item.text}
+              className="hero is-fullheight-with-navbar"
+              fluid={item.image.childImageSharp.fluid}
+            >
+              <div className="hero-body">
+                <div className="container">
+                  <img src={logo} alt="ISJ Photography" style={{ margin: 'auto' }} />
+                  <div className="columns" style={{ height: '50vh' }}>
+                    <div className="column is-6 is-offset-3 has-text-white is-size-5 is-flex is-justify-content-flex-end is-flex-direction-column">
+                      <div className="p-5 mb-5" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
+                        <p className="is-italic ">"{item.text}"</p>
+                        <p className="has-text-centered">{"Nick"}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </BackgroundImage>
+          ))}
+        </Slider>
+      </div>
+
       <div className="is-hidden-desktop">
         {timelineImages.map((item, index) => (
           <Link key={item.text} to={`/sessions/${kebabCase(item.text)}`}>
@@ -120,7 +157,7 @@ export const IndexPageTemplate = ({
       <div className="is-hidden-touch">
         <div className="hero linear-gradiant-light">
           <div className="hero-body">
-            <div className="is-flex is-justify-content-center"><img src={logo} alt="ISJ Photography" /></div>
+            {/* <div className="is-flex is-justify-content-center"><img src={logo} alt="ISJ Photography" /></div> */}
             <h2 className="is-size-1 has-text-weight-semibold has-text-centered has-text-primary my-4 is-family-secondary">
               Creating Visual Heirlooms
               </h2>
@@ -133,13 +170,13 @@ export const IndexPageTemplate = ({
               variants={variants}
             >
               {/* horizontal line */}
-              <img src={foralEnd} style={{ position: 'absolute', top: 0, left: 0, height: '3rem', transform: 'rotate(-90deg)' }} alt='floral' />
+              {/* <img src={foralEnd} style={{ position: 'absolute', top: 0, left: 0, height: '3rem', transform: 'rotate(-90deg)' }} alt='floral' /> */}
               <div
                 className='timeline'
-                style={{ height: '.1rem', width: '98%', position: 'absolute', top: '1.45rem', left: '1%' }}
+                style={{ height: '.1rem', width: '82%', position: 'absolute', top: '1.45rem', left: '9%' }}
 
               />
-              <img src={foralEnd} style={{ position: 'absolute', top: 0, right: 0, height: '3rem', transform: 'rotate(90deg)' }} alt='floral' />
+              {/* <img src={foralEnd} style={{ position: 'absolute', top: 0, right: 0, height: '3rem', transform: 'rotate(90deg)' }} alt='floral' /> */}
               {/* <img src={foralEnd} style={{ position: 'absolute', top: '.57rem', right: '91%', height: '3rem', transform: 'rotate(-90deg)' }} alt='floral' />
               <div
                 className='timeline'
@@ -188,6 +225,55 @@ export const IndexPageTemplate = ({
           </div>
         </div>
       </div>
+      {/* <div className="is-hidden-touch">
+        <div className="hero linear-gradiant-light">
+          <div className="hero-body">
+            <motion.div className="mt-3" style={{
+              position: 'relative',
+            }}
+              initial="hidden"
+              animate="visible"
+              variants={variants}
+            >
+              <div className="columns is-multiline">
+                {timelineImages.map((item, index) => (
+                  <>
+                    <motion.div
+                      className="column is-4"
+                      variants={itemVariants}
+                      key={item.text}
+                    >
+                      <Link to={`/sessions/${kebabCase(item.text)}`}>
+                        <motion.div
+                          className="card m-3"
+                          whileHover={{ scale: 1.1 }}
+                          style={{ originY: 0 }}
+                        >
+                          <div className="card-image">
+                            <Img fluid={{ ...item.image.childImageSharp.fluid, aspectRatio: 16 / 9 }} />
+                          </div>
+                          <div className="card-header">
+                            <h3 className='card-header-title is-centered subtitle is-3 is-family-secondary has-text-weight-semibold p-2'>
+                              {item.text}
+                            </h3>
+                          </div>
+                        </motion.div>
+                      </Link>
+                    </motion.div>
+                    {(index === 0) &&
+                      <div className="column is-4 is-flex is-flex-direction-column is-justify-content-center">
+                        <h2 className="is-size-1 has-text-weight-semibold has-text-centered has-text-primary my-4 is-family-secondary">
+                          Creating Visual Heirlooms
+                        </h2>
+                        <p className="has-text-centered is-4">Click on the sessions to begin exploring them</p>
+                      </div>}
+                  </>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </div> */}
       <section className="section pt-0">
         <div className="container">
           <div className="section">

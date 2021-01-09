@@ -14,7 +14,7 @@ const TestimonialCard = ({ testimonial, alt }) =>
             <div className="media is-align-items-center">
               <div className="media-left">
                 <div style={{ width: '200px' }}>
-                  <PreviewCompatibleImage imageInfo={testimonial.image} />
+                  <PreviewCompatibleImage imageInfo={testimonial.image} aspectRatio={16 / 9} />
                 </div>
               </div>
               <div className="media-content">
@@ -34,14 +34,14 @@ const TestimonialCard = ({ testimonial, alt }) =>
             <div className={`${testimonial.quote.length > 500 && "columns"} is-desktop`}>
 
               <div className="column">
-                <PreviewCompatibleImage imageInfo={testimonial.image} />
-                <p className="title is-4 is-hidden-widescreen mt-2">{testimonial.author}</p>
-                <p className="is-hidden-widescreen">{testimonial.location}</p>
+                <PreviewCompatibleImage imageInfo={testimonial.image} aspectRatio={16 / 9} />
+                <p className="title is-4 is-hidden-widescreen mt-2">{testimonial.author + " from " + testimonial.location}</p>
+                {/* <p className="is-hidden-widescreen">{testimonial.location}</p> */}
               </div>
 
               <div className="column content">
-                <p className="title is-4 is-hidden-touch is-hidden-desktop-only">{testimonial.author}</p>
-                <p className="is-hidden-touch is-hidden-desktop-only">{testimonial.location}</p>
+                <p className="title is-4 is-hidden-touch is-hidden-desktop-only">{testimonial.author + " from " + testimonial.location}</p>
+                {/* <p className="is-hidden-touch is-hidden-desktop-only">{testimonial.location}</p> */}
                 <cite>"{testimonial.quote}"</cite>
               </div>
             </div>

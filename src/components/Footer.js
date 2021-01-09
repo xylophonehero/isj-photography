@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql, StaticQuery } from 'gatsby'
+// import { graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { FaAngleDoubleUp, FaRegEnvelope } from 'react-icons/fa'
 import scrollTo from 'gatsby-plugin-smoothscroll';
@@ -9,6 +9,9 @@ import Facebook from '../img/social/facebook.svg'
 import Instagram from '../img/social/instagram.svg'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 // import PreviewCompatibleImage from './PreviewCompatibleImage'
 // import PreviewCompatibleImage from './PreviewCompatibleImage'
 
@@ -52,7 +55,7 @@ const Footer = ({ data }) =>
             style={{ width: '14em', height: '10em' }}
           />
         </div> */}
-      <button className="back-to-top has-background-light box has-text-dark" onClick={() => scrollTo('#top')}>
+      <button className="back-to-top has-background-light box has-text-dark" onClick={() => scrollTo('#top')} style={{ outline: 'none' }}>
         <FaAngleDoubleUp />
       </button>
       <div className="content has-text-centered has-text-black-ter">

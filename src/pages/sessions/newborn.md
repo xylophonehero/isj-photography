@@ -1,64 +1,176 @@
 ---
 templateKey: session-page
 title: Newborn
-pricing:
-  description: |
-    I offer packages to suit your needs and budget. Choose from the options below and please get in touch if you’d like anything a little different.
-    Your £99 deposit is deducted from your chosen package at your viewing & ordering appointment.
-  tables:
-    - title: Pinnacle
-      price: 899
-      features:
-        - 4-hour session
-        - Face-to-face photo viewing
-        - Ten luxury boxed prints of your chosen images (9’x6’)
-        - All 25 + fully edited high-resolution images on USB
-        - Phone app of digital images
-        - High-resolution video slideshow of your favourite images
-        - Facebook timeline cover collage
-        - 20 thank you cards
-        - Full use of studio props
-        - £100 credit towards any wall art purchase
-        - £50 off your sitter session
-    - title: Bloom
-      price: 599
-      features:
-        - 4-hour session
-        - Face-to-face photo viewing
-        - Ten prints of your chosen images (9’x6’)
-        - Ten matching fully edited high-resolution images on USB
-        - High resolution video of your favourite images
-        - Full use of studio props
-    - title: Rise
-      price: 299
-      features:
-        - 4-hour session
-        - Face-to-face photo viewing
-        - Five luxury boxed prints (9’x6’)
-        - Five matching fully edited high-resolution images on USB
-    - title: ABC Story
-      price: 299
-      features:
-        - High-resolution video slideshow of your favourite images
-        - 10-page 9’x6’ storybook
-  afterDescription: |
-    If a package does not fit your needs, there are many individual products you can chose from, additional to your session fee.
-    
-    Ask to see our à la carte options:
-    
-    **Photo prints**
-    
-    - Ten 9’x6’ boxed prints beautifully packaged £199
-    - Five 9’x6’ boxed prints beautifully packaged £99
-    
-    **Digital images**
-    - Ten digital images £399
-    - All digital images £599
+howItWorks: |
+  I have a beautiful newly-renovated home studio, where I’ll conduct your session. 
+
+  I am here to capture the story of your legacy, your growing family. I’ll create and freeze the memory of the new love you have for your little baby. These images will invoke the memories of when you first met. 
+
+  Your baby is a miracle that will grow up and change so fast. 
+
+  Welcoming your new little baby into the world will be one of the most emotional and incredible experiences of your life. I want to capture those feelings for you, document them for you to hold onto forever – give you a moment frozen in time that will go on to become a family visual heirloom. 
+
+  The most amazing thing – and what I love most about photography – is it has the power to transport you back to all those incredible moments. I love the feeling of creating an image that will bring back the emotions we experience at a particular moment in our lives. 
+
+  The images we create will become some of your most treasured possessions. I love creating these images which will decorate your home with memories of this incredible chapter in your life.  
+
+  I truly believe that every stage in your children's lives should be celebrated and captured. 
+
+  However, photographing newborn babies is something truly special.
+
+  It is an amazing gift and honour to be able to be the person photographing them. My aim is to create beautiful, soft and timeless images. 
+
+  I use simple, natural tones and textures that best complement your baby. I feel the best time to photograph newborns is between 7 and 15 days old, and I’d highly recommend you book your session as soon as you know your due date. We’ll make a provisional booking for 10 days after your due date, and we can adjust this if your baby is early or late. 
+
+  Newborn photography is a very unique genre of photography and you don't get a second chance to get it right. I love creating and working in a calm and peaceful environment during my newborn sessions, as this allows us all to have a truly magical experience. 
+
+  Newborn sessions are held in my warm, snug, natural-light home studio in Essex. My studio is filled with simple, natural textures, wraps and minimalist props, which will all available for use during your session. I would also always encourage, parents & siblings to get involved in the images too.
+
+  We are responsible for writing their story and it starts right here. 
+
+  If you like what you see, contact me today to secure your session.
+
+  ### Sitter/Older babies
+
+  These shoots are designed for babies between 6-10 months old, who can sit up confidently unaided but are not yet walking. 
+
+  My mum always used to say how fast time goes by, and that we were growing up too fast. All the while, I was impatiently waiting to grow up and become independent. 
+
+  Fast forward 20 years, and here I am wishing my baby would stop growing up so fast!  I’m not the one telling every newborn client how quickly they grow.
+
+  The love for our babies grows more by the day, but the earliest memories will fade a bit and their tiny toes will grow. 
+
+  This is why these sessions are perfect for capturing and preserving your littles one’s gummy smiles, arm rolls and chubby toes. 
+
+  They won’t be this little again. 
+
+  I absolutely love these sessions as their little cheeky personalities are staring to shine and I get to capture all the details that make unique and perfect.                    
+
+  Let me tell your story
+pricings:
+  - description: |
+      I offer packages to suit your needs and budget. Choose from the options below and please get in touch if you’d like anything a little different.
+      Your £99 deposit is deducted from your chosen package at your viewing & ordering appointment.
+    tables:
+      - title: Pinnacle
+        price: 899
+        features:
+          - 4-hour session
+          - Face-to-face photo viewing
+          - Ten luxury boxed prints of your chosen images (9’x6’)
+          - All 25 + fully edited high-resolution images on USB
+          - Phone app of digital images
+          - High-resolution video slideshow of your favourite images
+          - Facebook timeline cover collage
+          - 20 thank you cards
+          - Full use of studio props
+          - £100 credit towards any wall art purchase
+          - £50 off your sitter session
+      - title: Bloom
+        price: 599
+        features:
+          - 4-hour session
+          - Face-to-face photo viewing
+          - Ten prints of your chosen images (9’x6’)
+          - Ten matching fully edited high-resolution images on USB
+          - High resolution video of your favourite images
+          - Full use of studio props
+      - title: Rise
+        price: 299
+        features:
+          - 4-hour session
+          - Face-to-face photo viewing
+          - Five luxury boxed prints (9’x6’)
+          - Five matching fully edited high-resolution images on USB
+    afterDescription: |
+      If a package does not fit your needs, there are many individual products you can chose from, additional to your session fee.
+      
+      Ask to see our à la carte options:
+      
+      **Photo prints**
+      
+      - Ten 9’x6’ boxed prints beautifully packaged £199
+      - Five 9’x6’ boxed prints beautifully packaged £99
+      
+      **Digital images**
+      - Ten digital images £399
+      - All digital images £599
+  - description: |
+      ## Sitter Sessions/Older Babies
+    tables:
+      - title: Pinnacle
+        price: 549
+        features:
+          - Up to one-hour session
+          - Face-to-face viewing session
+          - 20+ images in high resolution, fully edited, on a USB stick
+          - Ten mounted 6" x 9" photo prints
+          - High-resolution HD slide show with your images
+          - Full use of props
+          - £100 credit towards a wall art purchase
+          - Facebook timeline cover
+          - £50 off your cake smash session 
+      - title: Vista
+        price: 449
+        features:
+          - Up to one-hour session
+          - Face-to-face viewing session
+          - 10 high-resolution, fully edited photos on a USB stick
+          - Ten 6" x 9" photo prints matching your chosen digital images
+          - High-resolution HD slide show with all your images
+          - Full use of props
+      - title: Signature
+        price: 349
+        features:
+          - Up to one-hour session
+          - Face-to-face viewing session
+          - 5 high-resolution, fully edited photos on a USB stick
+          - Five 6"x 9" prints matching your chosen digital images
+          - Full use of props
+  - description: |
+      ## Cake Smash/ 1st Birthday 
+    tables:
+      - title: Pinnacle
+        price: 549
+        features:
+          - Up to two-hour session
+          - Face-to-face viewing session
+          - Birthday cake
+          - A range of different themes/setups to choose from
+          - Splash bath
+          - 20+ images in high-resolution, fully edited, on a USB stick
+          - Ten mounted 6" x 9" photo prints
+          - High-resolution HD slide show with your images
+          - Full use of props
+          - £100 credit towards a wall art purchase
+          - Facebook timeline cover
+          - £50 off your family session 
+      - title: Vista
+        price: 449
+        features:
+          - Up to two-hour session
+          - Face-to-face viewing session
+          - Birthday cake 
+          - A range of different themes/setups to choose from
+          - Splash bath
+          - 10 high-resolution, fully edited photos on a USB stick
+          - Ten 6" x 9" photo prints matching your chosen digital images
+          - High resolution HD slide show with all your images
+          - Full use of props
+      - title: Signature
+        price: 349
+        features:
+          - Up to two-hour session
+          - Birthday cake 
+          - Face-to-face viewing session
+          - 5 high-resolution, fully edited photos on a USB stick
+          - Five 6"x 9" prints matching your chosen digital images
+          - Full use of props
 faqs:
   - question: When will we book my session?
     answer: |
       I feel the best time to photograph you newborn is when your baby is between 4-14 days old. I highly recommend you book your session as soon as you know your due date. We will make a provisional booking and patiently await their arrival. If it doesn’t work out for me to photograph your baby by 14 days old, we can do this when your baby is a little older, no problem. The session may take a little longer as after 14 days your baby is no longer at their sleepiest. They become more alert, and less curled and snuggled. Nevertheless, we will achieve beautiful images that you’ll love forever. Your baby may be more awake and not be able to be put into the same poses as babies 14 days old or younger. But there are many poses we can do to show off their perfect little selves.
-  - question: How long will the session be?
+  - question: How long will the session last?
     answer: |
       Around 2-4 hours depending on your baby. All sessions are baby led, so if they’re super sleepy, sessions will be on the shorter side but if they need extra feeding, burping or changing, then we will simply take more time. 
 

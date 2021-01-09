@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaAngleDown } from 'react-icons/fa'
-import Transform from '../components/Transform'
+import { Transform } from '../components/Transform'
 // import variables from './variables.scss'
 
 function AccordianItem({ itemData, index, expanded, setExpanded })
@@ -16,7 +16,7 @@ function AccordianItem({ itemData, index, expanded, setExpanded })
         animate={{ backgroundColor: isOpen ? "#BB8556" : "#F2ECE7" }}
         onClick={() => setExpanded(isOpen ? false : index)}
         onKeyDown={() => setExpanded(isOpen ? false : index)}
-        style={{ cursor: 'pointer' }}
+        style={{ cursor: 'pointer', outline: 'none' }}
         role="button"
         tabIndex={0}
       >
@@ -69,7 +69,7 @@ function Accordian({ data })
     <div>
       {data.map((item, index) => (
         <AccordianItem
-          key={index}
+          key={item.question}
           index={index}
           expanded={expanded}
           setExpanded={setExpanded}

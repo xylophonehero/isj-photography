@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 // import { kebabCase } from 'lodash'
 // import { Helmet } from 'react-helmet'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { v4 } from 'uuid'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
@@ -16,7 +16,7 @@ import { FaAngleLeft, FaAngleRight, FaCheck } from 'react-icons/fa'
 // import ScrollLock from 'react-scrolllock'
 import BackgroundImage from 'gatsby-background-image'
 
-import Transform from '../components/Transform'
+import HTMLBlock from '../components/Transform'
 
 // const AnimatedPicture = ({ delay, image }) =>
 // {
@@ -124,10 +124,11 @@ export const SessionPageTemplate = ({
   // tags,
   title,
   gallery,
-  pricing,
-  secondPricing,
+  pricings,
   testimonials,
-  faqs
+  faqs,
+  howItWorks
+
   // helmet,
 }) =>
 {
@@ -180,46 +181,6 @@ export const SessionPageTemplate = ({
   }
   const featuredTestimonial = testimonials.find(x => x.featured)
 
-  const mockpricing = {
-    description: "I offer packages to suit your needs and budget. Choose from the options below and please get in touch if you’d like anything a little different.",
-    tables: [
-      {
-        title: "Pinnacle",
-        image: "GatsbySharpHolder",
-        price: "499",
-        features: [
-          "ahsjahksdjkasd",
-          "ajsdklajskldaj ajdhakjshdjasd",
-          "ahsjdkhasjkda ahdja jah ah jahk",
-          "ahsjdkhasjkda ahdja ah jahk",
-          "ahsjdkhasjkda ahdja asdasdjah ah jahk",
-        ]
-      },
-      {
-        title: "Vista",
-        image: "GatsbySharpHolder",
-        price: "399",
-        features: [
-          "ahsjahksdjkasd",
-          "ajsdklajskldaj ajdhakjshdjasd",
-          "ahsjdkhasjkda ahdja jah ah jahk"
-        ]
-      },
-      {
-        title: "Signature",
-        image: "GatsbySharpHolder",
-        price: "299",
-        features: [
-          "ahsjahksdjkasd",
-          "ajsdklajskldaj ajdhakjshdjasd",
-          "ahsjdkhasjkda ahdja jah ah jahk"
-        ]
-      },
-    ]
-  }
-  pricing = pricing || mockpricing
-  // if (!pricing) { pricing = mockpricing }
-
   return (
     <>
       <section className="section" style={{ perspective: '2px' }}>
@@ -263,55 +224,49 @@ export const SessionPageTemplate = ({
         author={featuredTestimonial.author + " - " + featuredTestimonial.location}
         image={featuredTestimonial.image.childImageSharp.fluid}
       />
+
       <section className="section">
         <div className="container content">
+          {/* How it works */}
+          <Subtitle>How it works</Subtitle>
+          <HTMLBlock content={howItWorks} />
           {/* Pricing */}
-          <div className="columns">
-            <div className="column is-8 is-offset-2">
-              <Subtitle>Pricing</Subtitle>
-              {pricing.description.split("\n").map(item => <p key={item}>{item}</p>)}
-            </div>
-          </div>
-          <div className="columns">
-            {pricing.tables.map((item, index) => (
-              <div className="column" key={item.title}>
-                <div className={`card has-background-white ${index > 0 && "mt-3"}`}>
-                  <header className="card-header">
-
-                    <p className="card-header-title has-text-weight-semibold is-size-3">
-                      {item.title}
-                    </p>
-
-                  </header>
-                  <div className="card-image">
-                    <PreviewCompatibleImage imageInfo={gallery[0].photo} borderRadius={0} />
+          <Subtitle>Pricing</Subtitle>
+          {pricings.map(pricing => (
+            <>
+              <HTMLBlock content={pricing.description} />
+              {/* {pricing.description.split("\n").map(item => <p key={item}>{item}</p>)} */}
+              <div className="columns">
+                {pricing.tables.map((item, index) => (
+                  <div className={`column is-one-third ${pricing.tables.length === 1 && "is-offset-4"}`} key={item.title}>
+                    <div className={`card has-background-white ${index > 0 && "mt-3"}`}>
+                      <header className="card-header">
+                        <p className="card-header-title has-text-weight-semibold is-size-3">
+                          {item.title}
+                        </p>
+                      </header>
+                      <div className="card-image">
+                        <PreviewCompatibleImage imageInfo={gallery[0].photo} borderRadius={0} />
+                      </div>
+                      <div className="card-content">
+                        <p className={`is-size-3 has-text-centered ${index === 0 ? "has-text-primary has-text-weight-bold" : "has-text-weight-semibold"}`}>
+                          {Intl.NumberFormat('en-US', { style: 'currency', currency: 'GBP', minimumFractionDigits: 0, }).format(item.price)}
+                        </p>
+                        <hr />
+                        {item.features?.map(feature => (
+                          <p key={feature}><FaCheck /> {feature}</p>
+                        ))}
+                        <hr />
+                      </div>
+                    </div>
                   </div>
+                ))}
 
-                  <div className="card-content">
-                    <p className={`is-size-3 has-text-centered ${index === 0 ? "has-text-primary has-text-weight-bold" : "has-text-weight-semibold"}`}>
-                      {Intl.NumberFormat('en-US', { style: 'currency', currency: 'GBP', minimumFractionDigits: 0, }).format(item.price)}
-                    </p>
-                    <hr />
-                    {item.features.map(feature => (
-                      <p key={feature}><FaCheck /> {feature}</p>
-                    ))}
-                    <hr />
-
-                  </div>
-
-
-                </div>
               </div>
-            ))}
-
-          </div>
-          {!!pricing.afterDescription &&
-            <div className="columns">
-              <div className="column is-8 is-offset-2">
-                <p dangerouslySetInnerHTML={{ __html: Transform(pricing.afterDescription) }}></p>
-              </div>
-            </div>}
-          {!!secondPricing &&
+              {!!pricing.afterDescription && <HTMLBlock content={pricing.afterDescription} />}
+            </>
+          ))}
+          {/* {!!secondPricing &&
             <>
               <div className="columns">
                 <div className="column is-8 is-offset-2">
@@ -352,30 +307,19 @@ export const SessionPageTemplate = ({
                   <p dangerouslySetInnerHTML={{ __html: secondPricing.afterDescription }} />
                 </div>
               </div>
-            </>}
-          {/* FAQs */}
-          <div className="columns">
-            <div className="column is-8 is-offset-2">
-              <Subtitle>FAQs</Subtitle>
-              <Accordian data={faqs} />
-              {/* {faqs.map(faq =>
-              (
-                <div key={faq.question}>
-                  <p>{faq.question}</p>
-                  <p dangerouslySetInnerHTML={{ __html: Transform(faq.answer) }} />
-                </div>
-              ))} */}
+            </>} */}
+          <div className="hero has-background-light">
+            <div className="hero-body has-text-centered">
+              <p className="is-size-4 pb-3">Contact me to chat about your photoshoot.</p>
+              <Link to="/contact"><button className="button is-primary">Contact me</button></Link>
             </div>
           </div>
-          <Subtitle>Testimonials</Subtitle>
-          <div className="columns is-multiline">
-
-            {testimonials.filter(x => x.featured !== true).map(testimonial => (
-              <div className="column is-half-tablet">
-                <TestimonialCard key={v4()} testimonial={testimonial} alt={true} />
-              </div>
-            ))}
-
+          {/* FAQs */}
+          <Subtitle>FAQs</Subtitle>
+          <div className="columns">
+            <div className="column is-8 is-offset-2">
+              <Accordian data={faqs} />
+            </div>
           </div>
           {/* Gallery */}
           <motion.div
@@ -402,19 +346,21 @@ export const SessionPageTemplate = ({
                   </motion.div>
                 </div>
               ))}
-              {/* {galleryImages.map(item => (
-              <div key={item} className='column is-one-quarter-desktop is-half-tablet'>
-                <motion.div
-                  variants={galleryItemVariants}
-                  className='has-background-primary'
-                  style={{ width: '100%', height: '200px', borderRadius: '5px' }}>
-
-                </motion.div>
-              </div>
-            ))} */}
             </div>
           </motion.div>
         </div>
+        {/* Testimonials */}
+        {testimonials.length > 1 &&
+          <>
+            <Subtitle>Testimonials</Subtitle>
+            <div className="columns is-multiline">
+              {testimonials.filter(x => x.featured !== true).map(testimonial => (
+                <div className="column is-half-tablet">
+                  <TestimonialCard key={v4()} testimonial={testimonial} alt={true} />
+                </div>
+              ))}
+            </div>
+          </>}
         {/* Modal */}
         <AnimatePresence>
           {
@@ -463,10 +409,11 @@ const SessionPage = ({ data }) =>
         // tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         gallery={data.googlePhotosAlbum.photos}
-        pricing={post.frontmatter.pricing}
-        secondPricing={post.frontmatter.secondPricing}
+        pricings={post.frontmatter.pricings}
+        // secondPricing={post.frontmatter.secondPricing}
         testimonials={testimonials}
         faqs={post.frontmatter.faqs}
+        howItWorks={post.frontmatter.howItWorks}
       />
     </Layout>
   )
@@ -487,7 +434,8 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        pricing {
+        howItWorks
+        pricings {
           description
           tables{
             title
@@ -496,15 +444,15 @@ export const pageQuery = graphql`
           }
           afterDescription
         }
-        secondPricing {
-          description
-          tables{
-            title
-            price
-            features
-          }
-          afterDescription
-        }
+        # secondPricing {
+        #   description
+        #   tables{
+        #     title
+        #     price
+        #     features
+        #   }
+        #   afterDescription
+        # }
         faqs{
           question
           answer

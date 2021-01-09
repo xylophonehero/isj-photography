@@ -13,7 +13,8 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
-}) => {
+}) =>
+{
   const PostContent = contentComponent || Content
 
   return (
@@ -22,10 +23,10 @@ export const BlogPostTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+            <h1 className="title is-size-1 has-text-weight-bold is-bold-light has-text-centered is-family-secondary">
               {title}
             </h1>
-            <p>{description}</p>
+            {/* <p>{description}</p> */}
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -41,6 +42,12 @@ export const BlogPostTemplate = ({
             ) : null}
           </div>
         </div>
+        <div className="hero has-background-light">
+          <div className="hero-body has-text-centered">
+            <p className="is-size-4 pb-3">Contact me to chat about your photoshoot.</p>
+            <Link to="/contact"><button className="button is-primary">Contact me</button></Link>
+          </div>
+        </div>
       </div>
     </section>
   )
@@ -54,7 +61,8 @@ BlogPostTemplate.propTypes = {
   helmet: PropTypes.object,
 }
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data }) =>
+{
   const { markdownRemark: post } = data
 
   return (
