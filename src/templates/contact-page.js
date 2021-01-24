@@ -1,7 +1,9 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import { navigate } from 'gatsby-link'
-import Layout from '../../components/Layout'
+import Layout from '../components/Layout'
 import { FaRegEnvelope } from 'react-icons/fa'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 function encode(data)
 {
@@ -10,13 +12,15 @@ function encode(data)
     .join('&')
 }
 
-export default class Index extends React.Component
+export default class ContactPage extends React.Component
 {
   constructor(props)
   {
     super(props)
     this.state = { isValidated: false }
   }
+
+
 
   handleChange = (e) =>
   {
@@ -41,6 +45,8 @@ export default class Index extends React.Component
 
   render()
   {
+    const { description, image } = this.props.data.markdownRemark.frontmatter
+
     return (
       <Layout>
         <section className="section section--gradient">
@@ -51,17 +57,13 @@ export default class Index extends React.Component
                 <hr />
                 <div className="columns">
                   <div className="column is-6">
-                    <p>
-                      If you have any questions then please contact me by email or fill out the form and I will get back to you as quickly as possible.
-                </p>
+                    <PreviewCompatibleImage imageInfo={image} />
+                    <p>{description}</p>
                     <p className="is-flex is-align-content-baseline is-size-3">
-
                       <a href="mailto:isjphoto@hotmail.co.uk"><FaRegEnvelope size="1.5rem" /> isjphoto@hotmail.co.uk</a>
                     </p>
                   </div>
                   <div className="column is-6">
-
-
                     <form
                       name="contact v1"
                       method="post"
@@ -153,3 +155,20 @@ export default class Index extends React.Component
     )
   }
 }
+
+export const contactPageQuery = graphql`
+  query ContactPage{
+    markdownRemark(frontmatter: {templateKey: {eq: "contact-page"}}){
+      frontmatter {
+        description
+        image{
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`

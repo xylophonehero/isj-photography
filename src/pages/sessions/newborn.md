@@ -84,88 +84,77 @@ pricings:
           - Five matching fully edited high-resolution images on USB
     afterDescription: |
       If a package does not fit your needs, there are many individual products you can chose from, additional to your session fee.
-      
-      Ask to see our à la carte options:
-      
-      **Photo prints**
-      
-      - Ten 9’x6’ boxed prints beautifully packaged £199
-      - Five 9’x6’ boxed prints beautifully packaged £99
-      
-      **Digital images**
-      - Ten digital images £399
-      - All digital images £599
-  - description: |
-      ## Sitter Sessions/Older Babies
-    tables:
-      - title: Pinnacle
-        price: 549
-        features:
-          - Up to one-hour session
-          - Face-to-face viewing session
-          - 20+ images in high resolution, fully edited, on a USB stick
-          - Ten mounted 6" x 9" photo prints
-          - High-resolution HD slide show with your images
-          - Full use of props
-          - £100 credit towards a wall art purchase
-          - Facebook timeline cover
-          - £50 off your cake smash session 
-      - title: Vista
-        price: 449
-        features:
-          - Up to one-hour session
-          - Face-to-face viewing session
-          - 10 high-resolution, fully edited photos on a USB stick
-          - Ten 6" x 9" photo prints matching your chosen digital images
-          - High-resolution HD slide show with all your images
-          - Full use of props
-      - title: Signature
-        price: 349
-        features:
-          - Up to one-hour session
-          - Face-to-face viewing session
-          - 5 high-resolution, fully edited photos on a USB stick
-          - Five 6"x 9" prints matching your chosen digital images
-          - Full use of props
-  - description: |
-      ## Cake Smash/ 1st Birthday 
-    tables:
-      - title: Pinnacle
-        price: 549
-        features:
-          - Up to two-hour session
-          - Face-to-face viewing session
-          - Birthday cake
-          - A range of different themes/setups to choose from
-          - Splash bath
-          - 20+ images in high-resolution, fully edited, on a USB stick
-          - Ten mounted 6" x 9" photo prints
-          - High-resolution HD slide show with your images
-          - Full use of props
-          - £100 credit towards a wall art purchase
-          - Facebook timeline cover
-          - £50 off your family session 
-      - title: Vista
-        price: 449
-        features:
-          - Up to two-hour session
-          - Face-to-face viewing session
-          - Birthday cake 
-          - A range of different themes/setups to choose from
-          - Splash bath
-          - 10 high-resolution, fully edited photos on a USB stick
-          - Ten 6" x 9" photo prints matching your chosen digital images
-          - High resolution HD slide show with all your images
-          - Full use of props
-      - title: Signature
-        price: 349
-        features:
-          - Up to two-hour session
-          - Birthday cake 
-          - Face-to-face viewing session
-          - 5 high-resolution, fully edited photos on a USB stick
-          - Five 6"x 9" prints matching your chosen digital images
-          - Full use of props
+  # - description: |
+  #     ## Sitter Sessions/Older Babies
+  #   tables:
+  #     - title: Pinnacle
+  #       price: 549
+  #       features:
+  #         - Up to one-hour session
+  #         - Face-to-face viewing session
+  #         - 20+ images in high resolution, fully edited, on a USB stick
+  #         - Ten mounted 6" x 9" photo prints
+  #         - High-resolution HD slide show with your images
+  #         - Full use of props
+  #         - £100 credit towards a wall art purchase
+  #         - Facebook timeline cover
+  #         - £50 off your cake smash session 
+  #     - title: Vista
+  #       price: 449
+  #       features:
+  #         - Up to one-hour session
+  #         - Face-to-face viewing session
+  #         - 10 high-resolution, fully edited photos on a USB stick
+  #         - Ten 6" x 9" photo prints matching your chosen digital images
+  #         - High-resolution HD slide show with all your images
+  #         - Full use of props
+  #     - title: Signature
+  #       price: 349
+  #       features:
+  #         - Up to one-hour session
+  #         - Face-to-face viewing session
+  #         - 5 high-resolution, fully edited photos on a USB stick
+  #         - Five 6"x 9" prints matching your chosen digital images
+  #         - Full use of props
+  # - description: |
+  #     ## Cake Smash/ 1st Birthday 
+  #   tables:
+  #     - title: Pinnacle
+  #       price: 549
+  #       features:
+  #         - Up to two-hour session
+  #         - Face-to-face viewing session
+  #         - Birthday cake
+  #         - A range of different themes/setups to choose from
+  #         - Splash bath
+  #         - 20+ images in high-resolution, fully edited, on a USB stick
+  #         - Ten mounted 6" x 9" photo prints
+  #         - High-resolution HD slide show with your images
+  #         - Full use of props
+  #         - £100 credit towards a wall art purchase
+  #         - Facebook timeline cover
+  #         - £50 off your family session 
+  #     - title: Vista
+  #       price: 449
+  #       features:
+  #         - Up to two-hour session
+  #         - Face-to-face viewing session
+  #         - Birthday cake 
+  #         - A range of different themes/setups to choose from
+  #         - Splash bath
+  #         - 10 high-resolution, fully edited photos on a USB stick
+  #         - Ten 6" x 9" photo prints matching your chosen digital images
+  #         - High resolution HD slide show with all your images
+  #         - Full use of props
+  #     - title: Signature
+  #       price: 349
+  #       features:
+  #         - Up to two-hour session
+  #         - Birthday cake 
+  #         - Face-to-face viewing session
+  #         - 5 high-resolution, fully edited photos on a USB stick
+  #         - Five 6"x 9" prints matching your chosen digital images
+  #         - Full use of props
 faqs:
   - question: When will we book my session?
     answer: |

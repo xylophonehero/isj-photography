@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import { graphql, StaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import { graphql, StaticQuery } from 'gatsby'
+// import Img from 'gatsby-image'
 import { FaAngleDoubleUp, FaRegEnvelope } from 'react-icons/fa'
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import logo from '../img/isjlogo.svg'
@@ -12,7 +12,7 @@ import { useInView } from 'react-intersection-observer'
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import PreviewCompatibleImage from './PreviewCompatibleImage'
+import PreviewCompatibleImage from './PreviewCompatibleImage'
 // import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 // import logo from '../img/logo.svg'
@@ -28,7 +28,7 @@ const Footer = ({ data }) =>
   const [footerRef, footerInView] = useInView({
     triggerOnce: true
   })
-  const images = data?.allInstaNode.edges
+  const images = data?.allInstagramContent.edges
 
   const variants = {
     hiddden: { opacity: 0 },
@@ -133,18 +133,18 @@ const Footer = ({ data }) =>
                   <motion.a
                     key={item.node.id}
                     className={`column is-one-third-tablet is-half-mobile is-one-fifth-desktop ${index === 5 && "is-hidden-desktop"}`}
-                    href={`https://www.instagram.com/p/${item.node.id}/`}
+                    href={item.node.permalink}
                     rel="noopener noreferrer"
                     target="_blank"
                     variants={imageVariants}
                   >
                     {/* {item.node.localFile.childImageSharp.fixed} */}
-                    {/* <PreviewCompatibleImage imageInfo={item.node.localFile} /> */}
-                    <Img
-                      fluid={{ ...item.node.localFile.childImageSharp.fluid, aspectRatio: 1 }}
+                    <PreviewCompatibleImage imageInfo={item.node.localImage} aspectRatio={1} />
+                    {/* <Img
+                      fluid={{ ...item.node.localImage.childImageSharp.fluid, aspectRatio: 1 }}
                       alt={item.node.id}
 
-                    />
+                    /> */}
                   </motion.a>
                 ))}
               </motion.div>
@@ -197,7 +197,14 @@ const Footer = ({ data }) =>
                 </a>
               </div> */}
           </div>
-          <p className="is-size-7">Website built by <a href="https://nickworrall.co.uk" rel="noopener noreferrer" target="_blank">Nick Worrall</a></p>
+          <div className="columns">
+            <div className="column">
+              <p>Copywright 2021 ISJ Photography</p>
+            </div>
+            <div className="column">
+              <p className="is-size-6">Website built by <a href="https://nickworrall.co.uk" rel="noopener noreferrer" target="_blank">Nick Worrall</a></p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
@@ -213,28 +220,29 @@ Footer.propTypes = {
   })
 }
 
-export default Footer
+// export default Footer
 
-// export default () => (
-//   <StaticQuery
-//     query={graphql`
-//       query Footer {
-//         allInstaNode(limit: 6, sort: {order: DESC, fields: timestamp}) {
-//           edges {
-//             node {
-//               id
-//               localFile {
-//                 childImageSharp {
-//                   fluid(maxWidth: 250, quality: 100) {
-//                     ...GatsbyImageSharpFluid
-//                   }
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     `}
-//     render={data => <Footer data={data} />}
-//   />
-// )
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query Footer {
+        allInstagramContent(limit: 6, sort: {order: DESC, fields: timestamp}) {
+          edges {
+            node {
+              id
+              localImage {
+                childImageSharp {
+                  fluid(maxWidth: 250, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+              permalink
+            }
+          }
+        }
+      }
+    `}
+    render={data => <Footer data={data} />}
+  />
+)

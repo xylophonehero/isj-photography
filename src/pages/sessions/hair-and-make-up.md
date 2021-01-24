@@ -1,78 +1,49 @@
 ---
 templateKey: session-page
-title: Wedding
-howItWorks: |
-  Whether you are planning a wedding in the UK or abroad, I'd love to chat!
+title: Wedding Hair and Makeup
+description: |
+  I run the hair and makeup company, Krstev Kreates, with my husband Zoran. I am a qualified, experienced makeup artist and Zoran is an accomplished hairdresser. 
+  
+  It makes your wedding day go even smoother (and saves you money) to have the same team do your photography and makeup. 
+  
+  If you’d like to book us for both, here are the price packages.
 
-  Every wedding is different, and every couple’s needs are different. 
-
-  That’s why my packages are not set in stone. 
-
-  I work together with my couples to get the package that is best for you, your needs – and your day. There is no wedding too big or too small. 
-
-  There is so much to consider when picking the right photographer for you. 
-
-  There is so much choice nowadays. There are so many different prices, and a lot of the time you don’t even know where to start! 
-
-  If I can offer any advice, it would be fall in love with the work you see first. Your wedding photographs are the one thing that you will have left after the day has finished! 
-
-  The cake gets eaten, the guests go home, the dress goes back in the box. The photographs are the one thing that really helps keep your memories of the day alive. The feelings rush back, and you get to relive the day over and over again every time you look through them. 
-
-  I would absolutely love to tell your story, in a natural, candid, relaxed style. Capturing the raw real emotions and stories, giving you a visual heirloom to be proud of. 
-
-  I am not just your wedding photographer  
-
-  I am your friend. I’m there to make you laugh when you're feeling anxious. I’ll calm you down when you're stressed.
-
-  I’m there when you're about to have that last minute freak-out.
-
-  I am also your makeup artist. I will always have an emergency kit at the ready, and have lashes and glue for when the tears appear.
-
-  I am there for you to help get you into your dress, to do up the zips, fix the ties, fasten the buckles, remind you you've got hair bands on your wrist, hold your bags, have the tissues ready, direct the guests, and can even transport your Auntie Joan to the reception.
-
-  There is no ask too big or too small on your wedding day. If you want to see me, you'll see me. If you want me to blend in with the guests, I can certainly do that too. No two weddings are ever the same, and that is why I love my work so much!
-
-  My style and approach to weddings is very relaxed, non-obtrusive and natural. I capture the moments as they unfold and tell your story through images.
-
-  A wedding should be one of the most important, most memorable days of a couple’s life. As a couple you should be able to take in every single moment, and really enjoy the day you've spent so long planning.  As a photographer, I believe the moments should be captured and turned into memories. The raw emotions should be frozen in time, and the fun should be embraced – not forced, posed or set up. 
-
-  I LOVE capturing weddings! It is literally the biggest honour to be a part of your day! I love how every single wedding and every single couple is different. I will work with and serve you, adapting to every environment. There is no wedding too big or too small. 
-  Get in touch with me by email at <a href="mailto:isjphoto@hotmail.co.uk">isjphoto@hotmail.co.uk</a> if you like my style and would like to know more.  
-
-  I look forward to hearing from you.
-
+  (We’re also available to book for just hair and makeup should you wish, please head to <a href="https://www.facebook.com/krstevkreates/">Krstev Kreates</a> for info)
 pricings:
-  - description: I offer packages to suit your needs and budget. Choose from the options below and please get in touch if you’d like anything a little different.
-    tables:
-      - title: Pinnacle
-        price: 1600
-        features:
-        - 2 photographers
+  - tables:
+    - title: Pinnacle
+      price: 1900
+      features:
+      - 2 photographers
+      - Pre-wedding meeting
+      - Pre-wedding photo shoot
+      - 2 pieces of framed wall art
+      - All digital images
+      - Photos and edited slideshow saved on USB
+      - Luxury 20-page 11’ x 16’ album
+      - 20 thank you cards
+      - Hair and makeup for the bride plus three 
+      - Bridal trial
+    - title: Vista
+      price: 1500
+      features:
+        - 2 Photographers
         - Pre-wedding meeting
         - Pre-wedding photo shoot
-        - 2 pieces of framed wall art
+        - 16’ x 12’ Piece of framed wall art
         - All digital images
         - Photos and edited slideshow saved on USB
-        - Luxury 20-page 11’ x 16’ album
-        - 20 thank you cards
-      - title: Vista
-        price: 1200
-        features:
-          - 2 Photographers
-          - Pre-wedding meeting
-          - Pre-wedding photo shoot
-          - 16’ x 12’ Piece of framed wall art
-          - All digital images
-          - Photos and edited slideshow saved on USB
-          - Classic 5’ x 7’ 20-page album
-      - title: Signature
-        price: 750
-        features:
-          - 1 Photographer
-          - Pre-wedding meeting
-          - 10 retouched 8’ x 10’ prints
-          - All web-ready images
-          - Photos and edited slideshow saved on USB
+        - Classic 5’ x 7’ 20-page album
+        - Hair and makeup for the bride plus three
+    - title: Signature
+      price: 990
+      features:
+        - 1 Photographer
+        - Pre-wedding meeting
+        - 10 retouched 8’ x 10’ prints
+        - All web-ready images
+        - Photos and edited slideshow saved on USB
+        - Hair and makeup for the bride plus two
 faqs:
   - question: Where are you based?
     answer: |

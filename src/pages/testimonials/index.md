@@ -111,4 +111,18 @@ testimonials:
     quote: 
       This will be replaed with a real testimonial as we need one for the engagement couple session.
     image: /img/placeholder.jpg
+  - author: Jane
+    location: Doe
+    tag: Cake Smash
+    featured: true
+    quote: 
+      This will be replaed with a real testimonial as we need one for the engagement couple session.
+    image: /img/placeholder.jpg
+  - author: Jane
+    location: Doe
+    tag: Sitter
+    featured: true
+    quote: 
+      This will be replaed with a real testimonial as we need one for the engagement couple session.
+    image: /img/placeholder.jpg
 ---

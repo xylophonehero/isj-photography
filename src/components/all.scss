@@ -1,13 +1,17 @@
 @import "~bulma/sass/utilities/initial-variables";
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
 
 // Config vars
 // Kaldi logo brand color: #FD461E
 $kaldi-red: #808080;
 $kaldi-red-invert: #fff;
 $blush: #F6DEDA;
-$gold: #BB8556;
+$old-gold: #BB8556;
+$gold:#E0AA7B;
+$gold-2: #e6bb95;
+$gold-3:#f5e9df;
 $mud: #AEA19B;
 $soul: #F2ECE7;
 $storm: #4F4F50;
@@ -29,7 +33,7 @@ $navbar-dropdown-arrow: $storm !important;
 $footer-padding: 3.5rem 1.5rem 6rem;
 
 $family-primary: 'Raleway', sans-serif;
-$family-secondary:'Allura', cursive; 
+$family-secondary:'Tangerine', cursive; 
 
 .linear-gradiant-light{
   background-image: linear-gradient($light, transparent);
@@ -42,6 +46,12 @@ $family-secondary:'Allura', cursive;
 .navbar-link:not(.is-arrowless):hover::after{
   border-color: $gold !important;
 }
+
+.navbar-burger:hover {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+
 
 .navbar-dropdown{
   font-size: 1em;
@@ -105,6 +115,13 @@ $family-secondary:'Allura', cursive;
   outline: none;
 }
 
+.slick-slide div{
+    outline: none
+}
+
+.slick-initialized { overflow: hidden; }
+
+// .overflow-x-hidden{ overflow-x: hidden;}
 
 .navbar .navbar-menu{
   box-shadow: none !important;
@@ -147,23 +164,23 @@ $family-secondary:'Allura', cursive;
   justify-content: center;
   align-items: center;
 }
-.btn{
-  display: inline-block;
-  padding: 12px 16px 10px;
-  font-size: 18px;
-  font-size: 1rem;
-  line-height: 1.25;
-  background-color: #fff;
-  border-radius: .25rem;
-  text-decoration: none;
-  font-weight: 700;
-  color: #CC3700;
-  text-align: center;
-  -webkit-box-shadow: inset 0 0 0 2px #CC3700;
-  box-shadow: inset 0 0 0 2px #f40;
-  -webkit-transition: all .15s ease;
-  transition: all .15s ease;
-}
+// .btn{
+//   display: inline-block;
+//   padding: 12px 16px 10px;
+//   font-size: 18px;
+//   font-size: 1rem;
+//   line-height: 1.25;
+//   background-color: #fff;
+//   border-radius: .25rem;
+//   text-decoration: none;
+//   font-weight: 700;
+//   color: #CC3700;
+//   text-align: center;
+//   -webkit-box-shadow: inset 0 0 0 2px #CC3700;
+//   box-shadow: inset 0 0 0 2px #f40;
+//   -webkit-transition: all .15s ease;
+//   transition: all .15s ease;
+// }
 .margin-top-0{
   margin-top: 0 !important;
 }
@@ -284,7 +301,7 @@ $family-secondary:'Allura', cursive;
     left: 0;
     right: 0;
 
-    transform: translateY(-100vh);
+    transform: translateY(-100%);
     transition: transform .4s ease-in-out .4s;
     pointer-events: none;
     > *{

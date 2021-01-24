@@ -15,12 +15,12 @@ function AccordianItem({ itemData, index, expanded, setExpanded })
         initial={false}
         animate={{ backgroundColor: isOpen ? "#BB8556" : "#F2ECE7" }}
         onClick={() => setExpanded(isOpen ? false : index)}
-        onKeyDown={() => setExpanded(isOpen ? false : index)}
+        onKeyDown={e => e.keyCode === 13 && setExpanded(isOpen ? false : index)}
         style={{ cursor: 'pointer', outline: 'none' }}
         role="button"
         tabIndex={0}
       >
-        <h4 className="card-header-title">{itemData.question}</h4>
+        <h4 className="card-header-title m-0 is-size-5">{itemData.question}</h4>
         <p className="card-header-icon">
           <motion.span
             className="icon"
@@ -46,11 +46,11 @@ function AccordianItem({ itemData, index, expanded, setExpanded })
             transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
           >
             <motion.div
-              variants={{ collapsed: { scale: 0.8 }, open: { scale: 1 } }}
+              variants={{ collapsed: { opacity: 0 }, open: { opacity: 1 } }}
               transition={{ duration: 0.8 }}
               className="content-placeholder card-content"
             >
-              <div className="content"><p dangerouslySetInnerHTML={{ __html: Transform(itemData.answer) }} /></div>
+              <div className="content is-size-6"><p dangerouslySetInnerHTML={{ __html: Transform(itemData.answer) }} /></div>
             </motion.div>
 
           </motion.section>

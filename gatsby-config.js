@@ -66,16 +66,22 @@ module.exports = {
       },
     },
     `gatsby-plugin-smoothscroll`,
+    // {
+    //   resolve: `gatsby-source-instagram`,
+    //   options: {
+    //     username: `1706299453`,
+    //   },
+    // },
     {
-      resolve: `gatsby-source-instagram`,
+      resolve: `gatsby-source-instagram-all`,
       options: {
-        username: `1706299453`,
-      },
+        access_token: process.env.INSTAGRAM_TOKEN
+      }
     },
     {
       resolve: "gatsby-source-google-photos",
       options: {
-        albumsTitles: ["Wedding", "Engagement", "Maternity", "Newborn", "Family", "Landing"],
+        albumsTitles: ["Wedding", "Engagement", "Maternity", "Newborn", "Family", "Landing", "Cake Smash", "Sitter"],
         photosMaxWidth: 2048,
       },
     },

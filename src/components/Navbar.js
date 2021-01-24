@@ -33,7 +33,7 @@ const Navbar = () =>
             role="button"
             tabIndex='0'
             onKeyDown={e => { e.keyCode === 13 && setActive(!active) }}
-            style={{ height: '100px', width: '100px' }}
+            style={{ height: '100px', width: '100px', outline: 'none' }}
           >
             <span />
             <span />
@@ -45,9 +45,39 @@ const Navbar = () =>
           className={`navbar-menu ${active && 'is-active'}`}
         >
           <div className={`navbar-start  is-uppercase`}>
-            <Link className="navbar-item" to="/about">
-              About
+            <div className="navbar-item is-hoverable has-dropdown">
+              <Link className="navbar-link" to="/about">
+                About
               </Link>
+              <div className="navbar-dropdown">
+                <Link className="navbar-item" to="/about/studio">
+                  My studio
+                </Link>
+              </div>
+            </div>
+
+            <div className="navbar-item is-hoverable has-dropdown">
+              <div className="navbar-link">
+                Galleries
+                </div>
+              <div className="navbar-dropdown">
+                <Link className="navbar-item" to="/galleries/engagement">
+                  Engagement
+                </Link>
+                <Link className="navbar-item" to="/galleries/wedding">
+                  Wedding
+                </Link>
+                <Link className="navbar-item" to="/galleries/maternity">
+                  Maternity
+                </Link>
+                <Link className="navbar-item" to="/galleries/newborn">
+                  Newborn
+                </Link>
+                <Link className="navbar-item" to="/galleries/family">
+                  Family
+                </Link>
+              </div>
+            </div>
             <div className="navbar-item is-hoverable has-dropdown">
               <div className="navbar-link">
                 Sessions

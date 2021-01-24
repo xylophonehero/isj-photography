@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import { kebabCase } from 'lodash'
@@ -7,6 +7,9 @@ import Content, { HTMLContent } from '../components/Content'
 import BackgroundImage from 'gatsby-background-image'
 import { GiArrowDunk } from 'react-icons/gi'
 import Slider from 'react-slick'
+import { useInView } from 'react-intersection-observer'
+import { SlideX } from '../components/Animations'
+import Gallery from '../components/Gallery'
 
 // import SessionParallax from '../components/SessionParallax'
 // import VerticalTimeline from '../components/VerticalTimeline'
@@ -17,11 +20,36 @@ import Layout from '../components/Layout'
 // import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
-import Img from 'gatsby-image'
 // import foralEnd from '../img/floral-end.svg'
-import logo from '../img/isjlogo.svg'
+// import logo from '../img/isjlogo.svg'
 
 // import FitText from '@kennethormandy/react-fittext'
+
+const MobileTimelineItem = ({ item, index }) =>
+{
+  const [ref, inView] = useInView({ threshold: 0, triggerOnce: true })
+
+  return (
+    <SlideX animateCondition={inView} amount={'50%'}>
+      <Link to={`/sessions/${kebabCase(item.text)}`}>
+        <BackgroundImage
+          key={item.text}
+          className="hero mt-1"
+          style={{ minHeight: '20vh' }}
+          fluid={item.image.childImageSharp.fluid}
+          // eslint-disable-next-line
+          style={{ backgroundPosition: index === 1 ? '0% 20%' : 'center' }}
+        >
+          <div style={{ backgroundColor: 'rgba(0,0,0,0.4)' }} ref={ref}>
+            <div className="hero-body">
+              <h2 className="is-family-secondary is-size-2 has-text-light p-3">{item.text}</h2>
+            </div>
+          </div>
+        </BackgroundImage>
+      </Link>
+    </SlideX>
+  )
+}
 
 
 export const IndexPageTemplate = ({
@@ -35,10 +63,15 @@ export const IndexPageTemplate = ({
   timelineImages,
   ieashiaPhoto,
   content,
-  contentComponent
+  contentComponent,
+  gallery
 }) =>
 {
   const PageContent = contentComponent || Content
+
+
+  const [aboutRef, aboutInView] = useInView({ threshold: 0, triggerOnce: true })
+  const [timelineRef, timelineInView] = useInView({ threshold: 0, triggerOnce: true })
 
   const variants = {
     hidden: { opacity: 0 },
@@ -56,14 +89,19 @@ export const IndexPageTemplate = ({
     visible: { opacity: 1 }
   }
 
+  const [activeSlide, setActiveSlide] = useState(0)
+
   const settings = {
     infinte: true,
     speed: 2000,
+    swipe: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
-    autoplaySpeed: 5000,
-    cssEase: "ease-in-out"
+    pauseOnHover: false,
+    autoplay: true,
+    autoplaySpeed: 10000,
+    cssEase: "ease-in-out",
+    afterChange: current => setActiveSlide(current)
   }
 
   // const timelinePoints = {
@@ -89,23 +127,49 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
-      <div className="is-hidden-touch">
+      <div>
         <Slider {...settings}>
-          {timelineImages.map(item => (
+          {timelineImages.map((item, index) => (
             <BackgroundImage
               key={item.text}
-              className="hero is-fullheight-with-navbar"
+              className=""
               fluid={item.image.childImageSharp.fluid}
             >
-              <div className="hero-body">
-                <div className="container">
-                  <img src={logo} alt="ISJ Photography" style={{ margin: 'auto' }} />
-                  <div className="columns" style={{ height: '50vh' }}>
-                    <div className="column is-6 is-offset-3 has-text-white is-size-5 is-flex is-justify-content-flex-end is-flex-direction-column">
-                      <div className="p-5 mb-5" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
-                        <p className="is-italic ">"{item.text}"</p>
-                        <p className="has-text-centered">{"Nick"}</p>
+              <div className="hero is-fullheight-with-navbar">
+                <div className="hero-body">
+                  <div className="container">
+                    {/* <img src={logo} alt="ISJ Photography" style={{ margin: 'auto' }} /> */}
+                    {/* <div className="columns" style={{ height: '50vh' }}>
+                      <div className="column is-6 is-offset-3 has-text-white is-size-5 is-flex is-justify-content-flex-end is-flex-direction-column">
+                        <motion.div
+                          className="p-5 mb-5"
+                          style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}
+                          initial={{ opacity: 0, x: 100 }}
+                          animate={activeSlide === index ? { opacity: 1, x: 0, transition: { delay: 0.5, duration: 1 } } : { opacity: 0, x: 100 }}
+                        >
+                          <p className="is-italic ">"{item.text}"</p>
+                          <p className="has-text-centered">{"Nick"}</p>
+                        </motion.div>
                       </div>
+                    </div> */}
+                  </div>
+                </div>
+                <div className="hero-foot is-invisible-mobile">
+                  <div className="container">
+                    <div className="columns">
+                      <div className="column is-6 is-offset-3 has-text-white is-size-5">
+                        <motion.div
+                          className="p-5 mb-6"
+                          style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}
+                          initial={{ opacity: 0, x: 100 }}
+                          animate={activeSlide === index ? { opacity: 1, x: 0, transition: { delay: 0.5, duration: 1 } } : { opacity: 0, x: 100 }}
+                        >
+
+                          <p className="is-italic ">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem exercitationem sapiente excepturi rem esse odit ipsa facilis asperiores nobis enim quos, voluptatum voluptates consectetur voluptas et labore consequatur ut eos."</p>
+                          <p className="has-text-centered">{"Nick"}</p>
+                        </motion.div>
+                      </div>
+
                     </div>
                   </div>
                 </div>
@@ -115,24 +179,9 @@ export const IndexPageTemplate = ({
         </Slider>
       </div>
 
-      <div className="is-hidden-desktop">
+      <div className="is-hidden-desktop overflow-x-hidden">
         {timelineImages.map((item, index) => (
-          <Link key={item.text} to={`/sessions/${kebabCase(item.text)}`}>
-            <BackgroundImage
-              key={item.text}
-              className="hero mt-1"
-              style={{ minHeight: '20vh' }}
-              fluid={item.image.childImageSharp.fluid}
-              // eslint-disable-next-line
-              style={{ backgroundPosition: index === 1 ? '0% 20%' : 'center' }}
-            >
-              <div style={{ backgroundColor: 'rgba(0,0,0,0.4)' }}>
-                <div className="hero-body">
-                  <h2 className="is-family-secondary is-size-2 has-text-light p-3">{item.text}</h2>
-                </div>
-              </div>
-            </BackgroundImage>
-          </Link>
+          <MobileTimelineItem key={item.text} item={item} index={index} />
         ))}
       </div>
 
@@ -154,7 +203,7 @@ export const IndexPageTemplate = ({
           </div>
         </div>
       </section> */}
-      <div className="is-hidden-touch">
+      <div className="is-hidden-touch" ref={timelineRef}>
         <div className="hero linear-gradiant-light">
           <div className="hero-body">
             {/* <div className="is-flex is-justify-content-center"><img src={logo} alt="ISJ Photography" /></div> */}
@@ -166,16 +215,12 @@ export const IndexPageTemplate = ({
               position: 'relative',
             }}
               initial="hidden"
-              animate="visible"
+              animate={timelineInView ? "visible" : "hidden"}
               variants={variants}
             >
               {/* horizontal line */}
               {/* <img src={foralEnd} style={{ position: 'absolute', top: 0, left: 0, height: '3rem', transform: 'rotate(-90deg)' }} alt='floral' /> */}
-              <div
-                className='timeline'
-                style={{ height: '.1rem', width: '82%', position: 'absolute', top: '1.45rem', left: '9%' }}
 
-              />
               {/* <img src={foralEnd} style={{ position: 'absolute', top: 0, right: 0, height: '3rem', transform: 'rotate(90deg)' }} alt='floral' /> */}
               {/* <img src={foralEnd} style={{ position: 'absolute', top: '.57rem', right: '91%', height: '3rem', transform: 'rotate(-90deg)' }} alt='floral' />
               <div
@@ -184,43 +229,52 @@ export const IndexPageTemplate = ({
 
               />
               <img src={foralEnd} style={{ position: 'absolute', top: '.57rem', left: '91%', height: '3rem', transform: 'rotate(90deg)' }} alt='floral' /> */}
-              <div className="columns">
+              <div className="columns m-0">
                 {timelineImages.map(item => (
                   <motion.div
-                    className="column pt-0 mx-1"
+                    className="column py-0 m-0"
                     variants={itemVariants}
                     key={item.text}
                     style={{
                       margin: '1rem',
                       marginTop: '1.5rem'
                     }}>
-                    {/* vertical lines */}
-                    <div className='timeline' style={{ height: '2rem', width: '.125rem', margin: '0 auto' }} />
+
                     <Link to={`/sessions/${kebabCase(item.text)}`}>
                       <motion.div
                         className="card"
                         whileHover={{ scale: 1.1 }}
-                        style={{ originY: 0 }}
+                        style={{ originY: 0, position: 'relative' }}
                       >
-                        <div className="card-image">
-                          <Img fluid={{ ...item.image.childImageSharp.fluid, aspectRatio: 16 / 9 }} />
-                          {/* <PreviewCompatibleImage imageInfo={{ image: item.image }} borderRadius={0} /> */}
+                        <div className="card-image" style={{ backgroundColor: 'rgba(0,0,0,0.4)' }}>
+                          {/* <Img fluid={{ ...item.image.childImageSharp.fluid, aspectRatio: 16 / 9 }} /> */}
+                          <PreviewCompatibleImage imageInfo={item.image} borderRadius={0} aspectRatio={4 / 3} />
                         </div>
-                        <div className="card-header">
-
+                        <div style={{ backgroundColor: 'rgba(0,0,0,0.3)', height: '100%', position: 'absolute', width: '100%', top: 0 }}>
                           <h3
-                            className='card-header-title is-centered subtitle is-3 is-family-secondary has-text-weight-semibold p-2'
+                            className='subtitle is-2 is-family-secondary has-text-white p-2'
+                            style={{
+                              position: 'absolute',
+                              bottom: '10%',
+                              left: '10%',
+                              // backgroundColor: 'rgba(0,0,0,0.4)'
+                              // transform: 'translate(-50%, -50%)',
+                            }}
                           >
                             {item.text}
                           </h3>
-
                         </div>
                       </motion.div>
                     </Link>
-
+                    <div className='timeline' style={{ height: '2rem', width: '.125rem', margin: '0 auto' }} />
                   </motion.div>
                 ))}
               </div>
+              <div
+                className='timeline'
+                style={{ height: '.125rem', width: '80.15%', margin: 'auto' }}
+
+              />
             </motion.div>
           </div>
         </div>
@@ -274,39 +328,61 @@ export const IndexPageTemplate = ({
           </div>
         </div>
       </div> */}
-      <section className="section pt-0">
+      <section className="section ">
         <div className="container">
-          <div className="section">
-            <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <div className="content">
-                  <div className="columns">
-                    <div className="column is-4">
-                      <PreviewCompatibleImage imageInfo={ieashiaPhoto} style={{ height: '100%' }} />
-                    </div>
-                    <div className="column is-8">
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
+              <div className="content" ref={aboutRef}>
+                <div className="columns">
+                  <div className="column is-4 overflow-x-hidden">
+                    <SlideX
+                      amount={-200}
+                      animateCondition={aboutInView}
+                    >
+                      <PreviewCompatibleImage imageInfo={ieashiaPhoto} style={{ height: '100%' }} /></SlideX>
+                  </div>
+                  <div className="column is-8 overflow-x-hidden">
+                    <SlideX
+                      amount={200}
+                      animateCondition={aboutInView}
+                    >
                       <PageContent className="content" content={content} />
                       <p className="is-family-secondary is-size-2">Ieashia</p>
-                    </div>
+                    </SlideX>
                   </div>
-
-                  <div style={{ height: '100vh' }} />
-                  <h3 className="has-text-weight-semibold is-size-2 has-text-centered is-family-secondary">
-                    Latest stories
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <section className="section has-background-white-ter">
+        <div className="container">
+          <div className="is-hidden-touch">
+            <Gallery gallery={gallery} desktop={"one-third"} />
+          </div>
+          <div className="is-hidden-desktop">
+            <Gallery gallery={gallery} mobile={"half"} aspectRatio={1} />
+          </div>
+
+        </div>
+      </section>
+      <section className="section">
+        <div className="container">
+          <h3 className="has-text-weight-semibold is-size-2 has-text-centered is-family-secondary">
+            Latest stories
+                  </h3>
+          <BlogRoll />
+          <div className="has-text-centered">
+
+            <Link to="/blog">
+              <button className="button is-light">Read more</button>
+            </Link>
+
+          </div>
+        </div>
+      </section>
+
     </div>
   )
 }
@@ -344,7 +420,7 @@ const IndexPage = ({ data }) =>
         ieashiaPhoto={frontmatter.ieashiaPhoto}
         contentComponent={HTMLContent}
         content={html}
-        photos={data.googlePhotosAlbum.photos}
+        gallery={data.googlePhotosAlbum.photos}
       />
     </Layout>
   )
@@ -373,20 +449,6 @@ export const pageQuery = graphql`
           description
         }
         description
-        # intro {
-        #   blurbs {
-        #     image {
-        #       childImageSharp {
-        #         fluid(maxWidth: 240, quality: 64) {
-        #           ...GatsbyImageSharpFluid
-        #         }
-        #       }
-        #     }
-        #     text
-        #   }
-        #   heading
-        #   description
-        # }
         timelineImages {
           text
           image {
