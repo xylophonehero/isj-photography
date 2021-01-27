@@ -42,7 +42,7 @@ function WeddingGalleryTemplate({
           <div className="columns is-centered is-multiline">
             {albums.map(album => (
               <div key={album.node.title} className="column is-one-third-desktop is-half-tablet">
-                <Link to={`/galleries/wedding${kebabCase(album.node.title)}`}>
+                <Link to={`/galleries/wedding/${kebabCase(album.node.title)}`}>
                   <motion.div
                     className="card"
                     whileHover={{ scale: 1.1 }}

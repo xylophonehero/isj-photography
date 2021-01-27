@@ -58,7 +58,7 @@
     "clean": "gatsby clean",
     "start": "npm run develop",
     "build": "npm run clean && gatsby build",
-    "develop": "npm run clean && gatsby develop -H 192.168.0.10 -p 8000",
+    "develop": "npm run clean && gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "token": "gatsby-source-google-photos-token"

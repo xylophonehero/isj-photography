@@ -279,7 +279,7 @@ export const SessionPageTemplate = ({
       {/* Testimonials */}
       {testimonials.length > 1 &&
         <Element name="testimonials">
-          <div className="section content is-medium overflow-x-hidden" ref={testimonialsRef}>
+          <div className="section container is-medium overflow-x-hidden" ref={testimonialsRef}>
             <SlideX animateCondition={testimonialsInView} amount={200}>
               <Subtitle >Testimonials</Subtitle>
             </SlideX>

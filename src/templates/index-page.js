@@ -53,13 +53,6 @@ const MobileTimelineItem = ({ item, index }) =>
 
 
 export const IndexPageTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
   timelineImages,
   ieashiaPhoto,
   content,
@@ -409,13 +402,13 @@ const IndexPage = ({ data }) =>
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        // image={frontmatter.image}
+        // title={frontmatter.title}
+        // heading={frontmatter.heading}
+        // subheading={frontmatter.subheading}
+        // mainpitch={frontmatter.mainpitch}
+        // description={frontmatter.description}
+        // intro={frontmatter.intro}
         timelineImages={frontmatter.timelineImages}
         ieashiaPhoto={frontmatter.ieashiaPhoto}
         contentComponent={HTMLContent}
@@ -441,14 +434,14 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       html
       frontmatter {
-        title
-        heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
-        description
+        # title
+        # heading
+        # subheading
+        # mainpitch {
+        #   title
+        #   description
+        # }
+        # description
         timelineImages {
           text
           image {

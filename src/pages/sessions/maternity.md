@@ -20,7 +20,7 @@ howItWorks: |
 
   Make the time for you mama. Be proud of yourself and what you are creating, so in a few months or years’ time you will look back on this time in your life and say “Wow, yes I did that!” 
 pricings:
-  - tables:
+  tables:
     - title: Pinnacle
       price: 499
       features:

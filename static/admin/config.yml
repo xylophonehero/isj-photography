@@ -11,6 +11,8 @@ backend:
 media_folder: static/img
 public_folder: /img
 
+logo_url: https://isj-photography.netlify.app/static/isjlogo-fa67cd99ab1df8e6e710334a6f973b90.svg
+
 collections:
   - name: "blog"
     label: "Blog"
@@ -32,7 +34,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
 
-  - name: session
+  - name: Session
     label: session
     folder: "src/pages/sessions"
     create: true
@@ -46,6 +48,47 @@ collections:
         }
       - { label: Title, name: title, widget: string }
       - { label: Body, name: body, widget: markdown }
+      - { label: How It Works, name: howItWorks, widget: markdown }
+      - {
+          label: Pricings,
+          name: pricings,
+          widget: object,
+          fields:
+            [
+              { label: Description, name: description, widget: markdown },
+              {
+                label: Tables,
+                name: tables,
+                widget: list,
+                fields:
+                  [
+                    { label: Title, name: title, widget: string },
+                    { label: Price, name: price, widget: number },
+                    {
+                      label: Features,
+                      name: features,
+                      widget: list,
+                      field: { label: Feature, name: feature, widget: string },
+                    },
+                  ],
+              },
+              {
+                label: After Description,
+                name: afterDescription,
+                widget: text,
+              },
+            ],
+        }
+      - {
+          label: FAQs,
+          name: faqs,
+          widget: list,
+          fields:
+            [
+              { label: Question, name: question, widget: string },
+              { label: Answer, name: answer, widget: markdown },
+            ],
+        }
 
   - name: "pages"
     label: "Pages"
@@ -60,22 +103,22 @@ collections:
               widget: "hidden",
               default: "index-page",
             }
-          - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Subheading, name: subheading, widget: string }
-          - { label: Letter, name: letter, widget: markdown }
-          - {
-              label: Mainpitch,
-              name: mainpitch,
-              widget: object,
-              fields:
-                [
-                  { label: Title, name: title, widget: string },
-                  { label: Description, name: description, widget: text },
-                ],
-            }
-          - { label: Description, name: description, widget: string }
+          # - { label: Title, name: title, widget: string }
+          # - { label: Image, name: image, widget: image }
+          # - { label: Heading, name: heading, widget: string }
+          # - { label: Subheading, name: subheading, widget: string }
+          # - { label: Letter, name: letter, widget: markdown }
+          # - {
+          #     label: Mainpitch,
+          #     name: mainpitch,
+          #     widget: object,
+          #     fields:
+          #       [
+          #         { label: Title, name: title, widget: string },
+          #         { label: Description, name: description, widget: text },
+          #       ],
+          #   }
+          # - { label: Description, name: description, widget: string }
           # - {
           #     label: Intro,
           #     name: intro,
@@ -103,50 +146,11 @@ collections:
               fields:
                 [
                   { label: Image, name: image, widget: image },
-                  { label: Text, name: text, widget: text },
+                  { label: Text, name: text, widget: string },
                 ],
             }
           - { label: Ieashia Photo, name: ieashiaPhoto, widget: image }
-          - {
-              label: Main,
-              name: main,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                  {
-                    label: Image1,
-                    name: image1,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                  {
-                    label: Image2,
-                    name: image2,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                  {
-                    label: Image3,
-                    name: image3,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                ],
-            }
+          - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"

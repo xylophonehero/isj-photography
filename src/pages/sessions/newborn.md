@@ -48,42 +48,42 @@ howItWorks: |
 
   Let me tell your story
 pricings:
-  - description: |
-      I offer packages to suit your needs and budget. Choose from the options below and please get in touch if you’d like anything a little different.
-      Your £99 deposit is deducted from your chosen package at your viewing & ordering appointment.
-    tables:
-      - title: Pinnacle
-        price: 899
-        features:
-          - 4-hour session
-          - Face-to-face photo viewing
-          - Ten luxury boxed prints of your chosen images (9’x6’)
-          - All 25 + fully edited high-resolution images on USB
-          - Phone app of digital images
-          - High-resolution video slideshow of your favourite images
-          - Facebook timeline cover collage
-          - 20 thank you cards
-          - Full use of studio props
-          - £100 credit towards any wall art purchase
-          - £50 off your sitter session
-      - title: Bloom
-        price: 599
-        features:
-          - 4-hour session
-          - Face-to-face photo viewing
-          - Ten prints of your chosen images (9’x6’)
-          - Ten matching fully edited high-resolution images on USB
-          - High resolution video of your favourite images
-          - Full use of studio props
-      - title: Rise
-        price: 299
-        features:
-          - 4-hour session
-          - Face-to-face photo viewing
-          - Five luxury boxed prints (9’x6’)
-          - Five matching fully edited high-resolution images on USB
-    afterDescription: |
-      If a package does not fit your needs, there are many individual products you can chose from, additional to your session fee.
+  description: |
+    I offer packages to suit your needs and budget. Choose from the options below and please get in touch if you’d like anything a little different.
+    Your £99 deposit is deducted from your chosen package at your viewing & ordering appointment.
+  tables:
+    - title: Pinnacle
+      price: 899
+      features:
+        - 4-hour session
+        - Face-to-face photo viewing
+        - Ten luxury boxed prints of your chosen images (9’x6’)
+        - All 25 + fully edited high-resolution images on USB
+        - Phone app of digital images
+        - High-resolution video slideshow of your favourite images
+        - Facebook timeline cover collage
+        - 20 thank you cards
+        - Full use of studio props
+        - £100 credit towards any wall art purchase
+        - £50 off your sitter session
+    - title: Bloom
+      price: 599
+      features:
+        - 4-hour session
+        - Face-to-face photo viewing
+        - Ten prints of your chosen images (9’x6’)
+        - Ten matching fully edited high-resolution images on USB
+        - High resolution video of your favourite images
+        - Full use of studio props
+    - title: Rise
+      price: 299
+      features:
+        - 4-hour session
+        - Face-to-face photo viewing
+        - Five luxury boxed prints (9’x6’)
+        - Five matching fully edited high-resolution images on USB
+  afterDescription: |
+    If a package does not fit your needs, there are many individual products you can chose from, additional to your session fee.
   # - description: |
   #     ## Sitter Sessions/Older Babies
   #   tables:

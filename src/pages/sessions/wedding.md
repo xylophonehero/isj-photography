@@ -42,11 +42,11 @@ howItWorks: |
   I look forward to hearing from you.
 
 pricings:
-  - description: I offer packages to suit your needs and budget. Choose from the options below and please get in touch if you’d like anything a little different.
-    tables:
-      - title: Pinnacle
-        price: 1600
-        features:
+  description: I offer packages to suit your needs and budget. Choose from the options below and please get in touch if you’d like anything a little different.
+  tables:
+    - title: Pinnacle
+      price: 1600
+      features:
         - 2 photographers
         - Pre-wedding meeting
         - Pre-wedding photo shoot
@@ -55,24 +55,24 @@ pricings:
         - Photos and edited slideshow saved on USB
         - Luxury 20-page 11’ x 16’ album
         - 20 thank you cards
-      - title: Vista
-        price: 1200
-        features:
-          - 2 Photographers
-          - Pre-wedding meeting
-          - Pre-wedding photo shoot
-          - 16’ x 12’ Piece of framed wall art
-          - All digital images
-          - Photos and edited slideshow saved on USB
-          - Classic 5’ x 7’ 20-page album
-      - title: Signature
-        price: 750
-        features:
-          - 1 Photographer
-          - Pre-wedding meeting
-          - 10 retouched 8’ x 10’ prints
-          - All web-ready images
-          - Photos and edited slideshow saved on USB
+    - title: Vista
+      price: 1200
+      features:
+        - 2 Photographers
+        - Pre-wedding meeting
+        - Pre-wedding photo shoot
+        - 16’ x 12’ Piece of framed wall art
+        - All digital images
+        - Photos and edited slideshow saved on USB
+        - Classic 5’ x 7’ 20-page album
+    - title: Signature
+      price: 750
+      features:
+        - 1 Photographer
+        - Pre-wedding meeting
+        - 10 retouched 8’ x 10’ prints
+        - All web-ready images
+        - Photos and edited slideshow saved on USB
 faqs:
   - question: Where are you based?
     answer: |

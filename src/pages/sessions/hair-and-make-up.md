@@ -1,6 +1,6 @@
 ---
 templateKey: session-page
-title: Wedding Hair and Makeup
+title: Hair and Make Up
 description: |
   I run the hair and makeup company, Krstev Kreates, with my husband Zoran. I am a qualified, experienced makeup artist and Zoran is an accomplished hairdresser. 
   
@@ -10,20 +10,20 @@ description: |
 
   (We’re also available to book for just hair and makeup should you wish, please head to <a href="https://www.facebook.com/krstevkreates/">Krstev Kreates</a> for info)
 pricings:
-  - tables:
+  tables:
     - title: Pinnacle
       price: 1900
       features:
-      - 2 photographers
-      - Pre-wedding meeting
-      - Pre-wedding photo shoot
-      - 2 pieces of framed wall art
-      - All digital images
-      - Photos and edited slideshow saved on USB
-      - Luxury 20-page 11’ x 16’ album
-      - 20 thank you cards
-      - Hair and makeup for the bride plus three 
-      - Bridal trial
+        - 2 photographers
+        - Pre-wedding meeting
+        - Pre-wedding photo shoot
+        - 2 pieces of framed wall art
+        - All digital images
+        - Photos and edited slideshow saved on USB
+        - Luxury 20-page 11’ x 16’ album
+        - 20 thank you cards
+        - Hair and makeup for the bride plus three 
+        - Bridal trial
     - title: Vista
       price: 1500
       features:

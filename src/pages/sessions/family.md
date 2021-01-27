@@ -18,10 +18,10 @@ howItWorks: |
 
   It’s time to create your legacy.
 pricings:
-  - tables:
-      - title: Pinnacle
-        price: 899
-        features:
+  tables:
+    - title: Pinnacle
+      price: 899
+      features:
         - Up to two-hour session
         - Face-to-face viewing session
         - Style guide
@@ -32,24 +32,24 @@ pricings:
         - £100 credit towards a wall art purchase
         - Facebook timeline cover
         - £50 off your family session 
-      - title: Vista
-        price: 699
-        features:
-          - Up to two-hour session
-          - Face-to-face viewing session
-          - Style guide
-          - 10 high-resolution, fully edited photos on a USB stick
-          - Ten 6" x 9" photo prints matching your chosen digital images
-          - High resolution HD slide show with all your images
-          - Full use of props
-      - title: Signature
-        price: 499
-        features:
-          - Up to two-hour session
-          - Face-to-face viewing session
-          - Five high-resolution, fully edited photos on a USB stick
-          - Five 6"x 9" prints matching your chosen digital images
-          - Full use of props
+    - title: Vista
+      price: 699
+      features:
+        - Up to two-hour session
+        - Face-to-face viewing session
+        - Style guide
+        - 10 high-resolution, fully edited photos on a USB stick
+        - Ten 6" x 9" photo prints matching your chosen digital images
+        - High resolution HD slide show with all your images
+        - Full use of props
+    - title: Signature
+      price: 499
+      features:
+        - Up to two-hour session
+        - Face-to-face viewing session
+        - Five high-resolution, fully edited photos on a USB stick
+        - Five 6"x 9" prints matching your chosen digital images
+        - Full use of props
 faqs:
   - question: How long will the session last?
     answer: |
