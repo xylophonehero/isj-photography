@@ -30,7 +30,7 @@ const Footer = () =>
     {
       const fetchInstagram = async () =>
       {
-        const res = await fetch("http://localhost:8888/.netlify/functions/instagram")
+        const res = await fetch("https://isj-photography.netlify.app/.netlify/functions/instagram")
           .then(data => data.json())
         setInstagram(res)
         console.log(res)
