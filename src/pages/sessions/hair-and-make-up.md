@@ -1,6 +1,6 @@
 ---
 templateKey: session-page
-title: Hair and Make Up
+title: Hair And Make Up
 description: |
   I run the hair and makeup company, Krstev Kreates, with my husband Zoran. I am a qualified, experienced makeup artist and Zoran is an accomplished hairdresser. 
   
@@ -9,7 +9,7 @@ description: |
   If you’d like to book us for both, here are the price packages.
 
   (We’re also available to book for just hair and makeup should you wish, please head to <a href="https://www.facebook.com/krstevkreates/">Krstev Kreates</a> for info)
-pricings:
+pricing:
   tables:
     - title: Pinnacle
       price: 1900

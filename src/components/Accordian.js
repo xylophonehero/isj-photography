@@ -13,7 +13,7 @@ function AccordianItem({ itemData, index, expanded, setExpanded })
       <motion.header
         className="card-header"
         initial={false}
-        animate={{ backgroundColor: isOpen ? "#BB8556" : "#F2ECE7" }}
+        animate={{ backgroundColor: isOpen ? "#E0AA7B" : "#F2ECE7" }}
         onClick={() => setExpanded(isOpen ? false : index)}
         onKeyDown={e => e.keyCode === 13 && setExpanded(isOpen ? false : index)}
         style={{ cursor: 'pointer', outline: 'none' }}

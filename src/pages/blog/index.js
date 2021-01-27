@@ -31,11 +31,11 @@ export default class BlogIndexPage extends React.Component
           <div className="container">
             <div className="columns">
               <div className="column is-10 is-offset-1">
-                <div className="section">
-                  <h2 className="title is-size-1 has-text-weight-bold has-text-centered is-family-secondary">Blog</h2>
-                  <hr />
-                  {/* <p>Come and see the latest stories</p> */}
-                </div>
+
+                <h2 className="title is-size-1 has-text-weight-bold has-text-centered is-family-secondary">Blog</h2>
+                <hr />
+                {/* <p>Come and see the latest stories</p> */}
+
               </div>
             </div>
             <div className="content">

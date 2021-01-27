@@ -79,6 +79,14 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /\.inline\.svg$/ // See below to configure properly
+        }
+      }
+    },
+    {
       resolve: "gatsby-source-google-photos",
       options: {
         albumsTitles: ["Wedding", "Engagement", "Maternity", "Newborn", "Family", "Landing", "Cake Smash", "Sitter", "Hair And Make Up"],

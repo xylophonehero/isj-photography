@@ -1,34 +1,49 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql, StaticQuery } from 'gatsby'
+import React, { useState, useEffect } from 'react'
+// import PropTypes from 'prop-types'
+// import { graphql, StaticQuery } from 'gatsby'
 // import Img from 'gatsby-image'
 import { FaAngleDoubleUp, FaRegEnvelope } from 'react-icons/fa'
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import logo from '../img/isjlogo.svg'
-import Facebook from '../img/social/facebook.svg'
-import Instagram from '../img/social/instagram.svg'
+import Facebook from '../img/social/facebook.inline.svg'
+import Instagram from '../img/social/instagram.inline.svg'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import { IconContext } from 'react-icons/lib';
 // import PreviewCompatibleImage from './PreviewCompatibleImage'
 
-// import logo from '../img/logo.svg'
-// import facebook from '../img/social/facebook.svg'
-// import instagram from '../img/social/instagram.svg'
-// import twitter from '../img/social/twitter.svg'
-// import vimeo from '../img/social/vimeo.svg'
-
-// const Footer = class extends React.Component
-const Footer = ({ data }) =>
+const Footer = () =>
 {
 
   const [footerRef, footerInView] = useInView({
     triggerOnce: true
   })
-  const images = data?.allInstagramContent.edges
+
+  const [instagram, setInstagram] = useState([])
+
+  useEffect(() =>
+  {
+    try
+    {
+      const fetchInstagram = async () =>
+      {
+        const res = await fetch("http://localhost:8888/.netlify/functions/instagram")
+          .then(data => data.json())
+        setInstagram(res)
+        console.log(res)
+      }
+      fetchInstagram()
+    }
+    catch (e)
+    {
+      console.error(e)
+    }
+  }, [])
+
+  // const images = data?.allInstagramContent.edges
 
   const variants = {
     hiddden: { opacity: 0 },
@@ -58,13 +73,18 @@ const Footer = ({ data }) =>
       <button className="back-to-top has-background-light box has-text-dark" onClick={() => scrollTo('#top')} style={{ outline: 'none' }}>
         <FaAngleDoubleUp />
       </button>
-      <div className="content has-text-centered has-text-black-ter">
+      <div className="has-text-centered has-text-black-ter">
         <div className="container  has-text-black">
           <div style={{ maxWidth: '100vw' }} className="columns">
             <div className="column is-3">
               <img src={logo} alt="isj-photography" style={{ width: '100%', maxWidth: '250px' }} />
               <a href="mailto:isjphoto@hotmail.co.uk" style={{ display: 'block' }}>
-                <FaRegEnvelope size="1rem" /> isjphoto@hotmail.co.uk
+                <span className="icon-text">
+                  <IconContext.Provider value={{ size: '1rem', className: 'mr-2' }}>
+                    <FaRegEnvelope />
+                  </IconContext.Provider>
+                  <span>isjphoto@hotmail.co.uk</span>
+                </span>
               </a>
               <div className="is-flex is-justify-content-center">
                 <a
@@ -73,9 +93,12 @@ const Footer = ({ data }) =>
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="icon">
+                  <span className="icon is-medium">
+                    <Facebook />
+
+                  </span>{/* <span className="icon">
                     <img src={Facebook} alt="Facebook" />
-                  </span>
+                  </span> */}
                 </a>
                 <a
                   className="navbar-item"
@@ -83,47 +106,14 @@ const Footer = ({ data }) =>
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="icon">
-                    <img src={Instagram} alt="Instagram" />
+                  <span className="icon is-medium">
+                    <Instagram />
+
                   </span>
                 </a>
               </div>
-              {/* <section className="menu">
-                <ul className="menu-list">
-                  <li>
-                    <Link to="/" className="navbar-item">
-                      Home
-                      </Link>
-                  </li>
-                  <li>
-                    <Link className="navbar-item" to="/about">
-                      About
-                      </Link>
-                  </li>
-                  <li>
-                    <Link className="navbar-item" to="/products">
-                      Products
-                      </Link>
-                  </li>
-                  <li>
-                    <Link className="navbar-item" to="/contact/examples">
-                      Form Examples
-                      </Link>
-                  </li>
-                  <li>
-                    <a
-                      className="navbar-item"
-                      href="/admin/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Admin
-                      </a>
-                  </li>
-                </ul>
-              </section> */}
             </div>
-            {!!data && <div className="column is-9">
+            {/* {!!data && <div className="column is-9">
               <motion.div className="columns is-multiline is-mobile"
                 animate={footerInView ? 'visible' : ''}
                 initial="hidden"
@@ -138,68 +128,38 @@ const Footer = ({ data }) =>
                     target="_blank"
                     variants={imageVariants}
                   >
-                    {/* {item.node.localFile.childImageSharp.fixed} */}
                     <PreviewCompatibleImage imageInfo={item.node.localImage} aspectRatio={1} />
-                    {/* <Img
-                      fluid={{ ...item.node.localImage.childImageSharp.fluid, aspectRatio: 1 }}
-                      alt={item.node.id}
-
-                    /> */}
+                  </motion.a>
+                ))}
+              </motion.div>
+            </div>} */}
+            {!!instagram && <div className="column is-9">
+              <motion.div className="columns is-multiline is-mobile"
+                animate={footerInView ? 'visible' : ''}
+                initial="hidden"
+                variants={variants}
+              >
+                {instagram.map((item, index) => (
+                  <motion.a
+                    key={item.id}
+                    className={`column is-one-third-tablet is-half-mobile is-one-fifth-desktop ${index === 5 && "is-hidden-desktop"}`}
+                    href={item.permalink}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    variants={imageVariants}
+                  >
+                    <figure class="image is-square">
+                      <img src={item.url} alt="" style={{ objectFit: 'cover', borderRadius: '5px' }} />
+                    </figure>
+                    {/* <img src={item.url} style={{ borderRadius: '5px' }} /> */}
                   </motion.a>
                 ))}
               </motion.div>
             </div>}
-            {/* <div className="column is-4">
-                <section>
-                  <ul className="menu-list">
-                    <li>
-                      <Link className="navbar-item" to="/blog">
-                        Latest Stories
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact">
-                        Contact
-                      </Link>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4 social">
-                <a title="facebook" href="https://facebook.com">
-                  <img
-                    src={facebook}
-                    alt="Facebook"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="twitter" href="https://twitter.com">
-                  <img
-                    className="fas fa-lg"
-                    src={twitter}
-                    alt="Twitter"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="instagram" href="https://instagram.com">
-                  <img
-                    src={instagram}
-                    alt="Instagram"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="vimeo" href="https://vimeo.com">
-                  <img
-                    src={vimeo}
-                    alt="Vimeo"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-              </div> */}
           </div>
           <div className="columns">
             <div className="column">
-              <p>Copywright 2021 ISJ Photography</p>
+              <p>&#169; 2021 ISJ Photography</p>
             </div>
             <div className="column">
               <p className="is-size-6">Website built by <a href="https://nickworrall.co.uk" rel="noopener noreferrer" target="_blank">Nick Worrall</a></p>
@@ -212,37 +172,37 @@ const Footer = ({ data }) =>
 
 }
 
-Footer.propTypes = {
-  data: PropTypes.shape({
-    allInstaNode: PropTypes.shape({
-      edges: PropTypes.array
-    })
-  })
-}
+// Footer.propTypes = {
+//   data: PropTypes.shape({
+//     allInstaNode: PropTypes.shape({
+//       edges: PropTypes.array
+//     })
+//   })
+// }
 
-// export default Footer
+export default Footer
 
-export default () => (
-  <StaticQuery
-    query={graphql`
-      query Footer {
-        allInstagramContent(limit: 6, sort: {order: DESC, fields: timestamp}) {
-          edges {
-            node {
-              id
-              localImage {
-                childImageSharp {
-                  fluid(maxWidth: 250, quality: 100) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-              permalink
-            }
-          }
-        }
-      }
-    `}
-    render={data => <Footer data={data} />}
-  />
-)
+// export default () => (
+//   <StaticQuery
+//     query={graphql`
+//       query Footer {
+//         allInstagramContent(limit: 6, sort: {order: DESC, fields: timestamp}) {
+//           edges {
+//             node {
+//               id
+//               localImage {
+//                 childImageSharp {
+//                   fluid(maxWidth: 250, quality: 100) {
+//                     ...GatsbyImageSharpFluid
+//                   }
+//                 }
+//               }
+//               permalink
+//             }
+//           }
+//         }
+//       }
+//     `}
+//     render={data => <Footer data={data} />}
+//   />
+// )

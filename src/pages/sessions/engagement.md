@@ -7,7 +7,7 @@ howItWorks: |
   These sessions are really informal and it’s a great way for us to get to know each other more. You’ll see how I work, and I’ll get a feel for your personalities and what your day will be like. There is nothing worse than feeling awkward or not vibing with your photographer. I’ll be spending the whole of your big day day with you and it’s your most important day. So, I want to be your friend. I want you to feel happy, safe and comfortable with me – that’s when we get the best photos!
 
   This session can be at a location of your choice. A place that’s special and important to you both, such as where you first met or got engaged.
-pricings:
+pricing:
   tables:
     - title: Engagement/Couples
       price: 249

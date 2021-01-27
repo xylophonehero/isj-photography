@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { Link } from 'gatsby'
 // import github from '../img/github-icon.svg'
 import logo from '../img/isjlogo.svg'
-import Facebook from '../img/social/facebook.svg'
-import Instagram from '../img/social/instagram.svg'
+import Facebook from '../img/social/facebook.inline.svg'
+import Instagram from '../img/social/instagram.inline.svg'
 // import { ReactComponent as AltFacebook } from '../img/social/instagram.svg'
 // import { set } from 'lodash'
 
@@ -76,6 +76,7 @@ const Navbar = () =>
                 <Link className="navbar-item" to="/galleries/family">
                   Family
                 </Link>
+
               </div>
             </div>
             <div className="navbar-item is-hoverable has-dropdown">
@@ -97,6 +98,12 @@ const Navbar = () =>
                 </Link>
                 <Link className="navbar-item" to="/sessions/family">
                   Family
+                </Link>
+                <Link className="navbar-item" to="/sessions/sitter">
+                  Sitter
+                </Link>
+                <Link className="navbar-item" to="/sessions/cake-smash">
+                  Cake Smash
                 </Link>
               </div>
             </div>
@@ -126,9 +133,13 @@ const Navbar = () =>
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="icon">
-                <img src={Facebook} alt="Facebook" style={{ maxWidth: '2rem' }} />
+              <span className="icon is-medium">
+                <Facebook />
+
               </span>
+              {/* <span className="icon">
+                <img src={Facebook} alt="Facebook" style={{ maxWidth: '2rem' }} />
+              </span> */}
             </a>
             <a
               className="navbar-item"
@@ -136,9 +147,13 @@ const Navbar = () =>
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="icon">
-                <img src={Instagram} alt="Instagram" style={{ maxWidth: '2rem' }} />
+              <span className="icon is-medium">
+                <Instagram />
+
               </span>
+              {/* <span className="icon">
+                <img src={Instagram} alt="Instagram" style={{ maxWidth: '2rem' }} />
+              </span> */}
               {/* <AltFacebook /> */}
             </a>
           </div>

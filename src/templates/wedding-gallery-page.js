@@ -37,7 +37,7 @@ function WeddingGalleryTemplate({
 
         </div>
       </section>
-      <section className="section has-background-white-ter">
+      <section className="section ">
         <div className="container">
           <div className="columns is-centered is-multiline">
             {albums.map(album => (
@@ -71,7 +71,7 @@ function WeddingGalleryTemplate({
           </div>
         </div>
       </section>
-      <div className="hero">
+      <div className="hero has-background-white-ter">
         <div className="hero-body has-text-centered">
           <p className="is-size-4 pb-3">Contact me to chat about your photoshoot.</p>
           <Link to="/contact"><button className="button is-primary">Contact me</button></Link>

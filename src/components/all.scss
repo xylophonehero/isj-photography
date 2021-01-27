@@ -29,11 +29,18 @@ $navbar-item-img-max-height: 5rem;
 $navbar-dropdown-background-color: $soul;
 $navbar-dropdown-item-hover-color: $gold;
 $navbar-dropdown-arrow: $storm !important;
+$navbar-item-hover-background-color: transparent;
 
 $footer-padding: 3.5rem 1.5rem 6rem;
 
 $family-primary: 'Raleway', sans-serif;
 $family-secondary:'Tangerine', cursive; 
+
+
+$size-1: 4rem;
+$size-2: 3.5rem;
+
+
 
 .linear-gradiant-light{
   background-image: linear-gradient($light, transparent);
@@ -185,7 +192,11 @@ $family-secondary:'Tangerine', cursive;
   margin-top: 0 !important;
 }
 .navbar-item .icon{
-  color: $primary;}
+  color: $primary;
+  :hover{
+    color: $storm;
+  }
+}
 // Override for use of svg's from https://simpleicons.org/
 .icon svg{
   width: 1.5rem;

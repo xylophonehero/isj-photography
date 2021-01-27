@@ -17,7 +17,7 @@ howItWorks: |
   I want to help you create images that you can proudly hang in every room of the house, and even give as a gift to the grandparents.
 
   It’s time to create your legacy.
-pricings:
+pricing:
   tables:
     - title: Pinnacle
       price: 899

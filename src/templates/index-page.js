@@ -10,6 +10,7 @@ import Slider from 'react-slick'
 import { useInView } from 'react-intersection-observer'
 import { SlideX } from '../components/Animations'
 import Gallery from '../components/Gallery'
+import Banner from '../components/Banner'
 
 // import SessionParallax from '../components/SessionParallax'
 // import VerticalTimeline from '../components/VerticalTimeline'
@@ -263,10 +264,12 @@ export const IndexPageTemplate = ({
                   </motion.div>
                 ))}
               </div>
-              <div
+              <motion.div
                 className='timeline'
-                style={{ height: '.125rem', width: '80.15%', margin: 'auto' }}
-
+                style={{ height: '.125rem', marginLeft: '9.93%' }}
+                animate={{ width: timelineInView ? '80.15%' : '0%' }}
+                initial={{ width: '0%' }}
+                transition={{ duration: 2, delay: 0.4 }}
               />
             </motion.div>
           </div>
@@ -375,7 +378,7 @@ export const IndexPageTemplate = ({
           </div>
         </div>
       </section>
-
+      <Banner backgroundColor="white-ter" />
     </div>
   )
 }

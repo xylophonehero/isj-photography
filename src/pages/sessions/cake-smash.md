@@ -3,7 +3,7 @@ templateKey: session-page
 title: Cake Smash
 description: |
 
-pricings:
+pricing:
   description: |
     ## Cake Smash/ 1st Birthday 
   tables:

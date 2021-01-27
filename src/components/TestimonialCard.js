@@ -39,7 +39,7 @@ const TestimonialCard = ({ testimonial, alt }) =>
                 {/* <p className="is-hidden-widescreen">{testimonial.location}</p> */}
               </div>
 
-              <div className="column content">
+              <div className="column">
                 <p className="title is-4 is-hidden-touch is-hidden-desktop-only">{testimonial.author + " from " + testimonial.location}</p>
                 {/* <p className="is-hidden-touch is-hidden-desktop-only">{testimonial.location}</p> */}
                 <cite>"{testimonial.quote}"</cite>

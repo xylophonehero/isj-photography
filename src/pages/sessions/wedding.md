@@ -41,7 +41,7 @@ howItWorks: |
 
   I look forward to hearing from you.
 
-pricings:
+pricing:
   description: I offer packages to suit your needs and budget. Choose from the options below and please get in touch if you’d like anything a little different.
   tables:
     - title: Pinnacle

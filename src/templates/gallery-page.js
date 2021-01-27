@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 // import { motion, AnimatePresence } from 'framer-motion'
@@ -8,6 +8,7 @@ import Content, { HTMLContent } from '../components/Content'
 import { Title } from '../components/Styled'
 // import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 import Gallery from '../components/Gallery'
+import Banner from '../components/Banner'
 
 // const GalleryModal = ({ setModalActive, activeItem, handleDirectionClick }) =>
 // {
@@ -104,12 +105,7 @@ export const GalleryPageTemplate = ({
 
         </div>
       </section>
-      <div className="hero has-background-white-ter mt-6">
-        <div className="hero-body has-text-centered">
-          <p className="is-size-4 pb-3">Contact me to chat about your photoshoot.</p>
-          <Link to="/contact"><button className="button is-primary">Contact me</button></Link>
-        </div>
-      </div>
+      <Banner backgroundColor="white-ter" />
     </>
   )
 }

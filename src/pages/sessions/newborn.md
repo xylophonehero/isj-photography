@@ -47,7 +47,7 @@ howItWorks: |
   I absolutely love these sessions as their little cheeky personalities are staring to shine and I get to capture all the details that make unique and perfect.                    
 
   Let me tell your story
-pricings:
+pricing:
   description: |
     I offer packages to suit your needs and budget. Choose from the options below and please get in touch if you’d like anything a little different.
     Your £99 deposit is deducted from your chosen package at your viewing & ordering appointment.

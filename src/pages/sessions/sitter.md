@@ -3,7 +3,7 @@ templateKey: session-page
 title: Sitter
 description: |
 
-pricings:
+pricing:
   description: |
     ## Sitter Sessions/Older Babies
   tables:

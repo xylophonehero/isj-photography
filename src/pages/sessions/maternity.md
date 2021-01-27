@@ -19,7 +19,7 @@ howItWorks: |
   At your maternity session, I will take good care of you. I will feed you snacks, have caffeine-free drinks on tap for you, do your makeup, and you also can choose if you’d like to book for your hair to be done too. 
 
   Make the time for you mama. Be proud of yourself and what you are creating, so in a few months or years’ time you will look back on this time in your life and say “Wow, yes I did that!” 
-pricings:
+pricing:
   tables:
     - title: Pinnacle
       price: 499
