@@ -104,32 +104,32 @@ testimonials:
     quote: 
       I can’t thank you enough for giving me the most beautiful photos in the world. You were so welcoming, and made me feel so at ease. I can’t wait to come back every year for Christmas photos, and also for Harley’s birthday photos too! You’re an amazing photographer.
     image: /img/testimonial-suzanne.jpg
-  - author: Jane
-    location: Doe
-    tag: Engagement
-    featured: true
-    quote: 
-      This will be replaed with a real testimonial as we need one for the engagement couple session.
-    image: /img/placeholder.jpg
-  - author: Jane
-    location: Doe
-    tag: Cake Smash
-    featured: true
-    quote: 
-      This will be replaed with a real testimonial as we need one for the engagement couple session.
-    image: /img/placeholder.jpg
-  - author: Jane
-    location: Doe
-    tag: Sitter
-    featured: true
-    quote: 
-      This will be replaed with a real testimonial as we need one for the engagement couple session.
-    image: /img/placeholder.jpg
-  - author: Jane
-    location: Doe
-    tag: Hair And Make Up
-    featured: true
-    quote: 
-      This will be replaed with a real testimonial as we need one for the engagement couple session.
-    image: /img/placeholder.jpg
+  # - author: Jane
+  #   location: Doe
+  #   tag: Engagement
+  #   featured: true
+  #   quote: 
+  #     This will be replaed with a real testimonial as we need one for the engagement couple session.
+  #   image: /img/placeholder.jpg
+  # - author: Jane
+  #   location: Doe
+  #   tag: Cake Smash
+  #   featured: true
+  #   quote: 
+  #     This will be replaed with a real testimonial as we need one for the cake smash session.
+  #   image: /img/placeholder.jpg
+  # - author: Jane
+  #   location: Doe
+  #   tag: Sitters
+  #   featured: true
+  #   quote: 
+  #     This will be replaed with a real testimonial as we need one for the engagement couple session.
+  #   image: /img/placeholder.jpg
+  # - author: Jane
+  #   location: Doe
+  #   tag: Hair And Make Up
+  #   featured: true
+  #   quote: 
+  #     This will be replaed with a real testimonial as we need one for the engagement couple session.
+  #   image: /img/placeholder.jpg
 ---

@@ -57,9 +57,9 @@ const Navbar = () =>
             </div>
 
             <div className="navbar-item is-hoverable has-dropdown">
-              <div className="navbar-link">
+              <Link className="navbar-link" to="/galleries">
                 Galleries
-                </div>
+                </Link>
               <div className="navbar-dropdown">
                 <Link className="navbar-item" to="/galleries/engagement">
                   Engagement
@@ -80,9 +80,9 @@ const Navbar = () =>
               </div>
             </div>
             <div className="navbar-item is-hoverable has-dropdown">
-              <div className="navbar-link">
+              <Link className="navbar-link" to="/sessions">
                 Sessions
-                </div>
+                </Link>
               <div className="navbar-dropdown">
                 <Link className="navbar-item" to="/sessions/engagement">
                   Engagement
@@ -99,8 +99,8 @@ const Navbar = () =>
                 <Link className="navbar-item" to="/sessions/family">
                   Family
                 </Link>
-                <Link className="navbar-item" to="/sessions/sitter">
-                  Sitter
+                <Link className="navbar-item" to="/sessions/sitters">
+                  Sitters
                 </Link>
                 <Link className="navbar-item" to="/sessions/cake-smash">
                   Cake Smash
@@ -110,21 +110,12 @@ const Navbar = () =>
             <Link className="navbar-item" to="/testimonials">
               Testimonials
               </Link>
-            {/* <Link className="navbar-item" to="/shop">
-              Shop
-              </Link> */}
             <Link className="navbar-item" to="/blog">
               Blog
               </Link>
             <Link className="navbar-item" to="/contact">
               Contact
               </Link>
-            {/* <Link className="navbar-item" to="/blank">
-              Blank
-              </Link>
-            <Link className="navbar-item" to="/contact/examples">
-              Form Examples
-              </Link> */}
           </div>
           <div className="navbar-end has-text-centered">
             <a

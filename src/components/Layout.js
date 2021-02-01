@@ -22,6 +22,16 @@ const TemplateWrapper = ({ children }) =>
           href={`${withPrefix('/')}img/apple-touch-icon.png`}
         />
         <link
+          rel="android-chrome"
+          sizes="192x192"
+          href={`${withPrefix('/')}img/android-chrome-192x192.png`}
+        />
+        <link
+          rel="android-chrome"
+          sizes="512x512"
+          href={`${withPrefix('/')}img/android-chrome-512x512.png`}
+        />
+        <link
           rel="icon"
           type="image/png"
           href={`${withPrefix('/')}img/favicon-32x32.png`}
@@ -37,16 +47,16 @@ const TemplateWrapper = ({ children }) =>
         <link
           rel="mask-icon"
           href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
-          color="#ff4400"
+          color="#E0AA7B"
         />
-        <meta name="theme-color" content="#fff" />
+        <meta name="theme-color" content="#E0AA7B" />
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
         <meta
           property="og:image"
-          content={`${withPrefix('/')}img/og-image.jpg`}
+          content={`${withPrefix('/')}img/og-image.png`}
         />
       </Helmet>
       <Navbar />

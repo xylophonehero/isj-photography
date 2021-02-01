@@ -29,28 +29,13 @@ howItWorks: |
   We are responsible for writing their story and it starts right here. 
 
   If you like what you see, contact me today to secure your session.
-
-  ### Sitter/Older babies
-
-  These shoots are designed for babies between 6-10 months old, who can sit up confidently unaided but are not yet walking. 
-
-  My mum always used to say how fast time goes by, and that we were growing up too fast. All the while, I was impatiently waiting to grow up and become independent. 
-
-  Fast forward 20 years, and here I am wishing my baby would stop growing up so fast!  I’m not the one telling every newborn client how quickly they grow.
-
-  The love for our babies grows more by the day, but the earliest memories will fade a bit and their tiny toes will grow. 
-
-  This is why these sessions are perfect for capturing and preserving your littles one’s gummy smiles, arm rolls and chubby toes. 
-
-  They won’t be this little again. 
-
-  I absolutely love these sessions as their little cheeky personalities are staring to shine and I get to capture all the details that make unique and perfect.                    
-
-  Let me tell your story
 pricing:
   description: |
     I offer packages to suit your needs and budget. Choose from the options below and please get in touch if you’d like anything a little different.
+
     Your £99 deposit is deducted from your chosen package at your viewing & ordering appointment.
+
+    If a package does not fit your needs, there are many individual products you can chose from, additional to your session fee.
   tables:
     - title: Pinnacle
       price: 899
@@ -82,8 +67,7 @@ pricing:
         - Face-to-face photo viewing
         - Five luxury boxed prints (9’x6’)
         - Five matching fully edited high-resolution images on USB
-  afterDescription: |
-    If a package does not fit your needs, there are many individual products you can chose from, additional to your session fee.
+
   # - description: |
   #     ## Sitter Sessions/Older Babies
   #   tables:

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 // import { motion, AnimatePresence } from 'framer-motion'
@@ -9,42 +9,11 @@ import { Title } from '../components/Styled'
 // import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 import Gallery from '../components/Gallery'
 import Banner from '../components/Banner'
-
-// const GalleryModal = ({ setModalActive, activeItem, handleDirectionClick }) =>
-// {
-//   return (
-//     <div className="modal is-active" style={{ position: 'fixed' }}>
-//       <motion.div
-//         onClick={() => setModalActive(false)}
-//         className="modal-background"
-//         initial={{ opacity: 0 }}
-//         animate={{ opacity: 1 }}
-//         exit={{ opacity: 0 }}
-//       />
-//       <motion.div
-//         className="modal-content is-clipped"
-//         initial={{ opacity: 0, y: 100, scale: 0.5 }}
-//         animate={{ opacity: 1, y: 0, scale: 1 }}
-//         exit={{ opacity: 0, y: 100, scale: 0.5 }}
-//       >
-//         {/* TODO animate left and right images */}
-//         <motion.div>
-//           <PreviewCompatibleImage imageInfo={activeItem} />
-//         </motion.div>
-//         <div className="is-flex is-justify-content-center">
-//           <button className="is-large mt-2 gallery-arrow" aria-label="left" onClick={() => handleDirectionClick(-1)}><FaAngleLeft /></button>
-//           <button className="is-large mt-2 gallery-arrow" aria-label="right" onClick={() => handleDirectionClick(1)}><FaAngleRight /></button>
-//         </div>
-//       </motion.div>
-
-//       <button className="modal-close is-large" aria-label="close" onClick={() => setModalActive(false)} style={{ position: 'fixed' }} />
-//     </div>
-//   )
-// }
-
+import { kebabCase } from 'lodash'
 
 export const GalleryPageTemplate = ({
   title,
+  to,
   gallery,
   content,
   contentComponent
@@ -52,46 +21,6 @@ export const GalleryPageTemplate = ({
 {
 
   const PostContent = contentComponent || Content
-
-  // const [modalActive, setModalActive] = useState(false)
-  // const [modalPhotoIndex, setModalPhotoIndex] = useState(0)
-
-  // const handleGalleryClick = (index) =>
-  // {
-  //   setModalPhotoIndex(index)
-  //   setModalActive(true)
-  // }
-
-  // const handleDirectionClick = (direction) =>
-  // {
-  //   const maxIndex = gallery.length - 1
-  //   if (direction === -1 && modalPhotoIndex === 0)
-  //   {
-  //     setModalPhotoIndex(maxIndex)
-  //     return;
-  //   }
-  //   if (direction === 1 && modalPhotoIndex === maxIndex)
-  //   {
-  //     setModalPhotoIndex(0)
-  //     return;
-  //   }
-  //   setModalPhotoIndex(modalPhotoIndex + direction)
-  // }
-
-  // const galleryVariants = {
-  //   hidden: { opacity: 0 },
-  //   visible: {
-  //     opacity: 1,
-  //     transition: {
-  //       staggerChildren: 0.1
-  //     }
-  //   }
-  // }
-  // const galleryItemVariants = {
-  //   hidden: { opacity: 0 },
-  //   visible: { opacity: 1 }
-
-  // }
 
   return (
     <>
@@ -101,8 +30,13 @@ export const GalleryPageTemplate = ({
           <hr />
           <PostContent content={content} className="has-text-centered is-size-5" />
           {/* Gallery */}
-          <Gallery gallery={gallery} />
+          <Gallery gallery={gallery} aspectRatio={4 / 3} objectPosition={title === 'Headshots' ? "30%" : 'center'} />
 
+        </div>
+        <div className="has-text-centered mt-5">
+          <Link to={`/sessions/${!!to ? to : kebabCase(title)}`}>
+            <button className="button is-primary">More Info and Pricing</button>
+          </Link>
         </div>
       </section>
       <Banner backgroundColor="white-ter" />
@@ -127,6 +61,7 @@ const GalleryPage = ({ data }) =>
     <Layout>
       <GalleryPageTemplate
         title={post.frontmatter.title}
+        to={post.frontmatter.to}
         gallery={gallery}
         content={post.html}
         contentComponent={HTMLContent}
@@ -151,6 +86,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        to
       }
     }
     googlePhotosAlbum(title: {eq: $title}) {

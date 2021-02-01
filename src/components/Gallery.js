@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 import { useInView } from 'react-intersection-observer'
-
+import Img from 'gatsby-image'
 const GalleryModal = ({ setModalActive, activeItem, handleDirectionClick }) =>
 {
   return (
@@ -22,12 +22,25 @@ const GalleryModal = ({ setModalActive, activeItem, handleDirectionClick }) =>
         exit={{ opacity: 0, y: 100, scale: 0.5 }}
       >
         {/* TODO animate left and right images */}
-        <motion.div>
-          <PreviewCompatibleImage imageInfo={activeItem} borderRadius={0} />
-        </motion.div>
-        <div className="is-flex is-justify-content-center">
-          <button className="is-large mt-2 gallery-arrow" aria-label="left" onClick={() => handleDirectionClick(-1)}><FaAngleLeft /></button>
-          <button className="is-large mt-2 gallery-arrow" aria-label="right" onClick={() => handleDirectionClick(1)}><FaAngleRight /></button>
+        {/* <div className="columns is-mobile is-gapless">
+
+          <div className="column is-narrow is-flex">
+            <button className="is-large mt-2 gallery-arrow" aria-label="left" onClick={() => handleDirectionClick(-1)}><FaAngleLeft /></button>
+          </div>
+          <div className="column">
+            <PreviewCompatibleImage imageInfo={activeItem} borderRadius={0} />
+          </div>
+
+          <div className="column is-narrow">
+            <button className="is-large mt-2 gallery-arrow" aria-label="right" onClick={() => handleDirectionClick(1)}><FaAngleRight /></button>
+          </div>
+        </div> */}
+        <div >
+          <PreviewCompatibleImage imageInfo={activeItem} borderRadius={0} style={{ maxHeight: '80vh' }} />
+          <div className="is-flex is-justify-content-center" style={{ height: '69px' }}>
+            <button className="is-large mt-2 gallery-arrow" aria-label="left" onClick={() => handleDirectionClick(-1)}><FaAngleLeft /></button>
+            <button className="is-large mt-2 gallery-arrow" aria-label="right" onClick={() => handleDirectionClick(1)}><FaAngleRight /></button>
+          </div>
         </div>
       </motion.div>
 
@@ -36,7 +49,7 @@ const GalleryModal = ({ setModalActive, activeItem, handleDirectionClick }) =>
   )
 }
 
-function Gallery({ gallery, desktop = "one-quarter", tablet = "half", mobile = "full", aspectRatio = 16 / 9 })
+function Gallery({ gallery, desktop = "one-quarter", tablet = "half", mobile = "full", aspectRatio = 16 / 9, objectPosition = 'center' })
 {
 
   const [modalActive, setModalActive] = useState(false)
@@ -102,7 +115,8 @@ function Gallery({ gallery, desktop = "one-quarter", tablet = "half", mobile = "
                 onClick={() => handleGalleryClick(index)}
 
               >
-                <PreviewCompatibleImage imageInfo={photo.photo} aspectRatio={aspectRatio} />
+                {/* <PreviewCompatibleImage imageInfo={photo.photo} aspectRatio={aspectRatio} style={{ objectPosition: 'top' }} /> */}
+                <Img fluid={{ ...photo.photo.childImageSharp.fluid, aspectRatio: aspectRatio }} style={{ borderRadius: '5px' }} imgStyle={{ objectPosition: `center ${objectPosition}` }} />
               </motion.div>
             </div>
           ))}

@@ -40,6 +40,9 @@ $family-secondary:'Tangerine', cursive;
 $size-1: 4rem;
 $size-2: 3.5rem;
 
+.modal-content{
+  max-height: calc(100vh - 20px) !important;
+}
 
 
 .linear-gradiant-light{
@@ -58,6 +61,16 @@ $size-2: 3.5rem;
     background-color: rgba(0, 0, 0, 0) !important;
 }
 
+.has-background-black-opacity{
+  background-color: rgba($storm, 0.79) !important;
+  box-shadow: 0 0 20px 20px rgba($storm,0.8) !important;
+}
+
+.hero-foot{
+      /* background-color: rgba(79, 79, 80, 0.69) !important; */
+    background-image: linear-gradient(to bottom, transparent,$black);
+    padding-top: 10rem;
+}
 
 
 .navbar-dropdown{

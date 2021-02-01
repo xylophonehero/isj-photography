@@ -11,6 +11,8 @@ backend:
 media_folder: static/img
 public_folder: /img
 
+site_url: https://isj-photography.netlify.app
+
 logo_url: https://isj-photography.netlify.app/static/isjlogo-fa67cd99ab1df8e6e710334a6f973b90.svg
 
 collections:
@@ -50,8 +52,8 @@ collections:
       - { label: Body, name: body, widget: markdown }
       - { label: How It Works, name: howItWorks, widget: markdown }
       - {
-          label: Pricings,
-          name: pricings,
+          label: Pricing,
+          name: pricing,
           widget: object,
           fields:
             [
@@ -71,11 +73,6 @@ collections:
                       field: { label: Feature, name: feature, widget: string },
                     },
                   ],
-              },
-              {
-                label: After Description,
-                name: afterDescription,
-                widget: text,
               },
             ],
         }
@@ -103,42 +100,17 @@ collections:
               widget: "hidden",
               default: "index-page",
             }
-          # - { label: Title, name: title, widget: string }
-          # - { label: Image, name: image, widget: image }
-          # - { label: Heading, name: heading, widget: string }
-          # - { label: Subheading, name: subheading, widget: string }
-          # - { label: Letter, name: letter, widget: markdown }
-          # - {
-          #     label: Mainpitch,
-          #     name: mainpitch,
-          #     widget: object,
-          #     fields:
-          #       [
-          #         { label: Title, name: title, widget: string },
-          #         { label: Description, name: description, widget: text },
-          #       ],
-          #   }
-          # - { label: Description, name: description, widget: string }
-          # - {
-          #     label: Intro,
-          #     name: intro,
-          #     widget: object,
-          #     fields:
-          #       [
-          #         { label: Heading, name: heading, widget: string },
-          #         { label: Description, name: description, widget: text },
-          #         {
-          #           label: Blurbs,
-          #           name: blurbs,
-          #           widget: list,
-          #           fields:
-          #             [
-          #               { label: Image, name: image, widget: image },
-          #               { label: Text, name: text, widget: text },
-          #             ],
-          #         },
-          #       ],
-          #   }
+          - {
+              label: Slider Images,
+              name: sliderImages,
+              widget: list,
+              fields:
+                [
+                  { label: Image, name: image, widget: image },
+                  { label: Quote, name: quote, widget: text },
+                  { label: Author, name: author, widget: string },
+                ],
+            }
           - {
               label: Timeline Images,
               name: timelineImages,
@@ -175,117 +147,6 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
-      - file: "src/pages/products/index.md"
-        label: "Products Page"
-        name: "products"
-        fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "product-page",
-            }
-          - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Description, name: description, widget: string }
-          # - {
-          #     label: Intro,
-          #     name: intro,
-          #     widget: object,
-          #     fields:
-          #       [
-          #         { label: Heading, name: heading, widget: string },
-          #         { label: Description, name: description, widget: text },
-          #         {
-          #           label: Blurbs,
-          #           name: blurbs,
-          #           widget: list,
-          #           fields:
-          #             [
-          #               { label: Image, name: image, widget: image },
-          #               { label: Text, name: text, widget: text },
-          #             ],
-          #         },
-          #       ],
-          #   }
-          - {
-              label: Main,
-              name: main,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                  {
-                    label: Image1,
-                    name: image1,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                  {
-                    label: Image2,
-                    name: image2,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                  {
-                    label: Image3,
-                    name: image3,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                ],
-            }
-          - {
-              label: Testimonials,
-              name: testimonials,
-              widget: list,
-              fields:
-                [
-                  { label: Quote, name: quote, widget: string },
-                  { label: Author, name: author, widget: string },
-                ],
-            }
-          - { label: Full_image, name: full_image, widget: image }
-          - {
-              label: Pricing,
-              name: pricing,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: string },
-                  {
-                    label: Plans,
-                    name: plans,
-                    widget: list,
-                    fields:
-                      [
-                        { label: Plan, name: plan, widget: string },
-                        { label: Price, name: price, widget: string },
-                        {
-                          label: Description,
-                          name: description,
-                          widget: string,
-                        },
-                        { label: Items, name: items, widget: list },
-                      ],
-                  },
-                ],
-            }
       - file: "src/pages/testimonials/index.md"
         label: Testimonials
         name: testimonials
@@ -296,7 +157,7 @@ collections:
               widget: hidden,
               default: testmonial-page,
             }
-          - { label: Description, name: description, widget: string }
+          - { label: Description, name: description, widget: text }
           - {
               label: Testimonials,
               name: testimonials,
@@ -304,19 +165,31 @@ collections:
               fields:
                 [
                   { label: Author, name: author, widget: string },
-                  { label: Quote, name: quote, widget: string },
+                  { label: Quote, name: quote, widget: text },
                   { label: Image, name: image, widget: image },
                 ],
             }
-      - file: "src/pages/blank.md"
-        label: "Blank"
-        name: "blank"
+      - file: "src/pages/contact/index.md"
+        label: Contact
+        name: contact
         fields:
           - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "blank-page",
+              label: Template Key,
+              name: templateKey,
+              widget: hidden,
+              default: contact-page,
             }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: Description, name: description, widget: text }
+          - { label: Image, name: image, widget: image }
+      - file: "src/pages/contact/thanks.md"
+        label: Completed Contact
+        name: completed contact
+        fields:
+          - {
+              label: Template Key,
+              name: templateKey,
+              widget: hidden,
+              default: completed-contact,
+            }
+          - { label: Image, name: image, widget: image }
+          - { label: Body, name: body, widget: markdown }

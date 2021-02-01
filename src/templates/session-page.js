@@ -50,12 +50,12 @@ const TestimonialBlock = ({ image, text, author }) =>
         <div className="hero-body">
           <div className="columns" ref={featuredTestimonialRef}>
             <motion.div
-              className="column is-6 is-offset-3 has-text-white is-size-5 is-invisible-touch"
+              className="column is-6 is-offset-3 has-text-white is-size-5 is-invisible-touch has-background-black-opacity"
               whileHover={{ opacity: 0 }}
             >
               <SlideX
 
-                style={{ backgroundColor: 'rgba(0,0,0,0.5)', userSelect: 'none' }}
+                style={{ userSelect: 'none' }}
                 className="p-3"
                 amount={0}
                 animateCondition={featuredTestimonialInView}
@@ -165,11 +165,16 @@ export const SessionPageTemplate = ({
         </div>
       </section>
       {/* Testimonial */}
-      <TestimonialBlock
+      {!!featuredTestimonial ? <TestimonialBlock
         text={featuredTestimonial.quote}
         author={featuredTestimonial.author + " - " + featuredTestimonial.location}
         image={featuredTestimonial.image.childImageSharp.fluid}
-      />
+      /> :
+        <TestimonialBlock
+          text={"Sample Text"}
+          author={"Sample Author"}
+          image={gallery[0].photo.childImageSharp.fluid}
+        />}
       {/* How it works */}
       <Element name="howItWorks" >
         <div className="section is-medium has-background-white-ter" ref={howItWorksRef}>
@@ -213,7 +218,7 @@ export const SessionPageTemplate = ({
                     </p>
                   </header>
                   <div className="card-image">
-                    <PreviewCompatibleImage imageInfo={gallery[0].photo} borderRadius={0} />
+                    <PreviewCompatibleImage imageInfo={gallery[index].photo} borderRadius={0} aspectRatio={16 / 9} />
                   </div>
                   <div className="card-content">
                     <p className={`is-size-3 has-text-centered ${index === 0 ? "has-text-primary has-text-weight-bold" : "has-text-weight-semibold"}`}>
@@ -244,7 +249,7 @@ export const SessionPageTemplate = ({
               </motion.div>
             ))}
           </motion.div>
-          {!!pricing.afterDescription && <HTMLBlock content={pricing.afterDescription} />}
+          {/* {!!pricing.afterDescription && <HTMLBlock content={pricing.afterDescription} />} */}
         </div>
       </Element>
       <Banner backgroundColor="light" />
@@ -355,7 +360,7 @@ export const pageQuery = graphql`
             price
             features
           }
-          afterDescription
+          # afterDescription
         }
         # secondPricing {
         #   description

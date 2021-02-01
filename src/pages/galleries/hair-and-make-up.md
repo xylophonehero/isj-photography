@@ -1,4 +1,4 @@
 ---
 templateKey: gallery-page
-title: Hair And Make Up
+title: Hair and Make Up
 ---

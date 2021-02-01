@@ -11,6 +11,7 @@ import { useInView } from 'react-intersection-observer'
 import { SlideX } from '../components/Animations'
 import Gallery from '../components/Gallery'
 import Banner from '../components/Banner'
+import { v4 } from 'uuid'
 
 // import SessionParallax from '../components/SessionParallax'
 // import VerticalTimeline from '../components/VerticalTimeline'
@@ -54,6 +55,7 @@ const MobileTimelineItem = ({ item, index }) =>
 
 
 export const IndexPageTemplate = ({
+  sliderImages,
   timelineImages,
   ieashiaPhoto,
   content,
@@ -123,9 +125,9 @@ export const IndexPageTemplate = ({
     <div>
       <div>
         <Slider {...settings}>
-          {timelineImages.map((item, index) => (
+          {sliderImages.map((item, index) => (
             <BackgroundImage
-              key={item.text}
+              key={v4()}
               className=""
               fluid={item.image.childImageSharp.fluid}
             >
@@ -154,13 +156,13 @@ export const IndexPageTemplate = ({
                       <div className="column is-6 is-offset-3 has-text-white is-size-5">
                         <motion.div
                           className="p-5 mb-6"
-                          style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}
+                          style={{}}
                           initial={{ opacity: 0, x: 100 }}
                           animate={activeSlide === index ? { opacity: 1, x: 0, transition: { delay: 0.5, duration: 1 } } : { opacity: 0, x: 100 }}
                         >
 
-                          <p className="is-italic ">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem exercitationem sapiente excepturi rem esse odit ipsa facilis asperiores nobis enim quos, voluptatum voluptates consectetur voluptas et labore consequatur ut eos."</p>
-                          <p className="has-text-centered">{"Nick"}</p>
+                          <p className="is-italic ">"{item.quote}"</p>
+                          <cite className="has-text-centered">- {item.author}</cite>
                         </motion.div>
                       </div>
 
@@ -360,7 +362,13 @@ export const IndexPageTemplate = ({
           <div className="is-hidden-desktop">
             <Gallery gallery={gallery} mobile={"half"} aspectRatio={1} />
           </div>
+          <div className="has-text-centered mt-6">
 
+            <Link to="/galleries">
+              <button className="button is-light">See more</button>
+            </Link>
+
+          </div>
         </div>
       </section>
       <section className="section">
@@ -412,6 +420,7 @@ const IndexPage = ({ data }) =>
         // mainpitch={frontmatter.mainpitch}
         // description={frontmatter.description}
         // intro={frontmatter.intro}
+        sliderImages={frontmatter.sliderImages}
         timelineImages={frontmatter.timelineImages}
         ieashiaPhoto={frontmatter.ieashiaPhoto}
         contentComponent={HTMLContent}
@@ -437,14 +446,17 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       html
       frontmatter {
-        # title
-        # heading
-        # subheading
-        # mainpitch {
-        #   title
-        #   description
-        # }
-        # description
+        sliderImages {
+          quote
+          author
+          image {
+            childImageSharp {
+              fluid(maxWidth: 800, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
         timelineImages {
           text
           image {

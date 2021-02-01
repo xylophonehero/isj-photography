@@ -1,8 +1,8 @@
 ---
-templateKey: wedding-gallery-page
+templateKey: galleries-page
 title: Wedding gallery
+type: galleries/wedding
 albums:
-  - "Engagement"
   - "Simply You"
   - "Those Moments"
   - "Little Details"
@@ -10,4 +10,3 @@ albums:
   - "Down on the Dancefloor"
   - "The Ceremony"
 ---
-ahsdjaskhdajk
