@@ -34,15 +34,15 @@ function WeddingGalleryTemplate({
         <div className="container">
           <div className="columns is-centered is-multiline">
             {albums.map(album => (
-              <div key={album.node.title} className="column is-one-third-desktop is-half-tablet">
-                <Link to={`/${type}/${kebabCase(album.node.title)}`}>
+              <div key={album.title} className="column is-one-third-desktop is-half-tablet">
+                <Link to={`/${type}/${kebabCase(album.title)}`}>
                   <motion.div
                     className="card"
                     whileHover={{ scale: 1.05 }}
                     style={{ originY: 0, position: 'relative' }}
                   >
                     <div className="card-image" style={{ backgroundColor: 'rgba(0,0,0,0.4)' }}>
-                      <PreviewCompatibleImage imageInfo={album.node.cover.photo} borderRadius={0} aspectRatio={4 / 3} />
+                      <PreviewCompatibleImage imageInfo={album.cover.photo} borderRadius={0} aspectRatio={4 / 3} />
                     </div>
                     <div style={{ backgroundColor: 'rgba(0,0,0,0.3)', height: '100%', position: 'absolute', width: '100%', top: 0 }}>
                       <h3
@@ -55,7 +55,7 @@ function WeddingGalleryTemplate({
                           // transform: 'translate(-50%, -50%)',
                         }}
                       >
-                        {album.node.title}
+                        {album.title}
                       </h3>
                     </div>
                   </motion.div>
@@ -79,10 +79,14 @@ const WeddingGallery = ({ data }) =>
 {
 
   const markdown = data.markdownRemark
+  const albumsNeeded = markdown.frontmatter.albums
+  const allAlbums = data.allGooglePhotosAlbum.nodes
 
-  const allAlbums = data.allGooglePhotosAlbum.edges
-  const albums = allAlbums.filter(x => markdown.frontmatter.albums.includes(x.node.title))
-
+  const albums = albumsNeeded.reduce((albums, album) =>
+  {
+    return [...albums, allAlbums.find(x => x.title === album)]
+  }, [])
+  console.log(albums)
   return (
     <Layout>
       <WeddingGalleryTemplate
@@ -110,15 +114,13 @@ export const pageQuery = graphql`
       }
     }
     allGooglePhotosAlbum {
-      edges {
-        node {
-          title
-          cover {
-            photo {
-              childImageSharp {
-                fluid(maxWidth: 1024, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
+      nodes {
+        title
+        cover {
+          photo {
+            childImageSharp {
+              fluid(maxWidth: 1024, quality: 100) {
+                ...GatsbyImageSharpFluid
               }
             }
           }

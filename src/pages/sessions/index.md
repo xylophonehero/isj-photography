@@ -8,4 +8,7 @@ albums:
   - "Maternity"
   - "Newborn"
   - "Family"
+  - "Sitters"
+  - "Cake Smash"
+  - "Hair and Makeup"
 ---

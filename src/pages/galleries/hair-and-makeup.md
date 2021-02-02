@@ -1,5 +1,4 @@
 ---
 templateKey: gallery-page
-title: Headshots
-to: Coming soon
+title: Hair and Makeup
 ---

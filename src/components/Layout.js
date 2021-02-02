@@ -58,6 +58,16 @@ const TemplateWrapper = ({ children }) =>
           property="og:image"
           content={`${withPrefix('/')}img/og-image.png`}
         />
+        {typeof window !== 'undefined' && <script type="text/javascript">
+          {document.addEventListener('contextmenu', (e) =>
+          {
+            if (e.target.tagName === 'IMG')
+            {
+              e.preventDefault()
+              e.stopPropagation()
+            }
+          })}
+        </script>}
       </Helmet>
       <Navbar />
       <div>{children}</div>

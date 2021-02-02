@@ -72,12 +72,12 @@ module.exports = {
     //     username: `1706299453`,
     //   },
     // },
-    {
-      resolve: `gatsby-source-instagram-all`,
-      options: {
-        access_token: process.env.INSTAGRAM_TOKEN
-      }
-    },
+    // {
+    //   resolve: `gatsby-source-instagram-all`,
+    //   options: {
+    //     access_token: process.env.INSTAGRAM_TOKEN
+    //   }
+    // },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -89,8 +89,9 @@ module.exports = {
     {
       resolve: "gatsby-source-google-photos",
       options: {
-        albumsTitles: ["Wedding", "Engagement", "Maternity", "Newborn", "Family", "Landing", "Cake Smash", "Sitters", "Hair and Make Up", "Down on the Dancefloor", "Simply You", "Little Details", "The Ceremony", "Those Moments", "Headshots"],
-        photosMaxWidth: 2048,
+        albumsTitles: ["Wedding", "Engagement", "Maternity", "Newborn", "Family", "Landing", "Cake Smash", "Sitters", "Hair and Makeup", "Down on the Dancefloor", "Simply You", "The Prep", "Little Details", "The Ceremony", "Those Moments", "Headshots"],
+        photosMaxWidth: 1024,
+        debug: true
       },
     },
     {

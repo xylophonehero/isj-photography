@@ -76,7 +76,18 @@ const Navbar = () =>
                 <Link className="navbar-item" to="/galleries/family">
                   Family
                 </Link>
-
+                <Link className="navbar-item" to="/galleries/sitters">
+                  Sitters
+                </Link>
+                <Link className="navbar-item" to="/galleries/cake-smash">
+                  Cake Smash
+                </Link>
+                <Link className="navbar-item" to="/galleries/headshots">
+                  Headshots
+                </Link>
+                <Link className="navbar-item" to="/galleries/hair-and-makeup">
+                  Hair and Makeup
+                </Link>
               </div>
             </div>
             <div className="navbar-item is-hoverable has-dropdown">
@@ -105,8 +116,14 @@ const Navbar = () =>
                 <Link className="navbar-item" to="/sessions/cake-smash">
                   Cake Smash
                 </Link>
+                <Link className="navbar-item" to="/sessions/hair-and-makeup">
+                  Hair and Makeup
+                </Link>
               </div>
             </div>
+            <Link className="navbar-item" to="/wall-art">
+              Wall Art
+              </Link>
             <Link className="navbar-item" to="/testimonials">
               Testimonials
               </Link>

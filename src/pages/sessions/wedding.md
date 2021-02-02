@@ -45,32 +45,36 @@ pricing:
   description: I offer packages to suit your needs and budget. Choose from the options below and please get in touch if you’d like anything a little different.
   tables:
     - title: Pinnacle
-      price: 1600
+      price: 1999
       features:
         - 2 photographers
         - Pre-wedding meeting
         - Pre-wedding photo shoot
-        - 2 pieces of framed wall art
+        - 10 hours coverage
+        - 20 9"x6" luxury printed images
         - All digital images
         - Photos and edited slideshow saved on USB
-        - Luxury 20-page 11’ x 16’ album
+        - Video Slideshow
+        - Classic 8"x12" 20-page album
         - 20 thank you cards
+        - £100 credit towards Wall Art
     - title: Vista
-      price: 1200
+      price: 1499
       features:
         - 2 Photographers
+        - 8 hours coverage
         - Pre-wedding meeting
-        - Pre-wedding photo shoot
-        - 16’ x 12’ Piece of framed wall art
+        - 10 9"x6" luxury printed images
         - All digital images
         - Photos and edited slideshow saved on USB
-        - Classic 5’ x 7’ 20-page album
+        - Classic 5"x7" album
+        - Video Slideshow
     - title: Signature
-      price: 750
+      price: 899
       features:
         - 1 Photographer
+        - 8 hours coverage
         - Pre-wedding meeting
-        - 10 retouched 8’ x 10’ prints
         - All web-ready images
         - Photos and edited slideshow saved on USB
 faqs:

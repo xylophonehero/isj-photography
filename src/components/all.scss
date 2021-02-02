@@ -52,6 +52,17 @@ $size-2: 3.5rem;
 // .footer-gradiant{
 //   background-image: linear-gradient(white, $light);
 // }
+.navbar-item{
+  padding: 0.5em !important;
+}
+
+.navbar-link:not(.is-arrowless) {
+    padding-right: 1.5em !important;
+}
+
+.navbar-link:not(.is-arrowless)::after{
+  right: 0.5em !important;
+}
 
 .navbar-link:not(.is-arrowless):hover::after{
   border-color: $gold !important;
@@ -75,6 +86,7 @@ $size-2: 3.5rem;
 
 .navbar-dropdown{
   font-size: 1em;
+  padding: 0.5rem;
 }
 
 .back-to-top {

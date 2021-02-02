@@ -33,11 +33,11 @@ export const GalleryPageTemplate = ({
           <Gallery gallery={gallery} aspectRatio={4 / 3} objectPosition={title === 'Headshots' ? "30%" : 'center'} />
 
         </div>
-        <div className="has-text-centered mt-5">
+        {to !== "Coming soon" && <div className="has-text-centered mt-5">
           <Link to={`/sessions/${!!to ? to : kebabCase(title)}`}>
             <button className="button is-primary">More Info and Pricing</button>
           </Link>
-        </div>
+        </div>}
       </section>
       <Banner backgroundColor="white-ter" />
     </>

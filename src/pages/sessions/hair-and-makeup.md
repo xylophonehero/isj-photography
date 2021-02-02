@@ -1,6 +1,6 @@
 ---
 templateKey: session-page
-title: Hair And Make Up
+title: Hair and Makeup
 description: |
   I run the hair and makeup company, Krstev Kreates, with my husband Zoran. I am a qualified, experienced makeup artist and Zoran is an accomplished hairdresser. 
   

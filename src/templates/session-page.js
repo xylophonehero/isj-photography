@@ -45,11 +45,11 @@ const TestimonialBlock = ({ image, text, author }) =>
     <div className="hero is-large">
       <BackgroundImage
         fluid={image}
-        style={{ backgroundPosition: `center ${100 - offset / 15}%` }}
+        style={{ backgroundPosition: `center ${60 - offset / 20}%` }}
       >
         <div className="hero-body">
           <div className="columns" ref={featuredTestimonialRef}>
-            <motion.div
+            {!!text && <motion.div
               className="column is-6 is-offset-3 has-text-white is-size-5 is-invisible-touch has-background-black-opacity"
               whileHover={{ opacity: 0 }}
             >
@@ -63,7 +63,7 @@ const TestimonialBlock = ({ image, text, author }) =>
                 <p className="is-italic ">"{text}"</p>
                 <p className="has-text-centered">{author}</p>
               </SlideX>
-            </motion.div>
+            </motion.div>}
 
 
           </div>
@@ -171,8 +171,8 @@ export const SessionPageTemplate = ({
         image={featuredTestimonial.image.childImageSharp.fluid}
       /> :
         <TestimonialBlock
-          text={"Sample Text"}
-          author={"Sample Author"}
+          // text={"Sample Text"}
+          // author={"Sample Author"}
           image={gallery[0].photo.childImageSharp.fluid}
         />}
       {/* How it works */}
@@ -220,27 +220,29 @@ export const SessionPageTemplate = ({
                   <div className="card-image">
                     <PreviewCompatibleImage imageInfo={gallery[index].photo} borderRadius={0} aspectRatio={16 / 9} />
                   </div>
-                  <div className="card-content">
+                  <div className="card-content content">
                     <p className={`is-size-3 has-text-centered ${index === 0 ? "has-text-primary has-text-weight-bold" : "has-text-weight-semibold"}`}>
                       {Intl.NumberFormat('en-US', { style: 'currency', currency: 'GBP', minimumFractionDigits: 0, }).format(item.price)}
                     </p>
                     {item.features &&
                       <>
                         <hr className="has-background-grey-lighter" />
-                        {item.features.map(feature => (
-                          <p key={feature} class="icon-text">
-                            <IconContext.Provider value={{ size: '1rem', className: "mr-2" }}>
+                        <ul style={{ listStyleType: 'none' }}>
+                          {item.features.map(feature => (
+                            <li key={feature} class="">
+                              <IconContext.Provider value={{ size: '1rem', className: "mr-2" }}>
 
-                              <FaCheck />
+                                <FaCheck />
 
-                            </IconContext.Provider>
-                            {/* <span className="icon">
-                              <i style={{ height: '1rem', width: '1rem' }}><FaCheck /></i>
-                            </span> */}
-                            <span>{feature}</span>
-                          </p>
+                              </IconContext.Provider>
+                              {/* <span className="icon">
+                                <i style={{ height: '1rem', width: '1rem' }}><FaCheck /></i>
+                              </span> */}
+                              <span>{feature}</span>
+                            </li>
 
-                        ))}
+                          ))}
+                        </ul>
                         <hr className="has-background-grey-lighter" />
                       </>
                     }

@@ -2,29 +2,29 @@
 templateKey: index-page
 sliderImages:
   - image: /img/banner1.jpg
-    quote: Newborn quote
-    author: Author of quote
+    quote: When you photograph a face, you photograph the soul behind it.
+    author: Jean-Luc Godard
   - image: /img/banner2.jpg
-    quote: Wedding quote
-    author: Author of quote
+    quote: When you photograph a face, you photograph the soul behind it.
+    author: Jean-Luc Godard
   - image: /img/banner3.jpg
-    quote: Newborn quote
-    author: Author of quote
+    quote: When you photograph a face, you photograph the soul behind it.
+    author: Jean-Luc Godard
   - image: /img/banner4.jpg
-    quote: Wedding quote
-    author: Author of quote
+    quote: When you photograph a face, you photograph the soul behind it.
+    author: Jean-Luc Godard
   - image: /img/banner5.jpg
-    quote: Newborn quote
-    author: Author of quote
+    quote: When you photograph a face, you photograph the soul behind it.
+    author: Jean-Luc Godard
   - image: /img/banner6.jpg
-    quote: Wedding quote
-    author: Author of quote
+    quote: When you photograph a face, you photograph the soul behind it.
+    author: Jean-Luc Godard
   - image: /img/banner7.jpg
-    quote: Newborn quote
-    author: Author of quote
+    quote: When you photograph a face, you photograph the soul behind it.
+    author: Jean-Luc Godard
   - image: /img/banner8.jpg
-    quote: Wedding quote
-    author: Author of quote
+    quote: When you photograph a face, you photograph the soul behind it.
+    author: Jean-Luc Godard
 timelineImages:
   - image: /img/engagement.jpg
     text: Engagement
