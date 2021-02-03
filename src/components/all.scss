@@ -40,6 +40,11 @@ $family-secondary:'Tangerine', cursive;
 $size-1: 4rem;
 $size-2: 3.5rem;
 
+.touch-landing-container{
+  min-height: calc(100vh - 5rem); 
+  background-image: linear-gradient(to bottom, $light 50%, transparent);
+}
+
 .modal-content{
   max-height: calc(100vh - 20px) !important;
 }
@@ -109,7 +114,7 @@ $size-2: 3.5rem;
   outline: none;
   background: none;
   color: white;
-  font-size: xxx-large;
+  font-size: 3rem;
 }
 
 

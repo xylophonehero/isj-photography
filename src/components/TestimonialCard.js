@@ -3,12 +3,15 @@ import PropTypes from 'prop-types'
 // import { v4 } from 'uuid'
 // import { graphql } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import useWindowDimensions from '../hooks/useWindowDimensions'
 
 const TestimonialCard = ({ testimonial, alt }) => 
 {
+  const { width } = useWindowDimensions()
+
   return (
     <>
-      { alt === true ?
+      { alt === true && width > 768 ?
         <div className="card has-background-light mb-5">
           <div className="card-content">
             <div className="media is-align-items-center">

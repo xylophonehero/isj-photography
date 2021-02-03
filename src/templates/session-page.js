@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 // import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
+// import Img from 'gatsby-image'
 import { v4 } from 'uuid'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
@@ -21,12 +22,15 @@ import { SlideX } from '../components/Animations'
 
 import HTMLBlock from '../components/Transform'
 import Banner from '../components/Banner'
+import useWindowDimensions from '../hooks/useWindowDimensions'
 
 const TestimonialBlock = ({ image, text, author }) =>
 {
   const [offset, setOffset] = useState(0)
 
   const [featuredTestimonialRef, featuredTestimonialInView] = useInView({ threshold: 0, triggerOnce: true })
+
+  const { width } = useWindowDimensions()
 
   useEffect(() =>
   {
@@ -42,34 +46,56 @@ const TestimonialBlock = ({ image, text, author }) =>
   }, [])
 
   return (
-    <div className="hero is-large">
-      <BackgroundImage
-        fluid={image}
-        style={{ backgroundPosition: `center ${60 - offset / 20}%` }}
-      >
-        <div className="hero-body">
-          <div className="columns" ref={featuredTestimonialRef}>
-            {!!text && <motion.div
-              className="column is-6 is-offset-3 has-text-white is-size-5 is-invisible-touch has-background-black-opacity"
-              whileHover={{ opacity: 0 }}
-            >
-              <SlideX
+    <>
+      { width > 768 ?
+        <div className="hero is-large">
+          <BackgroundImage
+            fluid={image}
+            style={{ backgroundPosition: `center ${60 - offset / 20}%` }}
+          >
+            <div className="hero-body" style={{ height: '100%' }}>
+              <div className="columns" ref={featuredTestimonialRef}>
+                {!!text ? <motion.div
+                  className="column is-6 is-offset-3 has-text-white is-size-5 is-invisible-touch has-background-black-opacity"
+                  whileHover={{ opacity: 0 }}
+                >
+                  <SlideX
 
-                style={{ userSelect: 'none' }}
-                className="p-3"
-                amount={0}
-                animateCondition={featuredTestimonialInView}
-              >
-                <p className="is-italic ">"{text}"</p>
-                <p className="has-text-centered">{author}</p>
-              </SlideX>
-            </motion.div>}
+                    style={{ userSelect: 'none' }}
+                    className="p-3"
+                    amount={0}
+                    animateCondition={featuredTestimonialInView}
+                  >
+                    <p className="is-italic ">"{text}"</p>
+                    <p className="has-text-centered">{author}</p>
+                  </SlideX>
+                </motion.div> :
+                  <div style={{ height: '100%' }} />
+                }
 
 
-          </div>
+              </div>
+            </div>
+          </BackgroundImage>
         </div>
-      </BackgroundImage>
-    </div>
+        :
+        <BackgroundImage
+          fluid={image}
+        >
+          <div style={{ width: '100vw', height: '50vh' }}>
+            {/* <BackgroundImage
+              fluid={image}
+              style={{ backgroundPosition: `center ${60 - offset / 20}%` }}
+            >
+              <div className="hero-body" style={{ height: '100%' }}>
+                <div />
+              </div> 
+            </BackgroundImage>*/}
+            {/* <Img fluid={image} /> */}
+          </div>
+        </BackgroundImage>
+      }
+    </>
   )
 }
 
@@ -113,7 +139,7 @@ export const SessionPageTemplate = ({
 
   return (
     <>
-      <div className="" style={{ position: 'sticky', top: 0, zIndex: 4, backgroundColor: 'white' }}>
+      <div className="" style={{ position: 'sticky', top: 0, zIndex: 4, backgroundColor: '#F2ECE7' }}>
         <div className="columns is-centered is-multiline is-mobile py-2 m-0" style={{ width: '100%' }}>
           {/* <div className="column is-hidden-mobile" /> */}
           <div className="column is-narrow is-half-mobile has-text-centered">
@@ -171,9 +197,9 @@ export const SessionPageTemplate = ({
         image={featuredTestimonial.image.childImageSharp.fluid}
       /> :
         <TestimonialBlock
-          // text={"Sample Text"}
-          // author={"Sample Author"}
-          image={gallery[0].photo.childImageSharp.fluid}
+          text={""}
+          author={""}
+          image={gallery[3].photo.childImageSharp.fluid}
         />}
       {/* How it works */}
       <Element name="howItWorks" >
@@ -227,9 +253,9 @@ export const SessionPageTemplate = ({
                     {item.features &&
                       <>
                         <hr className="has-background-grey-lighter" />
-                        <ul style={{ listStyleType: 'none' }}>
+                        <ul style={{ listStyleType: 'none', marginLeft: '0rem' }}>
                           {item.features.map(feature => (
-                            <li key={feature} class="">
+                            <li key={feature} >
                               <IconContext.Provider value={{ size: '1rem', className: "mr-2" }}>
 
                                 <FaCheck />

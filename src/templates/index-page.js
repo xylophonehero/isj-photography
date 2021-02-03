@@ -123,82 +123,64 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
-      <div>
-        <Slider {...settings}>
-          {sliderImages.map((item, index) => (
-            <BackgroundImage
-              key={v4()}
-              className=""
-              fluid={item.image.childImageSharp.fluid}
-            >
-              <div className="hero is-fullheight-with-navbar">
-                <div className="hero-body">
-                  <div className="container">
-                    {/* <img src={logo} alt="ISJ Photography" style={{ margin: 'auto' }} /> */}
-                    {/* <div className="columns" style={{ height: '50vh' }}>
-                      <div className="column is-6 is-offset-3 has-text-white is-size-5 is-flex is-justify-content-flex-end is-flex-direction-column">
-                        <motion.div
-                          className="p-5 mb-5"
-                          style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}
-                          initial={{ opacity: 0, x: 100 }}
-                          animate={activeSlide === index ? { opacity: 1, x: 0, transition: { delay: 0.5, duration: 1 } } : { opacity: 0, x: 100 }}
-                        >
-                          <p className="is-italic ">"{item.text}"</p>
-                          <p className="has-text-centered">{"Nick"}</p>
-                        </motion.div>
-                      </div>
-                    </div> */}
+      <div className="touch-landing-container"
+      // style={{ minHeight: 'calc(100vh - 5rem)', backgroundImage: 'linear-gradient(to bottom, yellow 50%, transparent)' }}
+      >
+        <div>
+          <Slider {...settings}>
+            {sliderImages.map((item, index) => (
+              <BackgroundImage
+                key={v4()}
+                className=""
+                fluid={item.image.childImageSharp.fluid}
+              >
+                <div className="hero is-fullheight-with-navbar is-hidden-touch">
+                  <div className="hero-body">
+                    <div className="container">
+                    </div>
                   </div>
-                </div>
-                <div className="hero-foot is-invisible-mobile">
-                  <div className="container">
-                    <div className="columns">
-                      <div className="column is-6 is-offset-3 has-text-white is-size-5">
-                        <motion.div
-                          className="p-5 mb-6"
-                          style={{}}
-                          initial={{ opacity: 0, x: 100 }}
-                          animate={activeSlide === index ? { opacity: 1, x: 0, transition: { delay: 0.5, duration: 1 } } : { opacity: 0, x: 100 }}
-                        >
+                  <div className="hero-foot is-invisible-mobile">
+                    <div className="container">
+                      <div className="columns">
+                        <div className="column is-6 is-offset-3 has-text-white is-size-5">
+                          <motion.div
+                            className="p-5 mb-6"
+                            style={{}}
+                            initial={{ opacity: 0, x: 100 }}
+                            animate={activeSlide === index ? { opacity: 1, x: 0, transition: { delay: 0.5, duration: 1 } } : { opacity: 0, x: 100 }}
+                          >
 
-                          <p className="is-italic ">"{item.quote}"</p>
-                          <cite className="has-text-centered">- {item.author}</cite>
-                        </motion.div>
+                            <p className="is-italic ">"{item.quote}"</p>
+                            <cite className="has-text-centered">- {item.author}</cite>
+                          </motion.div>
+                        </div>
+
                       </div>
-
                     </div>
                   </div>
                 </div>
-              </div>
-            </BackgroundImage>
-          ))}
-        </Slider>
+                <div className="hero is-halfheight is-hidden-desktop">
+
+                </div>
+
+              </BackgroundImage>
+            ))}
+          </Slider>
+        </div>
+        <div className="is-hidden-desktop" style={{ flexGrow: 2, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <h2 className="is-size-2 has-text-weight-semibold has-text-centered has-text-primary my-4 is-family-secondary">
+            Creating Visual Heirlooms
+                </h2>
+        </div>
       </div>
 
       <div className="is-hidden-desktop overflow-x-hidden">
+
         {timelineImages.map((item, index) => (
           <MobileTimelineItem key={item.text} item={item} index={index} />
         ))}
       </div>
 
-      {/* <section className="is-hidden-desktop  section section--gradient">
-        <div className="columns is-mobile mt-5" >
-
-          <div className="column is-2 p-0">
-            <VerticalTimeline sessionInView={sessionInView} foralEnd={foralEnd} />
-          </div>
-          <div className="column is-10">
-            <div className="container">
-
-              <SessionParallax title="Engagement" handleSessionInView={handleNewSessionInView} />
-              <SessionParallax title="Weddings" handleSessionInView={handleNewSessionInView} />
-              <SessionParallax title="Maternity" handleSessionInView={handleNewSessionInView} />
-              <SessionParallax title="Newborns" handleSessionInView={handleNewSessionInView} />
-              <SessionParallax title="Family Photos" handleSessionInView={handleNewSessionInView} />
-            </div>
-          </div>
-        </div>
-      </section> */}
       <div className="is-hidden-touch" ref={timelineRef}>
         <div className="hero linear-gradiant-light">
           <div className="hero-body">
@@ -214,17 +196,7 @@ export const IndexPageTemplate = ({
               animate={timelineInView ? "visible" : "hidden"}
               variants={variants}
             >
-              {/* horizontal line */}
-              {/* <img src={foralEnd} style={{ position: 'absolute', top: 0, left: 0, height: '3rem', transform: 'rotate(-90deg)' }} alt='floral' /> */}
 
-              {/* <img src={foralEnd} style={{ position: 'absolute', top: 0, right: 0, height: '3rem', transform: 'rotate(90deg)' }} alt='floral' /> */}
-              {/* <img src={foralEnd} style={{ position: 'absolute', top: '.57rem', right: '91%', height: '3rem', transform: 'rotate(-90deg)' }} alt='floral' />
-              <div
-                className='timeline'
-                style={{ height: 0, width: '84%', borderTop: '.125rem solid', position: 'absolute', top: '2rem', left: '8%' }}
-
-              />
-              <img src={foralEnd} style={{ position: 'absolute', top: '.57rem', left: '91%', height: '3rem', transform: 'rotate(90deg)' }} alt='floral' /> */}
               <div className="columns m-0">
                 {timelineImages.map(item => (
                   <motion.div
@@ -238,23 +210,24 @@ export const IndexPageTemplate = ({
 
                     <Link to={`/sessions/${kebabCase(item.text)}`}>
                       <motion.div
-                        className="card"
+                        // className="card"
                         whileHover={{ scale: 1.1 }}
                         style={{ originY: 0, position: 'relative' }}
                       >
-                        <div className="card-image" style={{ backgroundColor: 'rgba(0,0,0,0.4)' }}>
+                        <div
+                        // className="card-image"
+                        // style={{ backgroundColor: 'rgba(0,0,0,0.4)' }}
+                        >
                           {/* <Img fluid={{ ...item.image.childImageSharp.fluid, aspectRatio: 16 / 9 }} /> */}
-                          <PreviewCompatibleImage imageInfo={item.image} borderRadius={0} aspectRatio={4 / 3} />
+                          <PreviewCompatibleImage imageInfo={item.image} borderRadius={5} aspectRatio={4 / 3} />
                         </div>
-                        <div style={{ backgroundColor: 'rgba(0,0,0,0.3)', height: '100%', position: 'absolute', width: '100%', top: 0 }}>
+                        <div style={{ backgroundColor: 'rgba(0,0,0,0.3)', height: '100%', position: 'absolute', width: '100%', top: 0, borderRadius: '5px' }}>
                           <h3
                             className='subtitle is-2 is-family-secondary has-text-white p-2'
                             style={{
                               position: 'absolute',
-                              bottom: '10%',
-                              left: '10%',
-                              // backgroundColor: 'rgba(0,0,0,0.4)'
-                              // transform: 'translate(-50%, -50%)',
+                              bottom: '0.25rem',
+                              left: '0.25rem',
                             }}
                           >
                             {item.text}
@@ -452,7 +425,7 @@ export const pageQuery = graphql`
           image {
             childImageSharp {
               fluid(maxWidth: 800, quality: 100) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
@@ -462,7 +435,7 @@ export const pageQuery = graphql`
           image {
             childImageSharp {
               fluid(maxWidth: 800, quality: 100) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }

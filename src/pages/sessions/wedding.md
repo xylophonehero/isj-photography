@@ -36,47 +36,52 @@ howItWorks: |
 
   A wedding should be one of the most important, most memorable days of a couple’s life. As a couple you should be able to take in every single moment, and really enjoy the day you've spent so long planning.  As a photographer, I believe the moments should be captured and turned into memories. The raw emotions should be frozen in time, and the fun should be embraced – not forced, posed or set up. 
 
-  I LOVE capturing weddings! It is literally the biggest honour to be a part of your day! I love how every single wedding and every single couple is different. I will work with and serve you, adapting to every environment. There is no wedding too big or too small. 
+  I LOVE capturing weddings! It is literally the biggest honour to be a part of your day! I love how every single wedding and every single couple is different. I will work with and serve you, adapting to every environment. There is no wedding too big or too small.
+
   Get in touch with me by email at <a href="mailto:isjphoto@hotmail.co.uk">isjphoto@hotmail.co.uk</a> if you like my style and would like to know more.  
 
   I look forward to hearing from you.
 
 pricing:
-  description: I offer packages to suit your needs and budget. Choose from the options below and please get in touch if you’d like anything a little different.
+  description: |
+    I offer packages to suit your needs and budget. Choose from the options below and please get in touch if you’d like anything a little different.
+
+    I’m a qualified makeup artist and with my husband Zoran, a qualified and experienced hairdresser, we also offer hair and makeup packages with our company Krstev Kreates. If you’d like to add hair and makeup to your wedding package, click <a href="/sessions/hair-and-makeup">here</a> for more info.
+
   tables:
-    - title: Pinnacle
-      price: 1999
-      features:
-        - 2 photographers
-        - Pre-wedding meeting
-        - Pre-wedding photo shoot
-        - 10 hours coverage
-        - 20 9"x6" luxury printed images
-        - All digital images
-        - Photos and edited slideshow saved on USB
-        - Video Slideshow
-        - Classic 8"x12" 20-page album
-        - 20 thank you cards
-        - £100 credit towards Wall Art
-    - title: Vista
-      price: 1499
-      features:
-        - 2 Photographers
-        - 8 hours coverage
-        - Pre-wedding meeting
-        - 10 9"x6" luxury printed images
-        - All digital images
-        - Photos and edited slideshow saved on USB
-        - Classic 5"x7" album
-        - Video Slideshow
-    - title: Signature
-      price: 899
-      features:
-        - 1 Photographer
-        - 8 hours coverage
-        - Pre-wedding meeting
-        - All web-ready images
-        - Photos and edited slideshow saved on USB
+      - title: Pinnacle
+        price: 1999
+        features:
+          - 2 photographers
+          - Pre-wedding meeting
+          - Pre-wedding photo shoot
+          - 10 hours coverage
+          - 20 9"x6" luxury printed images
+          - All digital images
+          - Photos and edited slideshow saved on USB
+          - Video Slideshow
+          - Classic 8"x12" 20-page album
+          - 20 thank you cards
+          - £100 credit towards Wall Art
+      - title: Vista
+        price: 1499
+        features:
+          - 2 Photographers
+          - 8 hours coverage
+          - Pre-wedding meeting
+          - 10 9"x6" luxury printed images
+          - All digital images
+          - Photos and edited slideshow saved on USB
+          - Classic 5"x7" album
+          - Video Slideshow
+      - title: Signature
+        price: 899
+        features:
+          - 1 Photographer
+          - 8 hours coverage
+          - Pre-wedding meeting
+          - All web-ready images
+          - Photos and edited slideshow saved on USB
 faqs:
   - question: Where are you based?
     answer: |
