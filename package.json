@@ -23,6 +23,7 @@
     "gatsby-remark-relative-images": "^0.3.0",
     "gatsby-source-filesystem": "^2.2.5",
     "gatsby-source-flickr": "0.0.4",
+    "gatsby-source-google-photos": "^2.4.1",
     "gatsby-source-instagram": "^0.9.0",
     "gatsby-source-instagram-all": "^3.0.3",
     "gatsby-transformer-remark": "^2.7.5",

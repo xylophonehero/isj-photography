@@ -11,10 +11,12 @@ function getWindowDimensions()
 
 export default function useWindowDimensions()
 {
-  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+  const [windowDimensions, setWindowDimensions] = useState({ width: 100, height: 100 });
 
   useEffect(() =>
   {
+    setWindowDimensions(getWindowDimensions())
+
     function handleResize()
     {
       setWindowDimensions(getWindowDimensions());
