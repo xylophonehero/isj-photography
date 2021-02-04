@@ -1,5 +1,5 @@
 ---
-templateKey: wall-art
+templateKey: about-page
 title: Wall Art
 ---
 

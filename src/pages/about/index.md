@@ -37,4 +37,4 @@ Let me tell your story,
 
 <p class="is-family-secondary is-size-2">Ieashia</p>
 
-![My love for cameras at an early age](../../../static/img/about3.jpg)
+![My love for cameras at an early age](/img/about3.jpg)

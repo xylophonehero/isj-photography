@@ -14,8 +14,9 @@ description: >
 
 
   (We’re also available to book for just hair and makeup should you wish, please head to <a href="https://www.facebook.com/krstevkreates/">Krstev Kreates</a> for info)
-howItWorks: /,m
-pricing:
+howItWorks:
+pricing:  
+  description:
   tables:
     - title: Pinnacle
       price: 2349
@@ -55,7 +56,7 @@ pricing:
         - Photos and edited slideshow saved on USB
         - Hair and Makeup for the Bride
         - Hair and Makeup for two members of bridal party
-  description: hvh
+
 faqs:
   - question: Where are you based?
     answer: >

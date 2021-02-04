@@ -20,7 +20,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) =>
                 {title}
               </h2>
               <hr />
-              <PageContent className="content" content={content} />
+              <PageContent className="content convert-images" content={content} />
               {/* <p className="is-family-secondary is-size-2">Ieashia</p> */}
 
 

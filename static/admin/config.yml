@@ -36,8 +36,8 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
 
-  - name: Session
-    label: session
+  - name: session
+    label: Session
     folder: "src/pages/sessions"
     create: true
     slug: "{{slug}}"
@@ -49,15 +49,25 @@ collections:
           default: session-page,
         }
       - { label: Title, name: title, widget: string }
-      - { label: Body, name: body, widget: markdown }
-      - { label: How It Works, name: howItWorks, widget: markdown }
+      - { label: Body, name: body, widget: markdown, required: false }
+      - {
+          label: How It Works,
+          name: howItWorks,
+          widget: markdown,
+          required: false,
+        }
       - {
           label: Pricing,
           name: pricing,
           widget: object,
           fields:
             [
-              { label: Description, name: description, widget: markdown },
+              {
+                label: Description,
+                name: description,
+                widget: markdown,
+                required: false,
+              },
               {
                 label: Tables,
                 name: tables,
@@ -132,6 +142,18 @@ collections:
               name: "templateKey",
               widget: "hidden",
               default: "about-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "src/pages/wall-art/index.md"
+        label: "Wall Art"
+        name: "wallArt"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "wall-art",
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }

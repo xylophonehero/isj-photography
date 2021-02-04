@@ -16,7 +16,7 @@ I truly believe that every stage in your children's lives should be celebrated a
 captured. However, photographing newborn babies is something truly special. My
 aim is to create beautiful, soft, and timeless images.
 
-![Simple Tones](../../../static/img/studio2.jpg)
+![Simple Tones](/img/studio2.jpg)
 
 ![](/img/isj_6575.jpg)
 
@@ -30,4 +30,4 @@ pieces to be displayed in your homes.
 
 I cannot wait to welcome you!
 
-![Wall Art](../../../static/img/studio3.jpg)
+![Wall Art](/img/studio3.jpg)
