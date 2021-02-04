@@ -1,9 +1,9 @@
 ---
-templateKey: 'about-page'
+templateKey: about-page
 path: /about
 title: About me
 ---
-![Ieashia](../../../static/img/about0.jpg)
+![Ieashia](/img/isj_4405.jpg)
 
 ## Hey!
 
@@ -11,13 +11,14 @@ I’m Ieashia (with an i) the photographer behind the lens of ISJ Photography.
 
 Based in Essex, with a love for travel.
 
-I am a visual storyteller and I would love to tell your story. Candidly capturing you and your family, showcasing the very best of you: your relationships, your commitment to each other, your beginnings, your family – but most of all your love.
+***I am a visual storyteller and I would love to tell your story. Candidly capturing you and your family, showcasing the very best of you: your relationships, your commitment to each other, your beginnings, your family – but most of all your love.***
 
 Capturing moments and memories is my passion. For me, there is nothing better than looking back at a photograph and all the memories, feelings, happiness and laughter of that moment come rushing back to you.
 
 My passion for photography started when I was a child.
 
 I remember my granddad sitting me on his knee and showing me how to use his 35mm camera: from putting in the film to explaining how important it is to capture the right moment! He’d say, 
+
 > “There are only 27 shots, so we don't want to waste one!”
 
 From that point on, I was hooked!
@@ -37,4 +38,3 @@ Let me tell your story,
 <p class="is-family-secondary is-size-2">Ieashia</p>
 
 ![My love for cameras at an early age](../../../static/img/about3.jpg)
-
