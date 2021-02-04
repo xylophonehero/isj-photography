@@ -91,7 +91,8 @@ module.exports = {
       options: {
         albumsTitles: ["Wedding", "Engagement", "Maternity", "Newborn", "Family", "Landing", "Cake Smash", "Sitters", "Hair and Makeup", "Down on the Dancefloor", "Simply You", "The Prep", "Little Details", "The Ceremony", "Those Moments", "Headshots"],
         photosMaxWidth: 1024,
-        debug: true
+        debug: true,
+        pageSizePhotos: 10
       },
     },
     {

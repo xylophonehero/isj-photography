@@ -95,7 +95,7 @@ export const IndexPageTemplate = ({
     slidesToScroll: 1,
     pauseOnHover: false,
     autoplay: true,
-    autoplaySpeed: 10000,
+    autoplaySpeed: 6000,
     cssEase: "ease-in-out",
     afterChange: current => setActiveSlide(current)
   }
