@@ -1,9 +1,9 @@
 ---
-templateKey: 'about-page'
+templateKey: about-page
 path: /about/studio
 title: My Studio
 ---
-![My Studio](../../../static/img/studio1.jpg)
+![My Studio](/img/isj_4337.jpg)
 
 ## Welcome to my happy place!
 
@@ -17,6 +17,8 @@ captured. However, photographing newborn babies is something truly special. My
 aim is to create beautiful, soft, and timeless images.
 
 ![Simple Tones](../../../static/img/studio2.jpg)
+
+![](/img/isj_6575.jpg)
 
 I use simple, natural tones and textures that best complement your baby. All
 sessions are held in my warm, snug, natural-light home studio in Essex. My studio is
