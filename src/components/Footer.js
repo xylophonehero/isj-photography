@@ -30,10 +30,18 @@ const Footer = () =>
     {
       const fetchInstagram = async () =>
       {
-        const res = await fetch("https://isj-photography.netlify.app/.netlify/functions/instagram")
-          .then(data => data.json())
-        setInstagram(res)
-        console.log(res)
+        const endpoint = 'https://graph.instagram.com'
+        const userId = '17841401783616660'
+        const fields = 'id,media_url,permalink'
+        const token = process.env.GATSBY_INSTAGRAM_TOKEN
+        const limit = 6
+        const url = `${endpoint}/${userId}/media/?fields=${fields}&access_token=${token}&limit=${limit}`
+
+        const { data: posts } = await fetch(url, {
+          method: 'GET',
+        }).then(data => data.json())
+
+        setInstagram(posts)
       }
       fetchInstagram()
     }
@@ -78,12 +86,12 @@ const Footer = () =>
           <div style={{ maxWidth: '100vw' }} className="columns">
             <div className="column is-3">
               <img src={logo} alt="isj-photography" style={{ width: '100%', maxWidth: '250px' }} />
-              <a href="mailto:isjphoto@hotmail.co.uk" style={{ display: 'block' }}>
+              <a href="mailto:sayhi@isjphotography.com" style={{ display: 'block' }}>
                 <span className="icon-text">
                   <IconContext.Provider value={{ size: '1rem', className: 'mr-2' }}>
                     <FaRegEnvelope />
                   </IconContext.Provider>
-                  <span>isjphoto@hotmail.co.uk</span>
+                  <span> sayhi@isjphotography.com</span>
                 </span>
               </a>
               <div className="is-flex is-justify-content-center">
@@ -148,8 +156,8 @@ const Footer = () =>
                     target="_blank"
                     variants={imageVariants}
                   >
-                    <figure class="image is-square">
-                      <img src={item.url} alt="" style={{ objectFit: 'cover', borderRadius: '5px' }} />
+                    <figure className="image is-square">
+                      <img src={item.media_url} alt="" style={{ objectFit: 'cover', borderRadius: '5px' }} />
                     </figure>
                     {/* <img src={item.url} style={{ borderRadius: '5px' }} /> */}
                   </motion.a>

@@ -66,18 +66,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-smoothscroll`,
-    // {
-    //   resolve: `gatsby-source-instagram`,
-    //   options: {
-    //     username: `1706299453`,
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-source-instagram-all`,
-    //   options: {
-    //     access_token: process.env.INSTAGRAM_TOKEN
-    //   }
-    // },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {

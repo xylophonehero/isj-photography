@@ -60,7 +60,7 @@ export default class ContactPage extends React.Component
                     <PreviewCompatibleImage imageInfo={image} />
                     <p className="mt-3">{description}</p>
                     <p className="is-flex is-align-content-baseline is-size-4 ">
-                      <a href="mailto:isjphoto@hotmail.co.uk"><FaRegEnvelope size="1.5rem" /> isjphoto@hotmail.co.uk</a>
+                      <a href="mailto:sayhi@isjphotography.com"><FaRegEnvelope size="1.5rem" /> sayhi@isjphotography.com</a>
                     </p>
                   </div>
                   <div className="column is-6">
