@@ -18,7 +18,7 @@ aim is to create beautiful, soft, and timeless images.
 
 ![Simple Tones](/img/studio2.jpg)
 
-![](/img/isj_6575.jpg)
+![Simple Tones](/img/isj_6575.jpg)
 
 I use simple, natural tones and textures that best complement your baby. All
 sessions are held in my warm, snug, natural-light home studio in Essex. My studio is
