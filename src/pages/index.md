@@ -42,7 +42,7 @@ ieashiaPhoto: /img/ieashia.jpg
 
 Welcome to ISJ Photography.
 
-I’m Ieashia (with an I), the photographer behind the lens of ISJ Photography, based in Dagenham in Essex. My passion is capturing your precious moments when your families come together and grow. 
+I’m Ieashia (with an i), the photographer behind the lens of ISJ Photography, based in Essex. My passion is capturing your precious moments when your families come together and grow. 
 
 I’m here for all your momentous moments. 
 
