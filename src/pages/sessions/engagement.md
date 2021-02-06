@@ -9,7 +9,7 @@ howItWorks: |
   This session can be at a location of your choice. A place that’s special and important to you both, such as where you first met or got engaged.
 pricing:
   tables:
-    - title: Engagement/Couples
+    - title: Couples
       price: 249
 faqs:
   - question: Do you offer engagement/couples sessions?

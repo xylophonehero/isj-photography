@@ -69,7 +69,7 @@ const TestimonialPage = ({ data }) =>
   return (
     <Layout>
       <TestimonialPageTemplate
-        description={frontmatter.description}
+        description={data.markdownRemark.html}
         testimonials={frontmatter.testimonials}
       />
     </Layout>
@@ -85,8 +85,8 @@ export default TestimonialPage
 export const testimonialPageQuery = graphql`
   query TestimonialPage {
     markdownRemark(frontmatter: { templateKey: { eq: "testimonial-page" } }) {
+      html
       frontmatter {
-        description
         testimonials{
           author
           location

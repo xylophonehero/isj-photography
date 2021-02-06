@@ -10,8 +10,8 @@ const PreviewCompatibleImage = ({ imageInfo, style, borderRadius = 5, aspectRati
   {
     return (
       !!aspectRatio ?
-        <Img style={imageStyle} fluid={{ ...image.childImageSharp.fluid, aspectRatio: aspectRatio }} alt={alt} /> :
-        <Img style={imageStyle} fluid={image.childImageSharp.fluid} alt={alt} />
+        <Img imgStyle={imageStyle} fluid={{ ...image.childImageSharp.fluid, aspectRatio: aspectRatio }} alt={alt} /> :
+        <Img imgStyle={imageStyle} fluid={image.childImageSharp.fluid} alt={alt} />
     )
   }
 
@@ -19,8 +19,8 @@ const PreviewCompatibleImage = ({ imageInfo, style, borderRadius = 5, aspectRati
   {
     return (
       !!aspectRatio ?
-        <Img style={imageStyle} fluid={{ ...childImageSharp.fluid, aspectRatio: aspectRatio }} alt={alt} /> :
-        <Img style={imageStyle} fluid={childImageSharp.fluid} alt={alt} />
+        <Img imgStyle={imageStyle} fluid={{ ...childImageSharp.fluid, aspectRatio: aspectRatio }} alt={alt} /> :
+        <Img imgStyle={imageStyle} fluid={childImageSharp.fluid} alt={alt} />
     )
   }
 

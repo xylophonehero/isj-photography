@@ -1,55 +1,40 @@
 ---
 templateKey: session-page
-title: Hair and Makeup
-howItWorks: |
-  I run the hair and makeup company, Krstev Kreates, with my husband Zoran. I am a qualified, experienced makeup artist and Zoran is an accomplished hairdresser. 
-
-  It makes your wedding day go even smoother (and saves you money) to have the same team do your photography and makeup. 
-
-  If you’d like to book us for both, here are the price packages.
-
-  (We’re also available to book for just hair and makeup should you wish, please head to <a href="https://www.facebook.com/krstevkreates/">Krstev Kreates</a> for info)
+title: Headshots
+howItWorks:
 pricing:  
-  description:
+  description: |
+    Additional images £25
+
+    In order to book please email <a href="sayhi@isjphotography.com">sayhi@isjphotography.com</a>
   tables:
     - title: Pinnacle
-      price: 2349
+      price: 399
       features:
-        - 2 photographers
-        - Pre-wedding meeting
-        - Pre-wedding photo shoot
-        - 10 hours Photography coverage
-        - 20 9"x6" luxury printed images
-        - All digital images
-        - Photos and edited slideshow saved on USB
-        - Classic 8"x12" 20-page album
-        - 20 thank you cards
-        - £100 credit towards Wall Art
-        - Hair and Makeup for the Bride
-        - Bridal trial
-        - Hair and Makeup for three members of bridal party
+        - 3-Hour session
+        - Multiple background options
+        - Natural and studio light options
+        - Outdoor location (weather permitting)
+        - 5 Unique looks created
+        - Multiple outfit changes
+        - 6 Retouched final images
+        - Online gallery
     - title: Vista
-      price: 1849
+      price: 299
       features:
-        - 2 Photographers
-        - 8 hours photography coverage
-        - Pre-wedding meeting
-        - 10 9"x6" luxury printed images
-        - All digital images
-        - Photos and edited slideshow saved on USB
-        - Classic 5"x7" album
-        - Hair and Makeup for the Bride
-        - Hair and Makeup for three members of bridal party
+        - 2-Hour session
+        - 2 Background options
+        - Natural and studio light options
+        - Outfit change
+        - 5 Retouched final images
+        - Online gallery
     - title: Signature
-      price: 1199
+      price: 199
       features:
-        - 1 Photographer
-        - Pre-wedding meeting
-        - 8 hours photography coverage
-        - All web-ready images
-        - Photos and edited slideshow saved on USB
-        - Hair and Makeup for the Bride
-        - Hair and Makeup for two members of bridal party
+        - 1 Hour-session
+        - 2 Background options
+        - 3 Retouched final images
+        - Online gallery
 
 faqs:
   - question: Where are you based?
@@ -107,12 +92,8 @@ faqs:
 
       Ultimately, I am going to be spending the whole day with you and it’s your most important day. So, I want to be your friend. I want you to feel happy, safe and comfortable with me, because that’s when we get the best photos. This session can be at a location of your choice, at a place that’s special and important to you both, for example where you first met or got engaged.
 ---
-You’ve found your “one”, you’ve made all the plans. Now it’s time to walk down that aisle
-and say your vows in front of your loved ones.
+It’s your time to shine, and you want more than the typical standard express headshot packages.
 
-This is the happiest day of your life.
+You want someone who sees you, captures your personality and that twinkle in your eye.
 
-So, you want to remember it.
-
-Your big day is here, so just relax, and enjoy it and I’ll capture the precious moments of you
-and your spouse, with your family and friends around you.
+Actors, dancers, performers, models – here at ISJ, I see you.

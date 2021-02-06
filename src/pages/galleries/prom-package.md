@@ -1,4 +1,4 @@
 ---
 templateKey: gallery-page
-title: Headshots
+title: Prom Package
 ---

@@ -44,14 +44,19 @@ function WeddingGalleryTemplate({
                     <div
                     // className="card-image" style={{ backgroundColor: 'rgba(0,0,0,0.4)' }}
                     >
-                      <PreviewCompatibleImage imageInfo={album.cover.photo} borderRadius={10} aspectRatio={4 / 3} />
+                      <PreviewCompatibleImage
+                        imageInfo={album.cover.photo}
+                        borderRadius={10}
+                        aspectRatio={16 / 9}
+                        style={{ objectPosition: `center ${(album.title === 'Prom Package' || album.title === 'Headshots') ? '20%' : 'center'}` }}
+                      />
                     </div>
                     <div style={{ backgroundColor: 'rgba(0,0,0,0.3)', height: '100%', position: 'absolute', width: '100%', top: 0, borderRadius: '10px' }}>
                       <h3
-                        className='subtitle is-1 is-family-secondary has-text-white p-2'
+                        className='subtitle is-2 is-family-secondary has-text-white p-2'
                         style={{
                           position: 'absolute',
-                          bottom: '1rem',
+                          bottom: '0',
                           left: '1rem',
                           // backgroundColor: 'rgba(0,0,0,0.4)'
                           // transform: 'translate(-50%, -50%)',

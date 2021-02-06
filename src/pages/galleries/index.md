@@ -10,6 +10,8 @@ albums:
   - "Family"
   - "Sitters"
   - "Cake Smash"
-  - "Headshots"
   - "Hair and Makeup"
+  - "Headshots"  
+  - "Prom Package"
+  - "Mini Session"
 ---

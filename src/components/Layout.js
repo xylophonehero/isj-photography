@@ -58,6 +58,7 @@ const TemplateWrapper = ({ children }) =>
           property="og:image"
           content={`${withPrefix('/')}img/og-image.png`}
         />
+        <meta name="google-site-verification" content="E3zCdlggV3AvPhJXGBBCA9TBQQ1-0ca6YXJuHpr2w54" />
         {typeof window !== 'undefined' && <script type="text/javascript">
           {document.addEventListener('contextmenu', (e) =>
           {

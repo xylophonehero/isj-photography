@@ -1,7 +1,6 @@
 ---
 templateKey: 'testimonial-page'
 path: /testimonials
-description: Words from some happy clients
 testimonials:
   - author: Kelly Taylor-Kulla
     location: Essex

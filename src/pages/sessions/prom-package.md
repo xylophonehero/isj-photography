@@ -1,55 +1,39 @@
 ---
 templateKey: session-page
-title: Hair and Makeup
+title: Prom Package
 howItWorks: |
-  I run the hair and makeup company, Krstev Kreates, with my husband Zoran. I am a qualified, experienced makeup artist and Zoran is an accomplished hairdresser. 
+  We LOVE Prom!
 
-  It makes your wedding day go even smoother (and saves you money) to have the same team do your photography and makeup. 
+  Who doesn’t love getting all dressed up?
 
-  If you’d like to book us for both, here are the price packages.
+  You’ve bought your perfect dress, got the sharpest tux, and now it’s time to make sure you show it off!
 
-  (We’re also available to book for just hair and makeup should you wish, please head to <a href="https://www.facebook.com/krstevkreates/">Krstev Kreates</a> for info)
+  Your iPhone pictures are just not going to cut it.
+
+  Why not get the full package and let us photograph you?
+  
+  The typical ‘Prom Date’ couples printed photo is so outdated. We are with you before you leave for prom to get all the pictures you will love to share with your family and the perfect pictures that you will love to update your Instagram profile with.
+
+  For the girls, we’ve got you covered the full works to make you look & feel like a princess.
+
+  For the guys, we know you still want to feel and look fresh without too much fuss. We’ve got you too.
 pricing:  
-  description:
+  description: |
+    Getting ready with your girls? Email us for the best friend options <a href="sayhi@isjphotography.com">sayhi@isjphotography.com</a>
   tables:
-    - title: Pinnacle
-      price: 2349
+    - title: Prom King/Queen
+      price: 269
       features:
-        - 2 photographers
-        - Pre-wedding meeting
-        - Pre-wedding photo shoot
-        - 10 hours Photography coverage
-        - 20 9"x6" luxury printed images
-        - All digital images
-        - Photos and edited slideshow saved on USB
-        - Classic 8"x12" 20-page album
-        - 20 thank you cards
-        - £100 credit towards Wall Art
-        - Hair and Makeup for the Bride
-        - Bridal trial
-        - Hair and Makeup for three members of bridal party
-    - title: Vista
-      price: 1849
+        - Hair and makeup OR Fresh Trim and Style
+        - Up to 2-hours photography coverage
+        - Video highlights slideshow
+        - Digital images
+    - title: One Night Only
+      price: 199
       features:
-        - 2 Photographers
-        - 8 hours photography coverage
-        - Pre-wedding meeting
-        - 10 9"x6" luxury printed images
-        - All digital images
-        - Photos and edited slideshow saved on USB
-        - Classic 5"x7" album
-        - Hair and Makeup for the Bride
-        - Hair and Makeup for three members of bridal party
-    - title: Signature
-      price: 1199
-      features:
-        - 1 Photographer
-        - Pre-wedding meeting
-        - 8 hours photography coverage
-        - All web-ready images
-        - Photos and edited slideshow saved on USB
-        - Hair and Makeup for the Bride
-        - Hair and Makeup for two members of bridal party
+        - Up to 1-hour photography coverage
+        - Video highlights slideshow
+        - Digital images
 
 faqs:
   - question: Where are you based?
@@ -107,12 +91,3 @@ faqs:
 
       Ultimately, I am going to be spending the whole day with you and it’s your most important day. So, I want to be your friend. I want you to feel happy, safe and comfortable with me, because that’s when we get the best photos. This session can be at a location of your choice, at a place that’s special and important to you both, for example where you first met or got engaged.
 ---
-You’ve found your “one”, you’ve made all the plans. Now it’s time to walk down that aisle
-and say your vows in front of your loved ones.
-
-This is the happiest day of your life.
-
-So, you want to remember it.
-
-Your big day is here, so just relax, and enjoy it and I’ll capture the precious moments of you
-and your spouse, with your family and friends around you.

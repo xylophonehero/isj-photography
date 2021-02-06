@@ -70,6 +70,7 @@ $size-2: 3.5rem;
 
 .navbar-link:not(.is-arrowless) {
     padding-right: 1.5em !important;
+    padding-left: 0;
 }
 
 .navbar-link:not(.is-arrowless)::after{

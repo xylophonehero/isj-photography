@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet'
 import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 // import { Helmet } from 'react-helmet'
@@ -108,8 +109,7 @@ export const SessionPageTemplate = ({
   testimonials,
   faqs,
   howItWorks,
-
-  // helmet,
+  helmet,
 }) =>
 {
 
@@ -139,14 +139,15 @@ export const SessionPageTemplate = ({
 
   return (
     <>
+      {helmet || ''}
       <div className="" style={{ position: 'sticky', top: 0, zIndex: 4, backgroundColor: '#F2ECE7' }}>
         <div className="columns is-centered is-multiline is-mobile py-2 m-0" style={{ width: '100%' }}>
           {/* <div className="column is-hidden-mobile" /> */}
-          <div className="column is-narrow is-half-mobile has-text-centered">
+          {!!howItWorks && <div className="column is-narrow is-half-mobile has-text-centered">
             <AnchorLink activeClass="activeAnchor" to="howItWorks" spy={true} smooth={true}>
               How It Works
             </AnchorLink>
-          </div>
+          </div>}
           <div className="column is-narrow is-half-mobile has-text-centered">
             <AnchorLink activeClass="activeAnchor" to="pricing" spy={true} smooth={true}>
               Pricing
@@ -172,7 +173,6 @@ export const SessionPageTemplate = ({
       </div>
 
       <section className="section" style={{ perspective: '2px' }}>
-        {/* {helmet || ''} */}
         <div className="container content">
           {/* Intro */}
           <div className="columns">
@@ -202,7 +202,7 @@ export const SessionPageTemplate = ({
           image={gallery[3].photo.childImageSharp.fluid}
         />}
       {/* How it works */}
-      <Element name="howItWorks" >
+      {!!howItWorks && <Element name="howItWorks" >
         <div className="section is-medium has-background-white-ter" ref={howItWorksRef}>
           <div className="container content overflow-x-hidden">
             <SlideX animateCondition={howItWorksInView} amount={200}>
@@ -214,7 +214,7 @@ export const SessionPageTemplate = ({
 
           </div>
         </div>
-      </Element>
+      </Element>}
       {/* Pricing */}
       <Element name="pricing" className="section is-medium" >
         <div className="container content overflow-x-hidden" ref={pricingRef}>
@@ -226,14 +226,14 @@ export const SessionPageTemplate = ({
           </SlideX>
 
           <motion.div
-            className="columns"
+            className="columns is-centered"
             variants={pricingVariants}
             initial="hidden"
             animate={pricingInView ? "visible" : "hidden"}
           >
             {pricing.tables.map((item, index) => (
               <motion.div
-                className={`column is-one-third ${pricing.tables.length === 1 && "is-offset-4"}`}
+                className={`column is-one-third`}
                 key={item.title}
                 variants={pricingBlockVariants}
               >
@@ -244,7 +244,7 @@ export const SessionPageTemplate = ({
                     </p>
                   </header>
                   <div className="card-image">
-                    <PreviewCompatibleImage imageInfo={gallery[index].photo} borderRadius={0} aspectRatio={16 / 9} />
+                    <PreviewCompatibleImage imageInfo={gallery[index].photo} borderRadius={0} aspectRatio={16 / 9} style={{ objectPosition: 'center 20%' }} />
                   </div>
                   <div className="card-content content">
                     <p className={`is-size-3 has-text-centered ${index === 0 ? "has-text-primary has-text-weight-bold" : "has-text-weight-semibold"}`}>
@@ -340,6 +340,14 @@ const SessionPage = ({ data }) =>
   return (
     <Layout>
       <SessionPageTemplate
+        helmet={<Helmet
+          titleTemplate="%s Sessions">
+          <title>{`${post.frontmatter.title}`}</title>
+          <meta
+            name="description"
+            content={`${post.html || post.frontmatter.howItWorks}`}
+          ></meta>
+        </Helmet>}
         content={post.html}
         contentComponent={HTMLContent}
         // description={post.frontmatter.description}

@@ -30,7 +30,7 @@ export const GalleryPageTemplate = ({
           <hr />
           <PostContent content={content} className="has-text-centered is-size-5" />
           {/* Gallery */}
-          <Gallery gallery={gallery} aspectRatio={4 / 3} objectPosition={title === 'Headshots' ? "30%" : 'center'} />
+          <Gallery gallery={gallery} aspectRatio={4 / 3} objectPosition={(title === 'Headshots' || title === 'Prom Package') ? "30%" : 'center'} />
 
         </div>
         {to !== "Coming soon" && <div className="has-text-centered mt-5">

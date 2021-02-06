@@ -100,27 +100,6 @@ export const IndexPageTemplate = ({
     afterChange: current => setActiveSlide(current)
   }
 
-  // const timelinePoints = {
-  //   height: '2rem',
-  //   width: '2rem',
-  //   left: '.5rem',
-  //   position: 'absolute',
-  //   backgroundColor: 'black',
-  //   border: 'solid black .25rem',
-  //   borderRadius: '1rem',
-  //   transform: 'translateY(-30px)'
-
-  // }
-
-  // const [sessionInView, setSessionInView] = useState('')
-  // const handleNewSessionInView = (target) =>
-  // {
-  //   setSessionInView(kebabCase(target))
-  // }
-  // const windowSize = useWindowSize()
-  // const { scrollY } = useViewportScroll()
-  // const ballPosition = useTransform(scrollY, [200, windowSize.height * 4], [windowSize.height * 0.05, windowSize.height * 0.65])
-
   return (
     <div>
       <div className="touch-landing-container"

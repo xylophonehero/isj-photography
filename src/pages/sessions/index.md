@@ -11,4 +11,7 @@ albums:
   - "Sitters"
   - "Cake Smash"
   - "Hair and Makeup"
+  - "Headshots"
+  - "Prom Package"
+  - "Mini Session"
 ---

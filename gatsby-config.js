@@ -4,9 +4,10 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: 'ISJ Photography',
+    title: 'ISJ Photography | Professional Essex based photographer',
     description:
-      'Essex based photographer specialising in capturing moments between couples, parents and children.',
+      'Essex based photographer specialising in capturing family milestones including weddings, newborn shot and fmaily portraits. ',
+    siteUrl: 'https://isjphotography.com'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -33,6 +34,7 @@ module.exports = {
         name: 'images',
       },
     },
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -72,7 +74,7 @@ module.exports = {
     {
       resolve: "gatsby-source-google-photos",
       options: {
-        albumsTitles: ["Wedding", "Engagement", "Maternity", "Newborn", "Family", "Landing", "Cake Smash", "Sitters", "Hair and Makeup", "Down on the Dancefloor", "Simply You", "The Prep", "Little Details", "The Ceremony", "Those Moments", "Headshots"],
+        albumsTitles: ["Wedding", "Engagement", "Maternity", "Newborn", "Family", "Landing", "Cake Smash", "Sitters", "Hair and Makeup", "Down on the Dancefloor", "Simply You", "The Prep", "Little Details", "The Ceremony", "Those Moments", "Headshots", "Prom Package", "Mini Session"],
         photosMaxWidth: 1024,
         debug: true,
         pageSizePhotos: 10

@@ -56,11 +56,11 @@ const Navbar = () =>
               </div>
             </div>
 
-            <div className="navbar-item is-hoverable has-dropdown">
-              <Link className="navbar-link" to="/galleries">
-                Galleries
+            {/* <div className="navbar-item"> */}
+            <Link className="navbar-item" to="/galleries">
+              Galleries
                 </Link>
-              <div className="navbar-dropdown">
+            {/* <div className="navbar-dropdown">
                 <Link className="navbar-item" to="/galleries/engagement">
                   Engagement
                 </Link>
@@ -88,8 +88,8 @@ const Navbar = () =>
                 <Link className="navbar-item" to="/galleries/hair-and-makeup">
                   Hair and Makeup
                 </Link>
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
             <div className="navbar-item is-hoverable has-dropdown">
               <Link className="navbar-link" to="/sessions">
                 Sessions
