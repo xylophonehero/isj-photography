@@ -128,20 +128,16 @@ export const IndexPageTemplate = ({
                             initial={{ opacity: 0, x: 100 }}
                             animate={activeSlide === index ? { opacity: 1, x: 0, transition: { delay: 0.5, duration: 1 } } : { opacity: 0, x: 100 }}
                           >
-
                             <p className="is-italic ">"{item.quote}"</p>
                             <cite className="has-text-centered">- {item.author}</cite>
                           </motion.div>
                         </div>
-
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="hero is-halfheight is-hidden-desktop">
-
                 </div>
-
               </BackgroundImage>
             ))}
           </Slider>

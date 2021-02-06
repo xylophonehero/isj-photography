@@ -20,6 +20,7 @@ import { IconContext } from 'react-icons'
 import BackgroundImage from 'gatsby-background-image'
 import { Link as AnchorLink, Element } from 'react-scroll'
 import { SlideX } from '../components/Animations'
+import Gallery from '../components/Gallery'
 
 import HTMLBlock from '../components/Transform'
 import Banner from '../components/Banner'
@@ -163,11 +164,19 @@ export const SessionPageTemplate = ({
               Testimonials
             </AnchorLink>
           </div>} */}
-          <div className="column is-narrow is-half-mobile has-text-centered">
+          {title !== "Mini Session" &&
+            <div className="column is-narrow is-half-mobile has-text-centered">
 
-            <Link to={`/galleries/${kebabCase(title)}`}>Gallery</Link>
 
-          </div>
+              {(title === "Headshots" || title === "Prom Package") ?
+                <AnchorLink activeClass="activeAnchor" to="gallery" spy={true} smooth={true}>
+                  FAQs
+            </AnchorLink>
+                :
+                <Link to={`/galleries/${kebabCase(title)}`}>Gallery</Link>
+              }
+
+            </div>}
           {/* <div className="column is-hidden-mobile" /> */}
         </div>
       </div>
@@ -281,6 +290,23 @@ export const SessionPageTemplate = ({
         </div>
       </Element>
       <Banner backgroundColor="light" />
+      {/* Gallery */}
+      {(title === "Headshots" || title === "Prom Package") &&
+        <Element name="gallery">
+          <section className="section">
+            <div className="container content">
+              {/* <SlideX animateCondition={faqsInView} amount={200}> */}
+              <Subtitle >Gallery</Subtitle>
+              {/* </SlideX> */}
+              <div className="is-hidden-touch">
+                <Gallery gallery={gallery} desktop={"one-third"} objectPosition="20%" />
+              </div>
+              <div className="is-hidden-desktop">
+                <Gallery gallery={gallery} mobile={"half"} aspectRatio={1} objectPosition="20%" />
+              </div>
+            </div>
+          </section>
+        </Element>}
       {/* FAQs */}
       <Element name="faqs">
         <div className="section is-medium has-background-white-ter overflow-x-hidden" ref={faqsRef}>
