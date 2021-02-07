@@ -159,18 +159,13 @@ export const SessionPageTemplate = ({
               FAQs
             </AnchorLink>
           </div>
-          {/* {testimonials.length > 1 && <div className="column is-narrow is-half-mobile has-text-centered">
-            <AnchorLink activeClass="activeAnchor" to="testimonials" spy={true} smooth={true}>
-              Testimonials
-            </AnchorLink>
-          </div>} */}
           {title !== "Mini Session" &&
             <div className="column is-narrow is-half-mobile has-text-centered">
 
 
               {(title === "Headshots" || title === "Prom Package") ?
                 <AnchorLink activeClass="activeAnchor" to="gallery" spy={true} smooth={true}>
-                  FAQs
+                  Gallery
             </AnchorLink>
                 :
                 <Link to={`/galleries/${kebabCase(title)}`}>Gallery</Link>

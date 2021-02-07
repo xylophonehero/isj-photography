@@ -8,7 +8,7 @@ import { withPrefix } from 'gatsby'
 
 const TemplateWrapper = ({ children }) =>
 {
-  const { title, description } = useSiteMetadata()
+  const { title, description, siteUrl } = useSiteMetadata()
   return (
     <div id="top">
       <Helmet>
@@ -53,10 +53,11 @@ const TemplateWrapper = ({ children }) =>
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
-        <meta property="og:url" content="/" />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={siteUrl} />
         <meta
           property="og:image"
-          content={`${withPrefix('/')}img/og-image.png`}
+          content={`${siteUrl}/img/og-image.png`}
         />
         <meta name="google-site-verification" content="E3zCdlggV3AvPhJXGBBCA9TBQQ1-0ca6YXJuHpr2w54" />
         {typeof window !== 'undefined' && <script type="text/javascript">

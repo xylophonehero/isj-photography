@@ -23,7 +23,7 @@
     "gatsby-remark-images": "^3.2.6",
     "gatsby-remark-relative-images": "^0.3.0",
     "gatsby-source-filesystem": "^2.2.5",
-    "gatsby-source-google-photos": "git://github.com/xylophonehero/gatsby-source-google-photos",
+    "gatsby-source-google-photos": "https://github.com/xylophonehero/gatsby-source-google-photos#use-with-npm",
     "gatsby-transformer-remark": "^2.7.5",
     "gatsby-transformer-sharp": "^2.4.7",
     "lodash": "^4.17.15",

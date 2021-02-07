@@ -9176,9 +9176,9 @@ gatsby-source-filesystem@^2.5.0:
     valid-url "^1.0.9"
     xstate "^4.14.0"
 
-"gatsby-source-google-photos@git://github.com/xylophonehero/gatsby-source-google-photos":
+"gatsby-source-google-photos@https://github.com/xylophonehero/gatsby-source-google-photos#use-with-npm":
   version "2.4.1"
-  resolved "git://github.com/xylophonehero/gatsby-source-google-photos#01f3ee5d136119f22f4ae9f4da875df23b747149"
+  resolved "https://github.com/xylophonehero/gatsby-source-google-photos#bf29538b8d572ceef4df81347706199a8d973f9e"
   dependencies:
     gatsby-source-filesystem "^2.5.0"
     google-oauth2-env-vars "^1.2.0"

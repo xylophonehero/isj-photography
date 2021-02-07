@@ -116,9 +116,12 @@ const Navbar = () =>
                 <Link className="navbar-item" to="/sessions/cake-smash">
                   Cake Smash
                 </Link>
-                <Link className="navbar-item" to="/sessions/hair-and-makeup">
-                  Hair and Makeup
+                <Link className="navbar-item" to="/sessions/additional-services">
+                  Additional Services
                 </Link>
+                {/* <Link className="navbar-item" to="/sessions/hair-and-makeup">
+                  Hair and Makeup
+                </Link> */}
               </div>
             </div>
             <Link className="navbar-item" to="/wall-art">

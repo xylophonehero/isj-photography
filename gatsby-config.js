@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: 'ISJ Photography | Professional Essex based photographer',
     description:
-      'Essex based photographer specialising in capturing family milestones including weddings, newborn shot and fmaily portraits. ',
+      'Essex based photographer specialising in capturing family milestones including weddings, newborn shot and family portraits.',
     siteUrl: 'https://isjphotography.com'
   },
   plugins: [
