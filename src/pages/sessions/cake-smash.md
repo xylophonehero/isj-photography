@@ -29,13 +29,13 @@ pricing:
         - Full use of props
         - £100 credit towards a wall art purchase
         - Facebook timeline cover
-        - £50 off your family session 
+        - £50 off your family session
     - title: Vista
       price: 449
       features:
         - Up to two-hour session
         - Face-to-face viewing session
-        - Birthday cake 
+        - Birthday cake
         - A range of different themes/setups to choose from
         - Splash bath
         - 10 high-resolution, fully edited photos on a USB stick
@@ -46,33 +46,57 @@ pricing:
       price: 249
       features:
         - Up to two-hour session
-        - Birthday cake 
+        - Birthday cake
         - Face-to-face viewing session
         - 5 high-resolution, fully edited photos on a USB stick
         - Five 6"x 9" prints matching your chosen digital images
         - Full use of props
 faqs:
   - question: When will we book my session?
-    answer: |
-      I feel the best time to photograph you newborn is when your baby is between 4-14 days old. I highly recommend you book your session as soon as you know your due date. We will make a provisional booking and patiently await their arrival. If it doesn’t work out for me to photograph your baby by 14 days old, we can do this when your baby is a little older, no problem. The session may take a little longer as after 14 days your baby is no longer at their sleepiest. They become more alert, and less curled and snuggled. Nevertheless, we will achieve beautiful images that you’ll love forever. Your baby may be more awake and not be able to be put into the same poses as babies 14 days old or younger. But there are many poses we can do to show off their perfect little selves.
+    answer: >
+      I feel the best time to photograph you newborn is when your baby is
+      between 4-14 days old. I highly recommend you book your session as soon as
+      you know your due date. We will make a provisional booking and patiently
+      await their arrival. If it doesn’t work out for me to photograph your baby
+      by 14 days old, we can do this when your baby is a little older, no
+      problem. The session may take a little longer as after 14 days your baby
+      is no longer at their sleepiest. They become more alert, and less curled
+      and snuggled. Nevertheless, we will achieve beautiful images that you’ll
+      love forever. Your baby may be more awake and not be able to be put into
+      the same poses as babies 14 days old or younger. But there are many poses
+      we can do to show off their perfect little selves.
   - question: How long will the session last?
-    answer: |
-      Around 2-4 hours depending on your baby. All sessions are baby led, so if they’re super sleepy, sessions will be on the shorter side but if they need extra feeding, burping or changing, then we will simply take more time. 
+    answer: >
+      Around 2-4 hours depending on your baby. All sessions are baby led, so if
+      they’re super sleepy, sessions will be on the shorter side but if they
+      need extra feeding, burping or changing, then we will simply take more
+      time. 
+
 
       I never rush you or your baby, so there is no need for you to stress if baby needs extra feeds (I am known for my patience, even though my husband may disagree!) Please don’t have anything planned for directly after your session though, as we can possibly go over time. 
 
+
       I provide all newborn props, outfits and backdrops, so all you will need to bring to your session are the baby’s feeds, with some extra to be on the safe side – and a backup outfit for mum and dad in case of any accidents. I’ll email you how to prep for your session before it, with more in-depth information of what to expect, what to wear, and my address. 
-  - question: How long are sitter and cake smash sessions for older babies? 
-    answer: |
+  - question: How long are sitter and cake smash sessions for older babies?
+    answer: >
       Around two hours.
+
 
       For cake smash, book this while at your sitter session or at least six months before the birthday, to make sure i can fit you in.
   - question: Where are you based?
-    answer: |
-      I do all my sessions from my beautiful cosy home studio in Chadwell Heath in Essex. I will give my address before you are due to arrive. I don’t travel for newborn sessions, however, if for some reason you are unable to get to me once your baby is born, please call me and we can arrange something.
+    answer: >
+      I do all my sessions from my beautiful cosy home studio in Chadwell Heath
+      in Essex. I will give my address before you are due to arrive. I don’t
+      travel for newborn sessions, however, if for some reason you are unable to
+      get to me once your baby is born, please call me and we can arrange
+      something.
   - question: When will my images be ready?
-    answer: |
-      Your images are hand-edited by me to the highest standard. This process takes around 10 days. Once your gallery is ready, you will be invited back to the studio for a private viewing session where you’ll choose your favourite images and what you’d like to purchase. Final payment is made on this day. 
+    answer: >
+      Your images are hand-edited by me to the highest standard. This process
+      takes around 10 days. Once your gallery is ready, you will be invited back
+      to the studio for a private viewing session where you’ll choose your
+      favourite images and what you’d like to purchase. Final payment is made on
+      this day. 
   - question: Is the deposit included in the package?
     answer: |
       Yes. The £99 will be deducted from the balance of any package you choose.
