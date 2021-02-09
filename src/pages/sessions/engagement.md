@@ -12,7 +12,7 @@ pricing:
     - title: Couples
       price: 249
 faqs:
-  - question: Do you offer engagement/couples sessions?
+  - question: Do you offer engagement or couples sessions?
     answer: |
       Yes, I do! I’d highly recommend booking one – especially if you are people who don’t really feel confident in front of the camera. These sessions are really informal and it’s a great way for us all to get to know each other more. You’ll see how I work and I can get a feel for your personalities and what your big day will be like. There is nothing worse than feeling awkward or not vibing with your photographer. 
 

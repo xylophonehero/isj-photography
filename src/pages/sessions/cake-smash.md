@@ -2,17 +2,17 @@
 templateKey: session-page
 title: Cake Smash
 howItWorks: |
-  Celebrate your baby’s first birthday in style!
+  Celebrate your baby’s first birthday in style!
 
-  Wow! How fast has the year gone by? Your baby’s first ever birthday – what a milestone!
+  Wow! How fast has the year gone by? Your baby’s first ever birthday – what a milestone!
 
-  These shoots are an ideal way to document, capture and celebrate. What better way for a baby to celebrate, than diving headfirst into their own birthday cake! The fun is followed by a nice warm bubble bath and bubbles.
+  These shoots are an ideal way to document, capture and celebrate. What better way for a baby to celebrate, than diving headfirst into their own birthday cake! The fun is followed by a nice warm bubble bath and bubbles.
 
-  You will have up to two hours studio time. All sessions include classic portraits, so bring mum, dad and the siblings along too!
+  You will have up to two hours studio time. All sessions include classic portraits, so bring mum, dad and the siblings along too!
 
-  It’s best to book these sessions for when your baby is 11 months old. This way you can use the images for their first birthday as party invites, thank you cards ,or have them printed and displayed at the main event!
+  It’s best to book these sessions for when your baby is 11 months old. This way you can use the images for their first birthday as party invites, thank you cards,or have them printed and displayed at the main event!
 
-  We will have a full consultation beforehand, where you will get all the essential information.
+  We will have a full consultation beforehand, where you will get all the essential information.
 pricing:
   tables:
     - title: Pinnacle

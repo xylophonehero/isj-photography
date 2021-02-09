@@ -103,7 +103,7 @@ faqs:
       Second, we’ll arrange a pre-wedding consultation in person or by Zoom (covid restrictions dependant) so that we can discuss your wedding ideas and photography aims. That will give me more of an understanding of how your wedding day will go. You can trust me. I’ve been there. Before I had my own wedding, I had photographed lots of others and appreciated how much effort went into each day. But when planning mine, I really learned first-hand how stressful planning your day can be. So, I want to eliminate as much of that for you as possible.
 
       You can contact me as little or as much as you’d like. I usually become friends with most of my clients due to the amount of time we spend chatting. I can also help you with hair and makeup and recommend a videographer if you wish. You can rest assured that from the pre-wedding to the post-wedding process of selecting and editing photos and designing a beautiful wedding album, you have my full commitment.
-  - question: Do you offer engagement/couples sessions?
+  - question: Do you offer engagement or couples sessions?
     answer: |
       Yes, I do! I’d highly recommend booking one – especially if you are people who don’t really feel confident in front of the camera. These sessions are really informal and it’s a great way for us all to get to know each other more. You’ll see how I work and I can get a feel for your personalities and what your big day will be like. There is nothing worse than feeling awkward or not vibing with your photographer. 
 
