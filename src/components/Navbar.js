@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
+import { facebookUrl, instagramUrl } from './urls'
 // import github from '../img/github-icon.svg'
 import logo from '../img/isjlogo.svg'
 import Facebook from '../img/social/facebook.inline.svg'
@@ -140,7 +141,7 @@ const Navbar = () =>
           <div className="navbar-end has-text-centered">
             <a
               className="navbar-item"
-              href="https://facebook.com"
+              href={facebookUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -154,7 +155,7 @@ const Navbar = () =>
             </a>
             <a
               className="navbar-item"
-              href="https://instagram.com"
+              href={instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
             >

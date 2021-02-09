@@ -10,6 +10,8 @@ import Instagram from '../img/social/instagram.inline.svg'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
+import { facebookUrl, instagramUrl } from './urls'
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IconContext } from 'react-icons/lib';
@@ -97,7 +99,7 @@ const Footer = () =>
               <div className="is-flex is-justify-content-center">
                 <a
                   className="navbar-item"
-                  href="https://facebook.com"
+                  href={facebookUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -110,7 +112,7 @@ const Footer = () =>
                 </a>
                 <a
                   className="navbar-item"
-                  href="https://instagram.com"
+                  href={instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
