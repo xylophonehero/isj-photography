@@ -27,13 +27,17 @@ tags:
   - honestparenting
   - ""
 ---
-<!--\[if gte mso 9]><xml>
+![](/img/isj_9602...jpg)
+
+
+
+<!--\\[if gte mso 9]><xml>
  <o:OfficeDocumentSettings>
   <o:AllowPNG/>
  </o:OfficeDocumentSettings>
-</xml><!\[endif]-->
+</xml><!\\[endif]-->
 
-<!--\[if gte mso 9]><xml>
+<!--\\[if gte mso 9]><xml>
  <w:WordDocument>
   <w:View>Normal</w:View>
   <w:Zoom>0</w:Zoom>
@@ -72,9 +76,9 @@ tags:
    <m:intLim m:val="subSup"/>
    <m:naryLim m:val="undOvr"/>
   </m:mathPr></w:WordDocument>
-</xml><!\[endif]-->
+</xml><!\\[endif]-->
 
-<!--\[if gte mso 9]><xml>
+<!--\\[if gte mso 9]><xml>
  <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
   DefSemiHidden="false" DefQFormat="false" DefPriority="99"
   LatentStyleCount="371">
@@ -643,9 +647,9 @@ tags:
   <w:LsdException Locked="false" Priority="52"
    Name="List Table 7 Colorful Accent 6"/>
  </w:LatentStyles>
-</xml><!\[endif]-->
+</xml><!\\[endif]-->
 
-<!--\[if gte mso 10]>
+<!--\\[if gte mso 10]>
 <style>
  /* Style Definitions */
  table.MsoNormalTable
@@ -670,7 +674,7 @@ tags:
 	mso-hansi-theme-font:minor-latin;
 	mso-fareast-language:EN-US;}
 </style>
-<!\[endif]-->
+<!\\[endif]-->
 
 <!--StartFragment-->
 
@@ -679,23 +683,19 @@ I spent so much time in the last 8 weeks of my pregnancy at the hospital, it was
 Fast forward 38 weeks pregnant after refusing 3 inductions a doctor finally explained why they needed to get the baby out sooner rather than later. It would be safer for the baby as they still hadn’t grown as much as they should and was showing no obvious signs as to why.\
 I was kept in and induced and not allowed to go home until the baby was here! The emotions were uncontrollable, excited because I was about to become a mum but also filled with nerves! Could I do this? Can my body do this? My biggest fear was having to have a c section.
 
-<!--\[if !supportLineBreakNewLine]-->
+<!--\\[if !supportLineBreakNewLine]-->
 
-
-
-<!--\[endif]-->
+<!--\\[endif]-->
 
 <!--EndFragment-->
 
-
-
-<!--\[if gte mso 9]><xml>
+<!--\\[if gte mso 9]><xml>
  <o:OfficeDocumentSettings>
   <o:AllowPNG/>
  </o:OfficeDocumentSettings>
-</xml><!\[endif]-->
+</xml><!\\[endif]-->
 
-<!--\[if gte mso 9]><xml>
+<!--\\[if gte mso 9]><xml>
  <w:WordDocument>
   <w:View>Normal</w:View>
   <w:Zoom>0</w:Zoom>
@@ -734,9 +734,9 @@ I was kept in and induced and not allowed to go home until the baby was here! Th
    <m:intLim m:val="subSup"/>
    <m:naryLim m:val="undOvr"/>
   </m:mathPr></w:WordDocument>
-</xml><!\[endif]-->
+</xml><!\\[endif]-->
 
-<!--\[if gte mso 9]><xml>
+<!--\\[if gte mso 9]><xml>
  <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
   DefSemiHidden="false" DefQFormat="false" DefPriority="99"
   LatentStyleCount="371">
@@ -1305,9 +1305,9 @@ I was kept in and induced and not allowed to go home until the baby was here! Th
   <w:LsdException Locked="false" Priority="52"
    Name="List Table 7 Colorful Accent 6"/>
  </w:LatentStyles>
-</xml><!\[endif]-->
+</xml><!\\[endif]-->
 
-<!--\[if gte mso 10]>
+<!--\\[if gte mso 10]>
 <style>
  /* Style Definitions */
  table.MsoNormalTable
@@ -1332,7 +1332,7 @@ I was kept in and induced and not allowed to go home until the baby was here! Th
 	mso-hansi-theme-font:minor-latin;
 	mso-fareast-language:EN-US;}
 </style>
-<!\[endif]-->
+<!\\[endif]-->
 
 <!--StartFragment-->
 
@@ -1350,23 +1350,19 @@ A few hours had passed around 4am, I was placed on the drip and 4cm dilated I ha
 
 At 07:07 our baby literally flew into our world! I was shouting that something was coming out, I really thought I was about to wet myself so I was just making everyone aware. But no, low and behold it was the baby, came out all in one go, no pushing, the midwife didn’t even have her gloves on. It came shooting out slid across the bed and hit the bottom, luckily we were still attached by the cord. It was a massive shock and relief to hear the first cry and when my husband saw and announced he was a boy; I just couldn’t control the tears. I wish I could bottle up that feeling of euphoria, total love, excitement and happiness. It really was the best moment of my life.
 
-<!--\[if !supportLineBreakNewLine]-->
+<!--\\[if !supportLineBreakNewLine]-->
 
-
-
-<!--\[endif]-->
+<!--\\[endif]-->
 
 <!--EndFragment-->
 
-
-
-<!--\[if gte mso 9]><xml>
+<!--\\[if gte mso 9]><xml>
  <o:OfficeDocumentSettings>
   <o:AllowPNG/>
  </o:OfficeDocumentSettings>
-</xml><!\[endif]-->
+</xml><!\\[endif]-->
 
-<!--\[if gte mso 9]><xml>
+<!--\\[if gte mso 9]><xml>
  <w:WordDocument>
   <w:View>Normal</w:View>
   <w:Zoom>0</w:Zoom>
@@ -1405,9 +1401,9 @@ At 07:07 our baby literally flew into our world! I was shouting that something w
    <m:intLim m:val="subSup"/>
    <m:naryLim m:val="undOvr"/>
   </m:mathPr></w:WordDocument>
-</xml><!\[endif]-->
+</xml><!\\[endif]-->
 
-<!--\[if gte mso 9]><xml>
+<!--\\[if gte mso 9]><xml>
  <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
   DefSemiHidden="false" DefQFormat="false" DefPriority="99"
   LatentStyleCount="371">
@@ -1976,9 +1972,9 @@ At 07:07 our baby literally flew into our world! I was shouting that something w
   <w:LsdException Locked="false" Priority="52"
    Name="List Table 7 Colorful Accent 6"/>
  </w:LatentStyles>
-</xml><!\[endif]-->
+</xml><!\\[endif]-->
 
-<!--\[if gte mso 10]>
+<!--\\[if gte mso 10]>
 <style>
  /* Style Definitions */
  table.MsoNormalTable
@@ -2003,7 +1999,7 @@ At 07:07 our baby literally flew into our world! I was shouting that something w
 	mso-hansi-theme-font:minor-latin;
 	mso-fareast-language:EN-US;}
 </style>
-<!\[endif]-->
+<!\\[endif]-->
 
 <!--StartFragment-->
 
@@ -2022,13 +2018,13 @@ Why is this happening to me and my baby? Why am I missing out on showing my baby
 My mum having to touch her first grandchild’s hands through the window pane, not being able to just squeeze him, smell him, kiss him. I could see the pain in her eyes every time she came for a doorstep visit and it was so cold we couldn’t even stand outside for too long with the baby.\
 My grandparents haven’t been able to spend a lot of time with their first great child. They missed out on the whole newborn faze!\
 I never wanted to expose Reggie to screens but that’s the only way he has gotten to know his family and his family have be able to see him grow, is by spending everyday on FaceTime.\
-I could start to see by the time he was around 3 months old and becoming more aware he was <!--\[if gte mso 9]><xml>
+I could start to see by the time he was around 3 months old and becoming more aware he was <!--\\[if gte mso 9]><xml>
  <o:OfficeDocumentSettings>
   <o:AllowPNG/>
  </o:OfficeDocumentSettings>
-</xml><!\[endif]-->
+</xml><!\\[endif]-->
 
-<!--\[if gte mso 9]><xml>
+<!--\\[if gte mso 9]><xml>
  <w:WordDocument>
   <w:View>Normal</w:View>
   <w:Zoom>0</w:Zoom>
@@ -2067,9 +2063,9 @@ I could start to see by the time he was around 3 months old and becoming more aw
    <m:intLim m:val="subSup"/>
    <m:naryLim m:val="undOvr"/>
   </m:mathPr></w:WordDocument>
-</xml><!\[endif]-->
+</xml><!\\[endif]-->
 
-<!--\[if gte mso 9]><xml>
+<!--\\[if gte mso 9]><xml>
  <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
   DefSemiHidden="false" DefQFormat="false" DefPriority="99"
   LatentStyleCount="371">
@@ -2638,9 +2634,9 @@ I could start to see by the time he was around 3 months old and becoming more aw
   <w:LsdException Locked="false" Priority="52"
    Name="List Table 7 Colorful Accent 6"/>
  </w:LatentStyles>
-</xml><!\[endif]-->
+</xml><!\\[endif]-->
 
-<!--\[if gte mso 10]>
+<!--\\[if gte mso 10]>
 <style>
  /* Style Definitions */
  table.MsoNormalTable
@@ -2665,7 +2661,7 @@ I could start to see by the time he was around 3 months old and becoming more aw
 	mso-hansi-theme-font:minor-latin;
 	mso-fareast-language:EN-US;}
 </style>
-<!\[endif]-->
+<!\\[endif]-->
 
 <!--StartFragment-->
 
@@ -2684,9 +2680,5 @@ You got this x  
 <!--EndFragment-->
 
 <!--EndFragment-->
-
-
-
-
 
 ![](/img/img_6559.jpg "Life in Lockdown as a new mum")
