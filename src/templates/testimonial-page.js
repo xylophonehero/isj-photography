@@ -93,7 +93,7 @@ export const testimonialPageQuery = graphql`
           quote
           image {
             childImageSharp {
-              fluid(maxWidth: 1200) {
+              fluid(maxWidth: 1200, quality: 60) {
                 ...GatsbyImageSharpFluid
               }
             }

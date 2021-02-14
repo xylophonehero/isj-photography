@@ -42,10 +42,11 @@ $size-2: 3.5rem;
 
 .convert-images img{
   max-width: 600px;
-    display: block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
+
 
 .touch-landing-container{
   min-height: calc(100vh - 5rem); 
@@ -372,5 +373,9 @@ $size-2: 3.5rem;
 
   .navbar-link:not(.is-arrowless)::after{
     border-color: transparent !important;
+  }
+
+  .convert-images img{
+    max-width: 90%;
   }
 }
