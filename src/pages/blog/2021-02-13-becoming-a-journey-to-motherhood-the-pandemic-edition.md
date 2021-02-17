@@ -18,13 +18,10 @@ featuredpost: true
 featuredimage: /img/isj_9602...jpg
 tags:
   - Newmum
-  - motherhood
+  - ""
   - 2020baby
-  - lockdown2020
   - essexphotographer
-  - newbornphotographer
   - realmotherhood
-  - honestparenting
   - ""
 ---
 ![](/img/isj_9602...jpg)
