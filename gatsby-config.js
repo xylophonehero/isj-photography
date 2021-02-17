@@ -65,6 +65,12 @@ module.exports = {
     },
     `gatsby-plugin-smoothscroll`,
     {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `isjphotography-com`
+      }
+    },
+    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {

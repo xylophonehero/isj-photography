@@ -6,17 +6,26 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Banner from '../components/Banner'
+import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
 
 export const BlogPostTemplate = ({
+  id,
   content,
   contentComponent,
   description,
   tags,
   title,
   helmet,
+  slug,
 }) =>
 {
   const PostContent = contentComponent || Content
+
+  const disqusConfig = {
+    url: `https://isjphotography.com${slug}`,
+    identifier: id,
+    title: title,
+  }
 
   return (
     <>
@@ -42,6 +51,9 @@ export const BlogPostTemplate = ({
                   </ul>
                 </div>
               ) : null}
+              <CommentCount config={disqusConfig} placeholder={'...'} />
+
+              <Disqus config={disqusConfig} />
             </div>
           </div>
 
@@ -67,6 +79,8 @@ const BlogPost = ({ data }) =>
   return (
     <Layout>
       <BlogPostTemplate
+        slug={post.fields.slug}
+        id={post.id}
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
@@ -99,6 +113,9 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      fields{
+        slug
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
