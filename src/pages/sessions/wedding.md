@@ -59,12 +59,11 @@ howItWorks: >-
   x
 pricing:
   description: >-
-    ##### I offer packages to suit your needs and budget. Choose from the
-    options below and please get in touch if you’d like anything a little
-    different.
+    ## I offer packages to suit your needs and budget. Choose from the options
+    below and please get in touch if you’d like anything a little different.
 
 
-    ##### I’m a qualified makeup artist and with my husband Zoran, a qualified and experienced hairdresser, we also offer hair and makeup packages with our company Krstev Kreates. If you’d like to add hair and makeup to your wedding package, click <a href="/sessions/hair-and-makeup">***here***</a> for more info.
+    ## I’m a qualified makeup artist and with my husband Zoran, a qualified and experienced hairdresser, we also offer hair and makeup packages with our company Krstev Kreates. If you’d like to add hair and makeup to your wedding package, click <a href="/sessions/hair-and-makeup">***here***</a> for more info.
   tables:
     - title: Pinnacle
       price: 1999
