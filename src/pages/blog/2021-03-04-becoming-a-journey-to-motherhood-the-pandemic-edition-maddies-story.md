@@ -7,20 +7,18 @@ description: |+
 
   The second story of the series. 
 
-featuredpost: true
+featuredpost: false
 featuredimage: /img/maddie-teddie-.jpg
 ---
 ![](/img/maddie-teddie-.jpg "Throughout this whole journey of becoming a mother in the middle of a global pandemic I have had a mixture of emotions, from happy, excited, worried, stressed and sad. But now I’m on cloud 9, having Teddie really turned my world around for the better.")
 
-
-
-<!--\[if gte mso 9]><xml>
+<!--\\[if gte mso 9]><xml>
  <o:OfficeDocumentSettings>
   <o:AllowPNG/>
  </o:OfficeDocumentSettings>
-</xml><!\[endif]-->
+</xml><!\\[endif]-->
 
-<!--\[if gte mso 9]><xml>
+<!--\\[if gte mso 9]><xml>
  <w:WordDocument>
   <w:View>Normal</w:View>
   <w:Zoom>0</w:Zoom>
@@ -59,9 +57,9 @@ featuredimage: /img/maddie-teddie-.jpg
    <m:intLim m:val="subSup"/>
    <m:naryLim m:val="undOvr"/>
   </m:mathPr></w:WordDocument>
-</xml><!\[endif]-->
+</xml><!\\[endif]-->
 
-<!--\[if gte mso 9]><xml>
+<!--\\[if gte mso 9]><xml>
  <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
   DefSemiHidden="false" DefQFormat="false" DefPriority="99"
   LatentStyleCount="371">
@@ -630,9 +628,9 @@ featuredimage: /img/maddie-teddie-.jpg
   <w:LsdException Locked="false" Priority="52"
    Name="List Table 7 Colorful Accent 6"/>
  </w:LatentStyles>
-</xml><!\[endif]-->
+</xml><!\\[endif]-->
 
-<!--\[if gte mso 10]>
+<!--\\[if gte mso 10]>
 <style>
  /* Style Definitions */
  table.MsoNormalTable
@@ -659,7 +657,7 @@ featuredimage: /img/maddie-teddie-.jpg
 	mso-bidi-theme-font:minor-bidi;
 	mso-fareast-language:EN-US;}
 </style>
-<!\[endif]-->
+<!\\[endif]-->
 
 <!--StartFragment-->
 
@@ -691,11 +689,7 @@ The only thing I feel that has affected my baby in any way is I feel that it may
 
 I really do think that the treatment towards maternity should have been done differently. They should have allowed your birthing partner at all appointments and the whole way through your birth not just scheduled times or when you are in active labour as you really do need the support the whole way through.
 
-
-
 Maddison Sydney-Smith \
 First Time Mum 
 
 <!--EndFragment-->
-
->
