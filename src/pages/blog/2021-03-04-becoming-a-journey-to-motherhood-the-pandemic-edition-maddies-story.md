@@ -9,6 +9,10 @@ description: |+
 
 featuredpost: false
 featuredimage: /img/maddie-teddie-.jpg
+tags:
+  - firsttimemum
+  - essexnewbornphotographer
+  - ""
 ---
 ![](/img/maddie-teddie-.jpg "Throughout this whole journey of becoming a mother in the middle of a global pandemic I have had a mixture of emotions, from happy, excited, worried, stressed and sad. But now I’m on cloud 9, having Teddie really turned my world around for the better.")
 
