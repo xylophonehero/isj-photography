@@ -1,9 +1,9 @@
 ---
 templateKey: blog-post
-title: Becoming. A Journey to Motherhood   - The Pandemic Edition - Maddies Story
+title: "Becoming. A Journey to Motherhood   - The Pandemic Edition "
 date: 2021-03-05T19:00:08.910Z
 description: |+
-  Maddies Story
+  Maddisons Story
 
   The second story of the series. 
 
@@ -16,13 +16,13 @@ tags:
 ---
 ![](/img/maddie-teddie-.jpg "Throughout this whole journey of becoming a mother in the middle of a global pandemic I have had a mixture of emotions, from happy, excited, worried, stressed and sad. But now I’m on cloud 9, having Teddie really turned my world around for the better.")
 
-<!--\\[if gte mso 9]><xml>
+<!--\\\[if gte mso 9]><xml>
  <o:OfficeDocumentSettings>
   <o:AllowPNG/>
  </o:OfficeDocumentSettings>
-</xml><!\\[endif]-->
+</xml><!\\\[endif]-->
 
-<!--\\[if gte mso 9]><xml>
+<!--\\\[if gte mso 9]><xml>
  <w:WordDocument>
   <w:View>Normal</w:View>
   <w:Zoom>0</w:Zoom>
@@ -61,9 +61,9 @@ tags:
    <m:intLim m:val="subSup"/>
    <m:naryLim m:val="undOvr"/>
   </m:mathPr></w:WordDocument>
-</xml><!\\[endif]-->
+</xml><!\\\[endif]-->
 
-<!--\\[if gte mso 9]><xml>
+<!--\\\[if gte mso 9]><xml>
  <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
   DefSemiHidden="false" DefQFormat="false" DefPriority="99"
   LatentStyleCount="371">
@@ -632,9 +632,9 @@ tags:
   <w:LsdException Locked="false" Priority="52"
    Name="List Table 7 Colorful Accent 6"/>
  </w:LatentStyles>
-</xml><!\\[endif]-->
+</xml><!\\\[endif]-->
 
-<!--\\[if gte mso 10]>
+<!--\\\[if gte mso 10]>
 <style>
  /* Style Definitions */
  table.MsoNormalTable
@@ -661,7 +661,7 @@ tags:
 	mso-bidi-theme-font:minor-bidi;
 	mso-fareast-language:EN-US;}
 </style>
-<!\\[endif]-->
+<!\\\[endif]-->
 
 <!--StartFragment-->
 
@@ -697,3 +697,7 @@ Maddison Sydney-Smith \
 First Time Mum 
 
 <!--EndFragment-->
+
+
+
+![](/img/becoming-maddie.jpg)
