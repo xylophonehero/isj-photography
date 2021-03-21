@@ -19,13 +19,13 @@ tags:
 ---
 ![](/img/emma-vinne.jpg)
 
-<!--\[if gte mso 9]><xml>
+<!--\\[if gte mso 9]><xml>
  <o:OfficeDocumentSettings>
   <o:AllowPNG/>
  </o:OfficeDocumentSettings>
-</xml><!\[endif]-->
+</xml><!\\[endif]-->
 
-<!--\[if gte mso 9]><xml>
+<!--\\[if gte mso 9]><xml>
  <w:WordDocument>
   <w:View>Normal</w:View>
   <w:Zoom>0</w:Zoom>
@@ -64,9 +64,9 @@ tags:
    <m:intLim m:val="subSup"/>
    <m:naryLim m:val="undOvr"/>
   </m:mathPr></w:WordDocument>
-</xml><!\[endif]-->
+</xml><!\\[endif]-->
 
-<!--\[if gte mso 9]><xml>
+<!--\\[if gte mso 9]><xml>
  <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
   DefSemiHidden="false" DefQFormat="false" DefPriority="99"
   LatentStyleCount="371">
@@ -635,9 +635,9 @@ tags:
   <w:LsdException Locked="false" Priority="52"
    Name="List Table 7 Colorful Accent 6"/>
  </w:LatentStyles>
-</xml><!\[endif]-->
+</xml><!\\[endif]-->
 
-<!--\[if gte mso 10]>
+<!--\\[if gte mso 10]>
 <style>
  /* Style Definitions */
  table.MsoNormalTable
@@ -664,14 +664,12 @@ tags:
 	mso-bidi-theme-font:minor-bidi;
 	mso-fareast-language:EN-US;}
 </style>
-<!\[endif]-->
+<!\\[endif]-->
 
 <!--StartFragment-->
 
 I found out I was pregnant on December 16th 2019.  When we found out I was around 4/5 weeks pregnant. It was pure shock as we had been trying for over a year.\
 Our little newborn baby boy was born on August 16th 2020 at Basildon Hospital in Essex.
-
- 
 
 I was pregnant during most of the pandemic. At the start, due to me having a physical high demanding job (dog groomer) I loved being off, I was able to enjoy being pregnant. The weather was lovely, going for walks I really enjoyed it. However my partner unable to attend appointments with me was a huge upset, my little boy was measuring big throughout whole pregnancy so I had extra appointments and scans which can be worrying at the best of times especially going on your own.
 
@@ -681,13 +679,13 @@ You was supposed to be tested Covid on entering the hospital and I had been give
 I got induced on Friday 14th (my partners birthday) and my contractions started within 5 hrs of them inducing me. Throughout the night on the lard ward (On my own) contractions were hyper stimulating (not stopping and no breaks in-between) I had to have an injection to stop them as the baby was getting very stressed due to constant contractions. Throughout all of this, which was a lot to go through I was still on my own at this point.  
 
 The next day I got moved to a birthing suite, my partner was finally allowed to be with me. I had been given the hormone drip, this was put in through my hand. I had to stop-start due to my babys heart rate increasing. The Midwives then broke my waters for me, and I opted for an epurial. After hours there was no progress. Then the next morning I was taken for an emergency C-section. They didn’t check my Covid results until I went into theatre, makes sense?\
- And our Surprise Baby boy arrived 10.17am Sunday 16th August ♥️   \
-<!--\[if !supportLineBreakNewLine]-->\
-<!--\[endif]-->
+ And our Surprise Baby boy arrived 10.17am Sunday 16th August ♥️   
+
+<!--\\[if !supportLineBreakNewLine]-->
+
+<!--\\[endif]-->
 
 Having a C-section was brutal, not being able to move or change my own babies first nappy or put him into his first little outfit was so upsetting. I was home by Monday afternoon. They basically kicked me out, very surprising as I could barely walk. I think due to Covid they wanted the new mums and babies out ASAP.
-
- 
 
 Life in lockdown\
 Since August having Vinnie we hadn’t been in full lockdown but we were in the tier system. The huge blow is obviously things such as baby groups & soft plays being open/closed continuously. The bookings I had made we’ve cancelled & our swimming lessons were cancelled to.
@@ -711,12 +709,8 @@ It’s very hard not to start thinking “Oh what/how life would have been diffe
 
 I think that maternity units simply should have always been able to have your partner with you. Throughout scans, appointments & throughout whole labour. It’s really not something we should go through alone.
 
-
-
 Emma Jade Parlane\
 First Time Mum 2020 
-
-
 
 ![](/img/emma-vinne1.jpg)
 
