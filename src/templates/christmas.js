@@ -15,14 +15,16 @@ const CompletedContact = ({ data }) => {
           <p>{frontmatter.description}</p>
           <div className="is-flex is-flex-direction-column is-align-items-center">
             <video className="mt-4" width="100%" controls>
-              <source src="/img/christmas.mp4" type="video/mp4" />
+              <source src="/img/christmas-video.mp4" type="video/mp4" />
               Your browser does not support HTML video.
             </video>
             <a
               className="mt-4"
               href="https://isjphotography.bigcartel.com/product/the-complete-christmas-experience-2021"
             >
-              {frontmatter.linkText}
+              <button className="button is-light">
+                {frontmatter.linkText}
+              </button>
             </a>
           </div>
         </div>
