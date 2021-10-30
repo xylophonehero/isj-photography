@@ -215,3 +215,16 @@ collections:
             }
           - { label: Image, name: image, widget: image }
           - { label: Body, name: body, widget: markdown }
+      - file: "src/pages/chrsitams.md"
+        label: Christmas
+        name: christams
+        fields:
+          - {
+              label: Template Key,
+              name: templateKey,
+              widget: hidden,
+              default: christmas,
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Description, name: description, widget: text }
+          - { label: Link text, name: linkText, widget: text }
