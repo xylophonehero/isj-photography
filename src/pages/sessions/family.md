@@ -1,20 +1,28 @@
 ---
 templateKey: session-page
 title: Family
-howItWorks: |
-  I have a beautiful newly-renovated home studio, where I’ll conduct your session. Your session will last about 2-4 hours.
+howItWorks: >
+  I have a beautiful newly-renovated home studio, where I’ll conduct your
+  session. Your session will last about 2-4 hours.
+
 
   The most amazing thing – and what I love most about photography – is it has the power to transport you back to all those incredible moments.
 
+
   I love the feeling of creating an image that will bring back the emotions we experience at a particular moment in our lives. The images we create will become some of your most treasured possessions.
+
 
   I would love to create these images which will decorate your home with beautiful memories of you and your children.
 
+
   I create beautiful, soft and timeless images. Something that will go on to be treasured and passed on through the generations.
+
 
   As a mum, I have noticed how much time we spend behind the camera, hiding away not happy with how we look now. But our babies deserve to have us in these images with them, holding them tight, beaming ear to ear with love and pride.
 
+
   I want to help you create images that you can proudly hang in every room of the house, and even give as a gift to the grandparents.
+
 
   It’s time to create your legacy.
 pricing:
@@ -31,9 +39,9 @@ pricing:
         - Full use of props
         - £100 credit towards a wall art purchase
         - Facebook timeline cover
-        - £50 off your family session 
+        - £50 off your family session
     - title: Vista
-      price: 699
+      price: 599
       features:
         - Up to two-hour session
         - Face-to-face viewing session
@@ -43,7 +51,7 @@ pricing:
         - High resolution HD slide show with all your images
         - Full use of props
     - title: Signature
-      price: 499
+      price: 299
       features:
         - Up to two-hour session
         - Face-to-face viewing session
@@ -55,11 +63,19 @@ faqs:
     answer: |
       Around 2 hours
   - question: Where are you based?
-    answer: |
-      I do all my sessions from my beautiful cosy home studio in Chadwell Heath in Essex. I will give my address before you are due to arrive. I don’t travel for newborn sessions, however, if for some reason you are unable to get to me once your baby is born, please call me and we can arrange something.
+    answer: >
+      I do all my sessions from my beautiful cosy home studio in Chadwell Heath
+      in Essex. I will give my address before you are due to arrive. I don’t
+      travel for newborn sessions, however, if for some reason you are unable to
+      get to me once your baby is born, please call me and we can arrange
+      something.
   - question: When will my images be ready?
-    answer: |
-      Your images are hand-edited by me to the highest standard. This process takes around 10 days. Once your gallery is ready, you will be invited back to the studio for a private viewing session where you’ll choose your favourite images and what you’d like to purchase. Final payment is made on this day. 
+    answer: >
+      Your images are hand-edited by me to the highest standard. This process
+      takes around 10 days. Once your gallery is ready, you will be invited back
+      to the studio for a private viewing session where you’ll choose your
+      favourite images and what you’d like to purchase. Final payment is made on
+      this day. 
   - question: Is the deposit included in the package?
     answer: |
       Yes. The £99 will be deducted from the balance of any package you choose.
