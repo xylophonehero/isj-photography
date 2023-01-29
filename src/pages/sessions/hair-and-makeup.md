@@ -1,19 +1,24 @@
 ---
 templateKey: session-page
 title: Hair and Makeup
-howItWorks: |
-  I run the hair and makeup company, Krstev Kreates, with my husband Zoran. I am a qualified, experienced makeup artist and Zoran is an accomplished hairdresser. 
+howItWorks: >
+  I run the hair and makeup company, Krstev Kreates, with my husband Zoran. I am
+  a qualified, experienced makeup artist and Zoran is an accomplished
+  hairdresser. 
+
 
   It makes your wedding day go even smoother (and saves you money) to have the same team do your photography and makeup. 
 
+
   If you’d like to book us for both, here are the price packages.
 
+
   (We’re also available to book for just hair and makeup should you wish, please head to <a href="https://www.facebook.com/krstevkreates/">Krstev Kreates</a> for info)
-pricing:  
-  description:
+pricing:
+  description: null
   tables:
     - title: Pinnacle
-      price: 2349
+      price: 2400
       features:
         - 2 photographers
         - Pre-wedding meeting
@@ -29,7 +34,7 @@ pricing:
         - Bridal trial
         - Hair and Makeup for three members of bridal party
     - title: Vista
-      price: 1849
+      price: 1800
       features:
         - 2 Photographers
         - 8 hours photography coverage
@@ -41,7 +46,7 @@ pricing:
         - Hair and Makeup for the Bride
         - Hair and Makeup for three members of bridal party
     - title: Signature
-      price: 1199
+      price: 1300
       features:
         - 1 Photographer
         - Pre-wedding meeting
@@ -50,7 +55,6 @@ pricing:
         - Photos and edited slideshow saved on USB
         - Hair and Makeup for the Bride
         - Hair and Makeup for two members of bridal party
-
 faqs:
   - question: Where are you based?
     answer: >
