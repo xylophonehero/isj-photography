@@ -28,7 +28,7 @@ howItWorks: >
 pricing:
   tables:
     - title: Pinnacle
-      price: 899
+      price: 799
       features:
         - Up to two-hour session
         - Face-to-face viewing session
