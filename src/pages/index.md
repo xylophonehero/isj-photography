@@ -1,28 +1,25 @@
 ---
 templateKey: index-page
 sliderImages:
-  - image: /img/banner1.jpg
+  - image: /img/isj-poppy-106.jpg
     quote: When you photograph a face, you photograph the soul behind it.
     author: Jean-Luc Godard
-  - image: /img/banner2.jpg
+  - image: /img/isj-sbalbum-234.jpg
     quote: When you photograph a face, you photograph the soul behind it.
     author: Jean-Luc Godard
-  - image: /img/banner3.jpg
+  - image: /img/isj-finley-093.jpg
     quote: When you photograph a face, you photograph the soul behind it.
     author: Jean-Luc Godard
   - image: /img/banner4.jpg
     quote: When you photograph a face, you photograph the soul behind it.
     author: Jean-Luc Godard
-  - image: /img/banner5.jpg
+  - image: /img/isj-finley-113.jpg
     quote: When you photograph a face, you photograph the soul behind it.
     author: Jean-Luc Godard
-  - image: /img/banner6.jpg
+  - image: /img/isjphotography-lh_362.jpg
     quote: When you photograph a face, you photograph the soul behind it.
     author: Jean-Luc Godard
-  - image: /img/banner7.jpg
-    quote: When you photograph a face, you photograph the soul behind it.
-    author: Jean-Luc Godard
-  - image: /img/banner8.jpg
+  - image: /img/isj-henry-005.jpg
     quote: When you photograph a face, you photograph the soul behind it.
     author: Jean-Luc Godard
 timelineImages:
@@ -36,13 +33,13 @@ timelineImages:
     text: Newborn
   - image: /img/family.jpg
     text: Family
-ieashiaPhoto: /img/ieashia.jpg
+ieashiaPhoto: /img/isj-me002-.jpg
 ---
 ## Hey
 
 Welcome to ISJ Photography.
 
-I’m Ieashia (with an i), the photographer behind the lens of ISJ Photography, based in Essex. My passion is capturing your precious moments when your families come together and grow. 
+I’m Ieashia (with an i), the photographer behind the lens of ISJ Photography, based in Essex. My passion is capturing your precious moments when your family comes together and grows. 
 
 I’m here for all your momentous moments. 
 
