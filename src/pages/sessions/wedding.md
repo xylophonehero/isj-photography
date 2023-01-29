@@ -91,7 +91,7 @@ pricing:
         - Classic 5"x7" album
         - Video Slideshow
     - title: Signature
-      price: 899
+      price: 999
       features:
         - 1 Photographer
         - 8 hours coverage
