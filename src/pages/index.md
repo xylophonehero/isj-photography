@@ -23,15 +23,13 @@ sliderImages:
     quote: When you photograph a face, you photograph the soul behind it.
     author: Jean-Luc Godard
 timelineImages:
-  - image: /img/engagement.jpg
-    text: Engagement
-  - image: /img/wedding.jpg
+  - image: /img/isj-sb-830.jpg
     text: Wedding
-  - image: /img/maternity.jpg
+  - image: /img/isj_6635.jpg
     text: Maternity
-  - image: /img/newborn.jpg
+  - image: /img/isjarnie16.jpg
     text: Newborn
-  - image: /img/family.jpg
+  - image: /img/isjarnie10.jpg
     text: Family
 ieashiaPhoto: /img/isj-me002-.jpg
 ---
